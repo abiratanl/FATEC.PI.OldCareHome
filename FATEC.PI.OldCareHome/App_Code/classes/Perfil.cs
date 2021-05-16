@@ -8,9 +8,9 @@ using System.Web;
 /// </summary>
 public class Perfil
 {
-    private int per_codigo;
+    private int per_id;
     private string per_descricao;
 
-    public int Per_codigo { get => per_codigo; set => per_codigo = value; }
+    public int Per_codigo { get => per_id; set => per_id = value; }
     public string Per_descricao { get => per_descricao; set => per_descricao = value; }
 }
