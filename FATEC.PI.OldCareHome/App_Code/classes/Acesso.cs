@@ -8,11 +8,11 @@ using System.Web;
 /// </summary>
 public class Acesso
 {
-    private int ace_id;
+    private int      ace_id;
     private DateTime ace_data;
-    private Boolean ace_ativo;
-    private Usuario usu_id;
-    private Perfil per_id;
+    private Boolean  ace_ativo;
+    private Usuario  usu_id;
+    private Perfil   per_id;
 
     public int Ace_id { get => ace_id; set => ace_id = value; }
     public DateTime Ace_data { get => ace_data; set => ace_data = value; }

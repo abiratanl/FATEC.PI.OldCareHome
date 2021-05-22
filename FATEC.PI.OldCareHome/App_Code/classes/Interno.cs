@@ -21,18 +21,13 @@ public class Interno{
     private string int_rg;
     private string int_tituloeleitor;
     private string int_beneficioinss;
-    private string int_planosaude;
-    private string int_endereco;
-    private string int_numero;
-    private string int_bairro;
-    private string int_cidade;
-    private string int_estado;
-    private string int_cep;
+    private string int_planosaude;    
     private string int_situacao;
     private DateTime int_dataentrada;
     private DateTime int_datasituacao;
     private string int_mobilidade;
     private Quarto qua_id;
+    private Endereco end_id;
 
     public int Int_id { get => int_id; set => int_id = value; }
     public string Int_nome { get => int_nome; set => int_nome = value; }
@@ -49,15 +44,10 @@ public class Interno{
     public string Int_tituloeleitor { get => int_tituloeleitor; set => int_tituloeleitor = value; }
     public string Int_beneficioinss { get => int_beneficioinss; set => int_beneficioinss = value; }
     public string Int_planosaude { get => int_planosaude; set => int_planosaude = value; }
-    public string Int_endereco { get => int_endereco; set => int_endereco = value; }
-    public string Int_numero { get => int_numero; set => int_numero = value; }
-    public string Int_bairro { get => int_bairro; set => int_bairro = value; }
-    public string Int_cidade { get => int_cidade; set => int_cidade = value; }
-    public string Int_estado { get => int_estado; set => int_estado = value; }
-    public string Int_cep { get => int_cep; set => int_cep = value; }
     public string Int_situacao { get => int_situacao; set => int_situacao = value; }
     public DateTime Int_dataentrada { get => int_dataentrada; set => int_dataentrada = value; }
     public DateTime Int_datasituacao { get => int_datasituacao; set => int_datasituacao = value; }
     public string Int_mobilidade { get => int_mobilidade; set => int_mobilidade = value; }
     public global::Quarto Qua_id { get => qua_id; set => qua_id = value; }
+    public global::Endereco End_id { get => end_id; set => end_id = value; }
 }
