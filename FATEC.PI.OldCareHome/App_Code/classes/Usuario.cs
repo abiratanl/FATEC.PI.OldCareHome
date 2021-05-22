@@ -12,6 +12,7 @@ public class Usuario
     private string usu_nome;
     private string usu_email;
     private string usu_senha;
+    private string usu_situacao;
     private DateTime usu_datacadastro;
     private DateTime usu_datasituacao;
     private Boolean usu_trocarsenha;
@@ -25,4 +26,5 @@ public class Usuario
     public global::Perfil Per_codigo { get => per_codigo; set => per_codigo = value; }
     public DateTime Usu_datasituacao { get => usu_datasituacao; set => usu_datasituacao = value; }
     public bool Usu_trocarsenha { get => usu_trocarsenha; set => usu_trocarsenha = value; }
+    public string Usu_situacao { get => usu_situacao; set => usu_situacao = value; }
 }

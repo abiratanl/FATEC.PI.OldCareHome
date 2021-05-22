@@ -11,6 +11,6 @@ public class Perfil
     private int per_id;
     private string per_descricao;
 
-    public int Per_codigo { get => per_id; set => per_id = value; }
+    public int Per_id { get => per_id; set => per_id = value; }
     public string Per_descricao { get => per_descricao; set => per_descricao = value; }
 }
