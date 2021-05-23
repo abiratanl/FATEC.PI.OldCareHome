@@ -18,7 +18,7 @@ public class Usuario
     private Boolean  usu_trocarsenha;
     
 
-    public int Usu_codigo { get => usu_id; set => usu_id = value; }
+    public int Usu_id { get => usu_id; set => usu_id = value; }
     public string Usu_nome { get => usu_nome; set => usu_nome = value; }
     public string Usu_email { get => usu_email; set => usu_email = value; }
     public string Usu_senha { get => usu_senha; set => usu_senha = value; }

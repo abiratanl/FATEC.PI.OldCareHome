@@ -8,7 +8,7 @@ using System.Web;
 /// </summary>
 public class Endereco
 {
-    private int end_id;
+    private int    end_id;
     private string end_tipo;
     private string end_logradouro;
     private string end_descricao;
@@ -16,7 +16,7 @@ public class Endereco
     private string end_bairro;
     private string end_cidade;
     private string end_cep;
-    private char end_estado;
+    private char   end_estado;
     private string end_complemento;
 
     public int End_id { get => end_id; set => end_id = value; }
