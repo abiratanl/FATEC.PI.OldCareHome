@@ -6,8 +6,8 @@ using System.Web;
 /// <summary>
 /// Summary description for Funcionario
 /// </summary>
-public class Funcionario
-{
+public class Funcionario{
+    
     private int     fun_id;
     private string  fun_nome;
     private decimal fun_salario;
