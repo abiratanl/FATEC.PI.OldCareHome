@@ -6,8 +6,8 @@ using System.Web;
 /// <summary>
 /// Summary description for Logdb
 /// </summary>
-public class Logdb
-{
+public class Log{
+
     private int log_id;
     private DateTime log_data;
     private string log_tabela;

@@ -6,8 +6,7 @@ using System.Web;
 /// <summary>
 /// Summary description for Patologia
 /// </summary>
-public class Patologia
-{
+public class Patologia{
     private int    pat_id;
     private string pat_descricao;
     private string pat_cid;

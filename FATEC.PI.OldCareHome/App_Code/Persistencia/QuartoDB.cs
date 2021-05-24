@@ -3,22 +3,23 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Data;
-/// <summary>
-/// Summary description for DiretorDB
-/// </summary>
-public class DiretorDB{
-    public static int Insert(Diretor d){
 
-        try{
+/// <summary>
+/// Summary description for QuartoDB
+/// </summary>
+public class QuartoDB{
+    public static int Insert(Quarto q){
+
+        try
+        {
             IDbConnection objConexao; // Abre a conexao
             IDbCommand objCommand; // Cria o comando
-            string sql = "INSERT INTO dtr_diretor(dtr_nome, dtr_cpf, dtr_rg, end_id) VALUES(?dtr_nome, ?dtr_cpf, ?dtr_rg, ?end_id)";
+            string sql = "INSERT INTO qua_quarto(qua_descricao, qua_capacidade, qua_tipo) VALUES(?qua_descricao, ?qua_capacidade, ?qua_tipo)";
             objConexao = Mapped.Connection();
             objCommand = Mapped.Command(sql, objConexao);
-            objCommand.Parameters.Add(Mapped.Parameter("?dtr_nome", d.Dtr_nome));
-            objCommand.Parameters.Add(Mapped.Parameter("?dtr_cpf", d.Dtr_cpf));
-            objCommand.Parameters.Add(Mapped.Parameter("?dtr_rg", d.Dtr_rg));
-            objCommand.Parameters.Add(Mapped.Parameter("?end_id", d.End_id.End_id));
+            objCommand.Parameters.Add(Mapped.Parameter("?qua_descricao", q.Qua_descricao));
+            objCommand.Parameters.Add(Mapped.Parameter("?qua_capacidade", q.Qua_capacidade));
+            objCommand.Parameters.Add(Mapped.Parameter("?qua_tipo", q.Qua_tipo));
             // utilizado quando cdigo não tem retorno, como seria o caso do SELECT
             objCommand.ExecuteNonQuery();
             objConexao.Close();

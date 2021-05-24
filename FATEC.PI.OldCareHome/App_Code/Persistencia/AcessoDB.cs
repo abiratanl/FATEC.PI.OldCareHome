@@ -8,7 +8,7 @@ using System.Data;
 /// Summary description for Acesso
 /// </summary>
 public class AcessoDB{
-    public static int Insert(Acesso a, Perfil p, Usuario u){        
+    public static int Insert(Acesso a){        
         try
         {
             IDbConnection objConexao; // Abre a conexao
@@ -18,8 +18,8 @@ public class AcessoDB{
             objCommand = Mapped.Command(sql, objConexao);
             objCommand.Parameters.Add(Mapped.Parameter("?ace_data", a.Ace_data));
             objCommand.Parameters.Add(Mapped.Parameter("?ace_ativo", a.Ace_ativo));
-            objCommand.Parameters.Add(Mapped.Parameter("?per_id", p.Per_id));
-            objCommand.Parameters.Add(Mapped.Parameter("?usu_id", a.Usu_id));
+            objCommand.Parameters.Add(Mapped.Parameter("?per_id", a.Per_id.Per_id));
+            objCommand.Parameters.Add(Mapped.Parameter("?usu_id", a.Usu_id.Usu_id));
             // utilizado quando código não tem retorno, como seria o caso do SELECT
             objCommand.ExecuteNonQuery();
             objConexao.Close();
@@ -28,7 +28,7 @@ public class AcessoDB{
         }
         catch (Exception)
         {
-            return-2;
+            return -2;
         }
         return 0;
     }

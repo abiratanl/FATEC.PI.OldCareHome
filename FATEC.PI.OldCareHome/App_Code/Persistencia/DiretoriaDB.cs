@@ -8,7 +8,7 @@ using System.Data;
 /// </summary>
 public class DiretoriaDB
 {
-    public static int Insert(Diretoria D, Diretor d, Cargo c){
+    public static int Insert(Diretoria d){
 
         try{
             IDbConnection objConexao; // Abre a conexao
@@ -17,10 +17,10 @@ public class DiretoriaDB
             sql += "VALUES(?dir_datainicio, ?dir_datatermino, ?dtr_id, ?car_id)";
             objConexao = Mapped.Connection();
             objCommand = Mapped.Command(sql, objConexao);
-            objCommand.Parameters.Add(Mapped.Parameter("?dir_datainicio", D.Dir_datainicio));
-            objCommand.Parameters.Add(Mapped.Parameter("?dir_datatermino", D.Dir_datatermino));
+            objCommand.Parameters.Add(Mapped.Parameter("?dir_datainicio", d.Dir_datainicio));
+            objCommand.Parameters.Add(Mapped.Parameter("?dir_datatermino", d.Dir_datatermino));
             objCommand.Parameters.Add(Mapped.Parameter("?dtr_id", d.Dtr_id));
-            objCommand.Parameters.Add(Mapped.Parameter("?car_id", c.Car_id));
+            objCommand.Parameters.Add(Mapped.Parameter("?car_id", d.Car_id.Car_id));
             // utilizado quando cdigo não tem retorno, como seria o caso do SELECT
             objCommand.ExecuteNonQuery();
             objConexao.Close();
@@ -28,7 +28,7 @@ public class DiretoriaDB
             objConexao.Dispose();
         }
         catch (Exception){
-            return 2;
+            return -2;
         }
         return 0;
     }

@@ -7,7 +7,7 @@ using System.Data;
 /// Summary description for HistoricoDB
 /// </summary>
 public class HistoricoDB{
-    public static int Insert(Historico h, Ocorrencia o, Interno i){
+    public static int Insert(Historico h){
 
         try
         {
@@ -17,8 +17,8 @@ public class HistoricoDB{
             objConexao = Mapped.Connection();
             objCommand = Mapped.Command(sql, objConexao);
             objCommand.Parameters.Add(Mapped.Parameter("?his_data", h.His_data));
-            objCommand.Parameters.Add(Mapped.Parameter("?oco_id", o.Oco_id));
-            objCommand.Parameters.Add(Mapped.Parameter("?int_id", i.Int_id));
+            objCommand.Parameters.Add(Mapped.Parameter("?oco_id", h.Oco_id.Oco_id));
+            objCommand.Parameters.Add(Mapped.Parameter("?int_id", h.Int_id.Int_id));
             objCommand.Parameters.Add(Mapped.Parameter("?his_observacao", h.His_observacao));
             // utilizado quando cdigo não tem retorno, como seria o caso do SELECT
             objCommand.ExecuteNonQuery();
@@ -28,7 +28,7 @@ public class HistoricoDB{
         }
         catch (Exception)
         {
-            return 2;
+            return -2;
         }
         return 0;
     }

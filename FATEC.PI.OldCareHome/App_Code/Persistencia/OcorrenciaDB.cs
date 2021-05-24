@@ -4,21 +4,20 @@ using System.Linq;
 using System.Web;
 using System.Data;
 /// <summary>
-/// Summary description for DiretorDB
+/// Summary description for OcorrenciaDB
 /// </summary>
-public class DiretorDB{
-    public static int Insert(Diretor d){
+public class OcorrenciaDB{
+    public static int Insert(Ocorrencia o){
 
-        try{
+        try
+        {
             IDbConnection objConexao; // Abre a conexao
             IDbCommand objCommand; // Cria o comando
-            string sql = "INSERT INTO dtr_diretor(dtr_nome, dtr_cpf, dtr_rg, end_id) VALUES(?dtr_nome, ?dtr_cpf, ?dtr_rg, ?end_id)";
+            string sql = "INSERT INTO oco_ocorrencia(oco_descricao, oco_tipo) VALUES(?oco_descricao, ?oco_tipo)";
             objConexao = Mapped.Connection();
             objCommand = Mapped.Command(sql, objConexao);
-            objCommand.Parameters.Add(Mapped.Parameter("?dtr_nome", d.Dtr_nome));
-            objCommand.Parameters.Add(Mapped.Parameter("?dtr_cpf", d.Dtr_cpf));
-            objCommand.Parameters.Add(Mapped.Parameter("?dtr_rg", d.Dtr_rg));
-            objCommand.Parameters.Add(Mapped.Parameter("?end_id", d.End_id.End_id));
+            objCommand.Parameters.Add(Mapped.Parameter("?oco_descricao", o.Oco_descricao));
+            objCommand.Parameters.Add(Mapped.Parameter("?oco_tipo", o.Oco_tipo));
             // utilizado quando cdigo não tem retorno, como seria o caso do SELECT
             objCommand.ExecuteNonQuery();
             objConexao.Close();

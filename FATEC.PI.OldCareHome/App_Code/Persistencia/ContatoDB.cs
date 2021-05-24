@@ -6,10 +6,8 @@ using System.Data;
 /// <summary>
 /// Summary description for ContatoDB
 /// </summary>
-public class ContatoDB
-{
-    public static int Insert(Contato c, Responsavel r)
-    {
+public class ContatoDB{
+    public static int Insert(Contato c){
 
         try
         {
@@ -20,7 +18,7 @@ public class ContatoDB
             objCommand = Mapped.Command(sql, objConexao);
             objCommand.Parameters.Add(Mapped.Parameter("?con_tipo", c.Con_tipo));
             objCommand.Parameters.Add(Mapped.Parameter("?con_descricao", c.Con_descricao));
-            objCommand.Parameters.Add(Mapped.Parameter("?res_id", r.Res_id));
+            objCommand.Parameters.Add(Mapped.Parameter("?res_id", c.Res_id.Res_id));
             // utilizado quando cdigo não tem retorno, como seria o caso do SELECT
             objCommand.ExecuteNonQuery();
             objConexao.Close();
@@ -29,9 +27,8 @@ public class ContatoDB
         }
         catch (Exception)
         {
-            return 2;
+            return -2;
         }
         return 0;
     }
-}
 }

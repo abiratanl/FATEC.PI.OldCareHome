@@ -7,7 +7,7 @@ using System.Data;
 /// Summary description for InternoDB
 /// </summary>
 public class InternoDB{
-    public static int Insert(Interno i, Quarto q, Endereco e){
+    public static int Insert(Interno i){
 
         try
         {
@@ -35,8 +35,8 @@ public class InternoDB{
             objCommand.Parameters.Add(Mapped.Parameter("?int_dataentrada", i.Int_dataentrada));
             objCommand.Parameters.Add(Mapped.Parameter("?int_datasituacao", i.Int_datasituacao));
             objCommand.Parameters.Add(Mapped.Parameter("?int_mobilidade", i.Int_mobilidade));
-            objCommand.Parameters.Add(Mapped.Parameter("?qua_id", q.Qua_id));
-            objCommand.Parameters.Add(Mapped.Parameter("?end_id", e.End_id));
+            objCommand.Parameters.Add(Mapped.Parameter("?qua_id", i.Qua_id.Qua_id));
+            objCommand.Parameters.Add(Mapped.Parameter("?end_id", i.End_id.End_id));
             // utilizado quando cdigo não tem retorno, como seria o caso do SELECT
             objCommand.ExecuteNonQuery();
             objConexao.Close();
@@ -44,7 +44,7 @@ public class InternoDB{
             objConexao.Dispose();
         }
         catch (Exception){
-            return 2;
+            return -2;
         }
         return 0;
     }

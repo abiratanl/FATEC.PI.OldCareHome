@@ -4,21 +4,21 @@ using System.Linq;
 using System.Web;
 using System.Data;
 /// <summary>
-/// Summary description for DiretorDB
+/// Summary description for PatologiaDB
 /// </summary>
-public class DiretorDB{
-    public static int Insert(Diretor d){
+public class PatologiaDB{
+    public static int Insert(Patologia p){
 
-        try{
+        try
+        {
             IDbConnection objConexao; // Abre a conexao
             IDbCommand objCommand; // Cria o comando
-            string sql = "INSERT INTO dtr_diretor(dtr_nome, dtr_cpf, dtr_rg, end_id) VALUES(?dtr_nome, ?dtr_cpf, ?dtr_rg, ?end_id)";
+            string sql = "INSERT INTO pat_patologia(pat_descricao, pat_cid, pat_restricao) VALUES(?pat_descricao, ?pat_cid, ?pat_restricao)";
             objConexao = Mapped.Connection();
             objCommand = Mapped.Command(sql, objConexao);
-            objCommand.Parameters.Add(Mapped.Parameter("?dtr_nome", d.Dtr_nome));
-            objCommand.Parameters.Add(Mapped.Parameter("?dtr_cpf", d.Dtr_cpf));
-            objCommand.Parameters.Add(Mapped.Parameter("?dtr_rg", d.Dtr_rg));
-            objCommand.Parameters.Add(Mapped.Parameter("?end_id", d.End_id.End_id));
+            objCommand.Parameters.Add(Mapped.Parameter("?per_descricao", p.Pat_descricao));
+            objCommand.Parameters.Add(Mapped.Parameter("?per_cid", p.Pat_cid));
+            objCommand.Parameters.Add(Mapped.Parameter("?per_restricao", p.Pat_restricao));
             // utilizado quando cdigo não tem retorno, como seria o caso do SELECT
             objCommand.ExecuteNonQuery();
             objConexao.Close();

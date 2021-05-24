@@ -7,7 +7,7 @@ using System.Data;
 /// Summary description for FuncionarioDB
 /// </summary>
 public class FuncionarioDB{
-    public static int Insert(Funcionario f, Endereco e, Situacao s, Cargo c){
+    public static int Insert(Funcionario f){
 
         try
         {
@@ -27,9 +27,9 @@ public class FuncionarioDB{
             objCommand.Parameters.Add(Mapped.Parameter("?fun_rg", f.Fun_rg));
             objCommand.Parameters.Add(Mapped.Parameter("?fun_pis", f.Fun_pis));
             objCommand.Parameters.Add(Mapped.Parameter("?fun_ctps", f.Fun_ctps));
-            objCommand.Parameters.Add(Mapped.Parameter("?sit_id", s.Sit_id));
-            objCommand.Parameters.Add(Mapped.Parameter("?end_id", e.End_id));
-            objCommand.Parameters.Add(Mapped.Parameter("?car_id", c.Car_id));
+            objCommand.Parameters.Add(Mapped.Parameter("?sit_id", f.Sit_id.Sit_id));
+            objCommand.Parameters.Add(Mapped.Parameter("?end_id", f.End_id.End_id));
+            objCommand.Parameters.Add(Mapped.Parameter("?car_id", f.Car_id.Car_id));
             // utilizado quando cdigo não tem retorno, como seria o caso do SELECT
             objCommand.ExecuteNonQuery();
             objConexao.Close();
@@ -37,7 +37,7 @@ public class FuncionarioDB{
             objConexao.Dispose();
         }
         catch (Exception){
-            return 2;
+            return -2;
         }
         return 0;
     }

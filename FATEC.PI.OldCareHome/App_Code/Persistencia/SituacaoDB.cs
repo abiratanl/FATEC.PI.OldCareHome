@@ -24,7 +24,7 @@ public class SituacaoDB{
             objConexao.Dispose();
         }
         catch (Exception){
-            return 2;
+            return -2;
         }
         return 0;
     }
