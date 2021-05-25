@@ -24,4 +24,18 @@ public partial class Adm_insertPerfil : System.Web.UI.Page{
                 break;
         }
     }
+
+    protected void btnDelete_Click(object sender, EventArgs e)
+    {
+        string tabela = "per_perfil", campo = "per_id", valor = "1";
+        switch (Del.Delete(tabela, campo, valor))
+        {
+            case 0:
+                ltlMensagem.Text = ">>>>> O K <<<<<<<";
+                break;
+            case -2:
+                ltlMensagem.Text = ">>>>> ERRO <<<<<<<";
+                break;
+        }
+    }
 }
