@@ -13,17 +13,13 @@
                 <label>Perfil:</label>
                 <asp:TextBox ID="txtPerfil" runat="server"></asp:TextBox>
                  <hr />
-                <asp:TextBox ID="txtTabela" runat="server"></asp:TextBox>
-                <asp:TextBox ID="Campo" runat="server"></asp:TextBox>
-                <asp:TextBox ID="txtValor" runat="server"></asp:TextBox>
+               
             </div>
             <div class="col-12 mb-3">
                 <asp:Button ID="btnCadastrar" runat="server" Text="Cadastrar"  OnClick="btnCadastrar_Click"/>
             </div>
             <hr />
-            <div class="col-12 mb-3">
-                <asp:Button ID="btnDelete" runat="server" Text="Deletar"  OnClick="btnDelete_Click"/>
-            </div>
+            
             <asp:Literal ID="ltlMensagem" runat="server"></asp:Literal>
         </div>
 

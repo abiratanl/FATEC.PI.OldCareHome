@@ -15,7 +15,7 @@ public partial class Adm_insertPerfil : System.Web.UI.Page{
         Perfil p = new Perfil();
         p.Per_descricao = txtPerfil.Text;
 
-        switch (PerfilDB.Insert(p)){
+        switch (p.Insert()){
             case 0:
                 ltlMensagem.Text = ">>>>> O K <<<<<<<";
                 break;
