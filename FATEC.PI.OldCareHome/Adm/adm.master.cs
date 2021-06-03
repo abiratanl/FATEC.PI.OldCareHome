@@ -11,4 +11,10 @@ public partial class adm_adm : System.Web.UI.MasterPage
     {
 
     }
+
+    protected void btnSair_Click(object sender, EventArgs e){
+        Session.Remove("nome");
+        Session.Remove("perfil");
+        Response.Redirect("~/Default.aspx");
+    }
 }

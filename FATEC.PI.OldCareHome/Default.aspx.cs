@@ -8,8 +8,8 @@ using System.Data;
 
 public partial class _Default : System.Web.UI.Page
 {
-    protected void Page_Load(object sender, EventArgs e)
-    {
+    protected void Page_Load(object sender, EventArgs e){
+        
 
     }
 
@@ -18,29 +18,20 @@ public partial class _Default : System.Web.UI.Page
 
 
     protected void btnEntrar_Click(object sender, EventArgs e) {
-        Usuario usuario = new Usuario();
-        DataSet ds = new DataSet();
-        ds = UsuarioDB.SelectEmail(txtEmail.Text);        
-        if(ds.Tables[0].Rows.Count == 0){
-            //Msg: Email ou senha não confere (modal)
+        DataSet ds = UsuarioDB.SelectLogin(txtEmail.Text, txtSenha.Text);
+        if (ds.Tables[0].Rows.Count == 1){
+            Session["nome"] = ds.Tables[0].Rows[0]["usu_nome"].ToString();
+            Session["perfil"] = ds.Tables[0].Rows[0]["per_descricao"].ToString();
+            Response.Redirect("~/adm/homeRestrita.aspx");
         }
         else{
-            if (!true) //Se txtEmail.Text != usuario.usu_email
-            {
-                //Msg: Email ou senha não confere (modal)
-            }
-            else
-            {
-                //Preencher as propriedades do usuário com os dados do Dataset
-                //Iniciar Sessão
-                //Msg: Bem-vindo ao OldCareHome (modal)
-                //Ir para homeRestrita
-            }
-
+            Page.ClientScript.RegisterStartupScript(this.GetType(), "script", "<script> $('#modalErroLogin').modal('show'); </script>", false);
         }
     }
 
     protected void btnCancelar_Click(object sender, EventArgs e){
-       // Msg: Retorna à home pública quando implementada;
-    }    
+        // Msg: Retorna à home pública quando implementada;
+        Page.ClientScript.RegisterStartupScript(this.GetType(), "script", "<script> $('#modalCancelarLogin').modal('show'); </script>", false);
+    }
+
 }

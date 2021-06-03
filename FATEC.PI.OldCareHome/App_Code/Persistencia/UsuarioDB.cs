@@ -51,21 +51,24 @@ public class UsuarioDB{
         objConnection.Dispose();
         return ds;
     }
-    public static DataSet SelectEmail(string email){
+    public static DataSet SelectLogin(string email, string senha){
         DataSet ds = new DataSet();
-        IDbConnection objConnection;
+        IDbConnection objConexao;
         IDbCommand objCommand;
         IDataAdapter objDataAdapter;
-        objConnection = Mapped.Connection();
-        string sql = "select * from usu_usuario where usu_email = ?email;";
-        objCommand = Mapped.Command(sql, objConnection);
-        objCommand.Parameters.Add(Mapped.Parameter("?email", email)); // única diferença do select comum
+        string sql = "select usu_nome, per_descricao from usu_usuario inner join "; 
+        sql += "per_perfil using(per_id) where usu_email = ?usu_email and usu_senha = ?usu_senha";
+        objConexao = Mapped.Connection();
+        objCommand = Mapped.Command(sql, objConexao);
+        objCommand.Parameters.Add(Mapped.Parameter("?usu_email", email));
+        objCommand.Parameters.Add(Mapped.Parameter("?usu_senha", senha));
         objDataAdapter = Mapped.Adapter(objCommand);
         objDataAdapter.Fill(ds);
-        objConnection.Close();
+        objConexao.Close();
+        objConexao.Dispose();
         objCommand.Dispose();
-        objConnection.Dispose();
         return ds;
     }
+
 }
 
