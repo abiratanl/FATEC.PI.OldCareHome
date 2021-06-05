@@ -23,3 +23,7 @@
     // a altura se adequa proporcionalmente
 }
 
+.cemPorCento {
+    width: 100% !important;
+}
+

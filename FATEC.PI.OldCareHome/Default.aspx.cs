@@ -13,10 +13,6 @@ public partial class _Default : System.Web.UI.Page
 
     }
 
-
-
-
-
     protected void btnEntrar_Click(object sender, EventArgs e) {
         DataSet ds = UsuarioDB.SelectLogin(txtEmail.Text, txtSenha.Text);
         if (ds.Tables[0].Rows.Count == 1){

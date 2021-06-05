@@ -9,10 +9,8 @@ using System.Data;
 /// Summary description for PerfilDB
 /// </summary>
 public class PerfilDB{
-    public static int Insert(Perfil p){
-        
-        try
-        {
+    public static int Insert(Perfil p){        
+        try{
             IDbConnection objConexao; // Abre a conexao
             IDbCommand objCommand; // Cria o comando
             string sql = "INSERT INTO per_perfil(per_descricao) VALUES(?per_descricao)";
@@ -38,7 +36,7 @@ public class PerfilDB{
         IDbCommand objCommand;
         IDataAdapter objDataAdapter;
         objConnection = Mapped.Connection();
-        objCommand = Mapped.Command("SELECT * FROM perfil ORDER BY per_descricao ",
+        objCommand = Mapped.Command("SELECT per_id as `Código`, per_descricao as `Perfil` FROM per_perfil ORDER BY per_descricao ",
         objConnection);
         objDataAdapter = Mapped.Adapter(objCommand);
         // O objeto DataAdapter vai preencher o DataSet com os dados do BD.

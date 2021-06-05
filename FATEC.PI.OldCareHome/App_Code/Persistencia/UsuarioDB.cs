@@ -13,17 +13,15 @@ public class UsuarioDB{
         try{
             IDbConnection objConexao; // Abre a conexao
             IDbCommand objCommand; // Cria o comando
-            string sql = "INSERT INTO usu_usuario(usu_nome, usu_email, usu_senha, usu_situacao, usu_datacadastro, usu_datasituacao, usu_trocarsenha) ";
-            sql += "VALUES(?usu_nome, ?usu_email, ?usu_senha, ?usu_situacao, ?usu_datacadastro, ?usu_datasituacao, ?usu_trocarsenha)";
+            string sql = "INSERT INTO usu_usuario(usu_nome, usu_email, usu_senha, usu_datacadastro, per_id) ";
+            sql += "VALUES(?usu_nome, ?usu_email, ?usu_senha, ?usu_datacadastro, ?per_id)";
             objConexao = Mapped.Connection();
             objCommand = Mapped.Command(sql, objConexao);
             objCommand.Parameters.Add(Mapped.Parameter("?usu_nome", u.Usu_nome));
             objCommand.Parameters.Add(Mapped.Parameter("?usu_email", u.Usu_email));
-            objCommand.Parameters.Add(Mapped.Parameter("?usu_senha", u.Usu_senha));
-            objCommand.Parameters.Add(Mapped.Parameter("?usu_situacao", u.Usu_situacao));
+            objCommand.Parameters.Add(Mapped.Parameter("?usu_senha", u.Usu_senha));           
             objCommand.Parameters.Add(Mapped.Parameter("?usu_datacadastro", u.Usu_datacadastro));
-            objCommand.Parameters.Add(Mapped.Parameter("?usu_datasituacao", u.Usu_datasituacao));
-            objCommand.Parameters.Add(Mapped.Parameter("?usu_trocarsenha", u.Usu_trocarsenha));
+            objCommand.Parameters.Add(Mapped.Parameter("?per_id", u.Per_id));
             // utilizado quando  não tem retorno, como seria o caso do SELECT
             objCommand.ExecuteNonQuery();
             objConexao.Close();
@@ -36,13 +34,15 @@ public class UsuarioDB{
         return 0;
     }
     public static DataSet SelectAll()    {
+        string sql = "SELECT usu_id AS `Código`, usu_nome AS `Nome`, usu_email AS `Email`,  ";
+        sql += "usu_senha AS `Senha`, DATE_FORMAT(usu_datacadastro, '%d/%m/%Y') AS `Data de Cadastro`, "; 
+        sql += "per_descricao AS `Perfil`  FROM usu_usuario INNER JOIN  per_perfil USING(per_id) ORDER BY usu_nome";
         DataSet ds = new DataSet();
         IDbConnection objConnection;
         IDbCommand objCommand;
         IDataAdapter objDataAdapter;
         objConnection = Mapped.Connection();
-        objCommand = Mapped.Command("SELECT * FROM usu_usuario ORDER BY usu_nome ",
-        objConnection);
+        objCommand = Mapped.Command(sql, objConnection);
         objDataAdapter = Mapped.Adapter(objCommand);
         // O objeto DataAdapter vai preencher o DataSet com os dados do BD.
         objDataAdapter.Fill(ds); // O método Fill é o responsável por preencher o DataSet

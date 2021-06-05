@@ -6,7 +6,7 @@ using System.Web;
 /// <summary>
 /// Summary description for Interno
 /// </summary>
-public class Interno{
+public class Internos{
     private int int_id;
     private string int_nome;
     private DateTime int_datanascimento;

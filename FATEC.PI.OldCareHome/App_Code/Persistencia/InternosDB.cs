@@ -3,11 +3,12 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Data;
+using MySql.Data.MySqlClient;
 /// <summary>
 /// Summary description for InternoDB
 /// </summary>
-public class InternoDB{
-    public static int Insert(Interno i){
+public class InternosDB{
+    public static int Insert(Internos i){
 
         try
         {
@@ -47,5 +48,21 @@ public class InternoDB{
             return -2;
         }
         return 0;
+    }
+    public static DataSet SelectAll()
+    {
+        DataSet ds = new DataSet();
+        IDbConnection objConnection;
+        IDbCommand objCommand;
+        IDataAdapter objDataAdapter;
+        objConnection = Mapped.Connection();
+        objCommand = Mapped.Command("SELECT * FROM int_internos ORDER BY int_nome", objConnection);
+        objDataAdapter = Mapped.Adapter(objCommand);
+        // O objeto DataAdapter vai preencher o DataSet com os dados do BD.
+        objDataAdapter.Fill(ds); // O método Fill é o responsável por preencher o DataSet
+        objConnection.Close();
+        objCommand.Dispose();
+        objConnection.Dispose();
+        return ds;
     }
 }

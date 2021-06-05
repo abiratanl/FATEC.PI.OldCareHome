@@ -14,7 +14,7 @@ public class RegistroClinico
     private string    reg_situacao;
     private DateTime  reg_datasituacao;
     private Patologia pat_id;
-    private Interno   int_id;
+    private Internos   int_id;
 
     public int Reg_id { get => reg_id; set => reg_id = value; }
     public DateTime Reg_datainicio { get => reg_datainicio; set => reg_datainicio = value; }
@@ -22,5 +22,5 @@ public class RegistroClinico
     public string Reg_situacao { get => reg_situacao; set => reg_situacao = value; }
     public DateTime Reg_datasituacao { get => reg_datasituacao; set => reg_datasituacao = value; }
     public global::Patologia Pat_id { get => pat_id; set => pat_id = value; }
-    public global::Interno Int_id { get => int_id; set => int_id = value; }
+    public global::Internos Int_id { get => int_id; set => int_id = value; }
 }
