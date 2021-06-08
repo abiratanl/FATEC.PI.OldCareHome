@@ -14,13 +14,13 @@ public partial class _Default : System.Web.UI.Page
     }
 
     protected void btnEntrar_Click(object sender, EventArgs e) {
-        DataSet ds = UsuarioDB.SelectLogin(txtEmail.Text, txtSenha.Text);
+        DataSet ds = UsuarioDB.SelectLogin(txtEmail.Text, Functions.HashTexto(txtSenha.Text));
         if (ds.Tables[0].Rows.Count == 1){
             Session["nome"] = ds.Tables[0].Rows[0]["usu_nome"].ToString();
             Session["perfil"] = ds.Tables[0].Rows[0]["per_descricao"].ToString();
             Response.Redirect("~/adm/homeRestrita.aspx");
         }
-        else{
+        else{ 
             Page.ClientScript.RegisterStartupScript(this.GetType(), "script", "<script> $('#modalErroLogin').modal('show'); </script>", false);
         }
     }

@@ -21,14 +21,14 @@ public class UsuarioDB{
             objCommand.Parameters.Add(Mapped.Parameter("?usu_email", u.Usu_email));
             objCommand.Parameters.Add(Mapped.Parameter("?usu_senha", u.Usu_senha));           
             objCommand.Parameters.Add(Mapped.Parameter("?usu_datacadastro", u.Usu_datacadastro));
-            objCommand.Parameters.Add(Mapped.Parameter("?per_id", u.Per_id));
+            objCommand.Parameters.Add(Mapped.Parameter("?per_id", u.Per_id.Per_id));
             // utilizado quando  não tem retorno, como seria o caso do SELECT
             objCommand.ExecuteNonQuery();
             objConexao.Close();
             objCommand.Dispose();
             objConexao.Dispose();
         }
-        catch (Exception){
+        catch (Exception ex){
             return -2;
         }
         return 0;
