@@ -17,8 +17,9 @@ public partial class Adm_HomeRestrita : System.Web.UI.Page{
         else
         {
             lblSessao.Text = Session["nome"].ToString();
-            if (!IsPostBack){
-                CarregarGrid();
+            if (!IsPostBack){                
+                lblTitle.Text = "Cadastro de Usuários";
+                CarregarTable();
             }
         }
     }
@@ -28,9 +29,9 @@ public partial class Adm_HomeRestrita : System.Web.UI.Page{
         int qtd = ds.Tables[0].Rows.Count;
         if (qtd > 0)
         {
-            gridMain.DataSource = ds.Tables[0].DefaultView;
-            gridMain.DataBind();
-            gridMain.Visible = true;
+            //gridMain.DataSource = ds.Tables[0].DefaultView;
+           // gridMain.DataBind();
+            //gridMain.Visible = true;
             //lbl.Text = "Foram encontrados " + qtd + " de registros";
         }
         else
@@ -43,8 +44,6 @@ public partial class Adm_HomeRestrita : System.Web.UI.Page{
 
 
     protected void btnAdicionar_Click(object sender, EventArgs e){
-        //gridMain.Visible = false;
-       // pnlUsuarios.Visible = true;
         Page.ClientScript.RegisterStartupScript(this.GetType(), "script", "<script> $('#modalUsuarios').modal('show'); </script>", false);
     }
 
@@ -71,8 +70,11 @@ public partial class Adm_HomeRestrita : System.Web.UI.Page{
 
     }
 
-    protected void btnEntrar_Click(object sender, EventArgs e)
-    {
-
+    
+    protected void CarregarTable(){
+        DataSet ds = UsuarioDB.SelectAll();
+        rptTableBody.DataSource = ds;
+        rptTableBody.DataBind();
     }
+    
 }

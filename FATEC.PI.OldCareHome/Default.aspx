@@ -7,7 +7,7 @@
     <title>Home</title>
     <link href="Content/bootstrap.min.css" rel="stylesheet" />
     <link href="Content/myStyle.css" rel="stylesheet" />
-
+    
 </head>
 <body>
     <form id="form1" runat="server">
@@ -66,18 +66,15 @@
                     <div class="modal-body text-danger  text-center">
                         <div class="row">
                             <div class="col-3">
-                                <asp:Image ID="imgErro" class="img-80-80" ImageUrl="~/img/erro1.png"  runat="server" />
-                        
+                                <asp:Image ID="imgErro" class="img-80-80" ImageUrl="~/img/erro1.png" runat="server" />
                             </div>
                             <div class="col-9 mt-4">
                                 <p><strong>Email ou senha não confere!</strong></p>
                             </div>
                         </div>
-                        
                     </div>
                     <div class="modal-footer">
                         <button type="button" class="btn btn-primary" data-dismiss="modal">Fechar</button>
-                        
                     </div>
                 </div>
             </div>
@@ -98,17 +95,14 @@
                     </div>
                     <div class="modal-footer">
                         <button type="button" class="btn btn-primary" data-dismiss="modal">Fechar</button>
-                        
                     </div>
                 </div>
             </div>
         </div>
         <!-- /.modal -->
-        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+        <script src="Scripts/jquery-3.5.1.min.js"></script>        
         <script src="Scripts/bootstrap.bundle.min.js"></script>
-        <script src="Scripts/bootstrap.min.js"></script>        
-        
+        <script src="Scripts/bootstrap.min.js"></script>
     </form>
-    
 </body>
 </html>

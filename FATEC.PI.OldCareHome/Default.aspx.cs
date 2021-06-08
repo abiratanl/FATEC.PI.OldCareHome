@@ -25,7 +25,7 @@ public partial class _Default : System.Web.UI.Page
         }
     }
 
-    protected void btnCancelar_Click(object sender, EventArgs e){
+    protected void btnCancelar_Click(object sender, EventArgs e){        
         // Msg: Retorna à home pública quando implementada;
         Page.ClientScript.RegisterStartupScript(this.GetType(), "script", "<script> $('#modalCancelarLogin').modal('show'); </script>", false);
     }
