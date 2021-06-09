@@ -75,7 +75,7 @@
             <!-- /.card -->
         </asp:Panel>
         <!-- Modal Cadastrar Usuarios-->
-        <div class="modal fade modal-md" id="modalInsertUsuario" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+<%--        <div class="modal fade modal-md" id="modalInsertUsuario" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
             <div class="modal-dialog modal-dialog-centered" role="document">
                 <div class="modal-content">
                     <div class="modal-header bg-primary">
@@ -124,7 +124,7 @@
                     </div>
                 </div>
             </div>
-        </div>
+        </div>--%>
         <!-- /.modal Cadastrar usuários-->
         <!-- Modal Cadastrar Patologia-->
         <div class="modal fade modal-md" id="modalPatologia" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
@@ -136,36 +136,37 @@
                             <span aria-hidden="true">&times;</span>
                         </button>
                     </div>
-                    <div class="modal-body text-center">
+                    <div class="modal-body text-left">
                         <div class="row">
                             <div class="col-12">
                                 <div class="cemPorCento mt-2">
                                     <asp:Label ID="lblPatologia" runat="server" Text="Patologia:"></asp:Label>
                                     <br />
                                     <asp:TextBox ID="txtPatologia" Width="100%" runat="server"></asp:TextBox>
-                                </div>
-                                <div class="mt-2">
-                                    <asp:Label ID="lblCid" runat="server" Text="CID:"></asp:Label>
-                                    <br />
-                                    <asp:TextBox ID="txtCid" Width="100%" runat="server"></asp:TextBox>
-                                </div>
+                                </div>                                
                                 <div class="mt-2">
                                     <asp:Label ID="lblRestricao" runat="server" Text="Restrição:"></asp:Label>
                                     <br />
                                     <asp:TextBox ID="txtRestricao" Width="100%" Type="text" runat="server"></asp:TextBox>
-                                </div>                                
+                                </div> 
+                                <div class="mt-2">
+                                    <asp:Label ID="lblCid" runat="server" Text="CID:"></asp:Label>
+                                    <br />
+                                    <asp:TextBox ID="txtCid" Width="50%" runat="server"></asp:TextBox>
+                                </div>
                             </div>
                         </div>
                     </div>
                     <div class="modal-footer">
                         <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
-                        <asp:Button ID="Button1" class="btn btn-primary" runat="server" Text="Salvar" OnClick="btnSalvar_Click" />
+                        <asp:LinkButton ID="btnSalvarPatologia" type="btn-button" Cssclass="btn btn-primary"  runat="server" OnClick="btnSalvarPatologia_Click"  >Cadastrar</asp:LinkButton>
+                        
                     </div>
                 </div>
             </div>
         </div>
         <!-- /.modal Cadastrar Patologias-->
-        <!-- Modal Cadastrar Patologia-->
+        <!-- Modal Cadastrar Quarto-->
         <div class="modal fade modal-md" id="modalInsertQuarto" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
             <div class="modal-dialog modal-dialog-centered" role="document">
                 <div class="modal-content">
@@ -186,7 +187,7 @@
                                 <div class="mt-2">
                                     <asp:Label ID="lblCapacidade" runat="server" Text="Capacidade:"></asp:Label>
                                     <br />
-                                    <asp:TextBox ID="txtCapacidade" Width="100%" runat="server"></asp:TextBox>
+                                    <asp:TextBox ID="txtQuartoCapacidade" Width="100%" runat="server"></asp:TextBox>
                                 </div>
                                 <div class="mt-2">
                                     <asp:Label ID="lblQuartoTipo" runat="server" Text="Tipo:"></asp:Label>
@@ -198,7 +199,7 @@
                     </div>
                     <div class="modal-footer">
                         <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
-                        <asp:Button ID="btnInsertQuarto" class="btn btn-primary" runat="server" Text="Salvar"  />
+                        <asp:Button ID="btnInsertQuarto" class="btn btn-primary" runat="server" Text="Cadastrar" OnClick="btnInsertQuarto_Click" />
                     </div>
                 </div>
             </div>

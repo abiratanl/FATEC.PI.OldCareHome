@@ -8,7 +8,7 @@ using System.Data;
 public partial class Adm_insertUsuario : System.Web.UI.Page
 {
     protected void Page_Load(object sender, EventArgs e){
-        //lblSessao.Text = Session["nome"].ToString();
+        lblSessao.Text = Session["nome"].ToString();
         if (!IsPostBack)
         {
             //Carregar um DropDownList com o Banco de Dados
@@ -22,14 +22,13 @@ public partial class Adm_insertUsuario : System.Web.UI.Page
 
     }
 
-    protected void btnInsertUsuarioVoltar_Click(object sender, EventArgs e)
-    {
-
+    protected void btnInsertUsuarioVoltar_Click(object sender, EventArgs e){
+        Response.Redirect("~/adm/HomeRestrita.aspx");
     }
 
     protected void btnInsertUsuarioCadastrar_Click(object sender, EventArgs e){        
         Usuario u = new Usuario();         
-        u.Usu_nome = txtInsertUsuarioNome.Text;
+        u.Usu_nome = txtInsertUsuarioNome.Text ;
         u.Usu_email = txtInsertUsuarioEmail.Text;
         u.Usu_senha = Functions.HashTexto(txtInsertUsuarioSenha.Text);
         u.Usu_datacadastro = Convert.ToDateTime(txtDataCadastro.Text);
@@ -39,8 +38,7 @@ public partial class Adm_insertUsuario : System.Web.UI.Page
         u.Per_id = p;
 
 
-        switch (UsuarioDB.Insert(u))
-        {
+        switch (UsuarioDB.Insert(u)){
             case 0:                
                 Page.ClientScript.RegisterStartupScript(this.GetType(), "script", "<script> $('#modalCadastroOk').modal('show'); </script>", false);
                 

@@ -47,23 +47,7 @@ public partial class Adm_HomeRestrita : System.Web.UI.Page{
         Page.ClientScript.RegisterStartupScript(this.GetType(), "script", "<script> $('#modalUsuarios').modal('show'); </script>", false);
     }
 
-    protected void btnSalvar_Click(object sender, EventArgs e){
-        Usuario u = new Usuario();
-        u.Usu_nome = txtNome.Text;
-        u.Usu_email = txtEmail.Text;
-        u.Usu_senha = txtSenha.Text;
-       // u.Per_id = ddlPerfil.SelectedValue;
-        switch (UsuarioDB.Insert(u))
-        {
-            case 0:
-                //ltlMensagem.Text = ">>>>> O K <<<<<<<";
-                break;
-            case -2:
-                //ltlMensagem.Text = ">>>>> ERRO <<<<<<<";
-                break;
-        }
-
-    }
+    
 
     protected void btnCancelar_Click(object sender, EventArgs e)
     {
@@ -76,5 +60,49 @@ public partial class Adm_HomeRestrita : System.Web.UI.Page{
         rptTableBody.DataSource = ds;
         rptTableBody.DataBind();
     }
-    
+
+
+    protected void LinkButton1_Click(object sender, EventArgs e)
+    {
+
+    }
+
+    protected void btnSalvarPatologia_Click(object sender, EventArgs e){
+        Patologia p = new Patologia();
+        p.Pat_descricao = txtPatologia.Text;
+        p.Pat_cid = txtCid.Text;
+        p.Pat_restricao = txtRestricao.Text;
+        // u.Per_id = ddlPerfil.SelectedValue;
+        switch (PatologiaDB.Insert(p))
+        {
+            case 0:
+                Page.ClientScript.RegisterStartupScript(this.GetType(), "script", "<script> $('#modalCadastroOk').modal('show'); </script>", false);
+                break;
+            case -2:
+                Page.ClientScript.RegisterStartupScript(this.GetType(), "script", "<script> $('#modalErroBanco').modal('show'); </script>", false);
+                break;
+        }
+    }
+
+    protected void btnInsertQuarto_Click(object sender, EventArgs e){
+        Quarto q = new Quarto();
+        q.Qua_descricao = txtQuartoDescricao.Text;
+        q.Qua_capacidade = Convert.ToInt32(txtQuartoCapacidade.Text);
+        q.Qua_tipo = txtQuartoTipo.Text;     
+
+
+
+        switch (QuartoDB.Insert(q))
+        {
+            case 0:
+                Page.ClientScript.RegisterStartupScript(this.GetType(), "script", "<script> $('#modalCadastroOk').modal('show'); </script>", false);
+
+                break;
+            case -2:
+
+                Page.ClientScript.RegisterStartupScript(this.GetType(), "script", "<script> $('#modalErroBanco').modal('show'); </script>", false);
+
+                break;
+        }
+    }
 }

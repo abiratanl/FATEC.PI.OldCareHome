@@ -22,13 +22,13 @@ public partial class adm_adm : System.Web.UI.MasterPage
     
 
     protected void btnMenuPatologia_Click(object sender, EventArgs e){
-       
-        Page.ClientScript.RegisterStartupScript(this.GetType(), "script", "<script> $('#modalPatologia').modal('show'); </script>", false);
+        Response.Redirect("~/adm/insertPatologia.aspx");
+        //Page.ClientScript.RegisterStartupScript(this.GetType(), "script", "<script> $('#modalPatologia').modal('show'); </script>", false);
     }
 
     protected void btnMenuQuarto_Click(object sender, EventArgs e){
-        
-        Page.ClientScript.RegisterStartupScript(this.GetType(), "script", "<script> $('#modalInsertQuarto').modal('show'); </script>", false);
+        Response.Redirect("~/adm/insertQuarto.aspx");
+        //Page.ClientScript.RegisterStartupScript(this.GetType(), "script", "<script> $('#modalInsertQuarto').modal('show'); </script>", false);
     }
 
     protected void btnInsertUsuario_Click(object sender, EventArgs e){

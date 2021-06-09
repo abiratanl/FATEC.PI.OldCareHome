@@ -1,58 +1,45 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Adm/adm.master" AutoEventWireup="true" CodeFile="insertUsuario.aspx.cs" Inherits="Adm_insertUsuario" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Adm/adm.master" AutoEventWireup="true" CodeFile="InsertPatologia.aspx.cs" Inherits="Adm_InsertPatologia" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" Runat="Server">
 </asp:Content>
-<asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" Runat="Server" >
+<asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" Runat="Server">
     <div class="text-right mr-3">
         <asp:Label ID="lblUsuario"  runat="server" Text="Usuário:"></asp:Label>            
         <asp:Label ID="lblSessao" CssClass="text-primary font-weight-bold" runat="server" Text="---"></asp:Label>
     </div>
      <div class="card card-primary">
                             <div class="card-header bg-primary text-white">
-                                <h3 class="card-title " >Cadastramento de Usuários</h3>
+                                <h3 class="card-title " >Cadastramento de Patologias</h3>
                             </div>
                             <!-- /.card-header -->
                             <!-- form start -->
 
                             <div class="card-body">
                                 <div class="form-group" >
-                                    <label for="txtInsertUsuarioNome">Nome:</label>
-                                    <asp:TextBox ID="txtInsertUsuarioNome" type="text" required="required" class="form-control" placeholder="Digite nome" runat="server"></asp:TextBox>
+                                    <label for="txtInsertPatologiaDescricao">Patologia:</label>
+                                    <asp:TextBox ID="txtInsertPatologiaDescricao" type="text" required="required" class="form-control" placeholder="Digite Patologia" runat="server"></asp:TextBox>
                                     
                                 </div>
                                 <div class="form-group">
-                                    <label for="txtInsertUsuarioEmail">Email:</label>
-                                    <asp:TextBox ID="txtInsertUsuarioEmail" type="email" required="required" class="form-control" placeholder="Digite email" runat="server"></asp:TextBox>
+                                    <label for="txtInsertPatologiaRestricao">Restrição:</label>
+                                    <asp:TextBox ID="txtInsertPatologiaRestricao" type="text" required="required" class="form-control" placeholder="Digite email" runat="server"></asp:TextBox>
                                 </div>
                                 <div class="form-group">
-                                    <label for="txtInsertUsuarioSenha">Senha:</label>
-                                     <asp:TextBox ID="txtInsertUsuarioSenha" type="password" required="required" class="form-control" placeholder="Digite senha" runat="server"></asp:TextBox>
-                                </div>
-                                <div class="row">
-                                    <div class="col-6 mt-2">
-                                        <asp:Label ID="lblDataCadastro" runat="server" Text="Data de Cadastro:"></asp:Label>
-                                        <br />
-                                        <asp:TextBox ID="txtDataCadastro" type="date" required="required" Width="100%" runat="server"></asp:TextBox>
-                                    </div>
-                                    <div class="col-6 mt-2">
-                                        <asp:Label ID="Label7" runat="server" Text="Perfil:"></asp:Label>
-                                        <br />
-
-                                        <asp:DropDownList ID="ddlPerfil" Width="100%" required="required" runat="server"></asp:DropDownList>
-                                    </div>
-                                </div>
+                                    <label for="txtInsertPatologiaCid">Cid:</label>
+                                     <asp:TextBox ID="txtInsertPatologiaCid" type="text" required="required" class="form-control" placeholder="Digite CID" runat="server"></asp:TextBox>
+                                </div>                               
                             </div>
                             <!-- /.card-body -->
 
                             <div class="card-footer text-right">
                                 <asp:Panel ID="panBotoes" runat="server" CssClass="btn-group text-right" role="group">
                         <%--<form class="form-inline">--%>                            
-                            <asp:LinkButton ID="btnInsertUsuarioVoltar" CssClass="text-center mx-3" runat="server" Width="100%" onMouseOver="window.status='New Panel'; return true;" onMouseOut="window.status='Menu ready'; return true;" OnClick="btnInsertUsuarioVoltar_Click" >
+                            <asp:LinkButton ID="btnInsertPatologiaVoltar" CssClass="text-center mx-3" runat="server" Width="100%" onMouseOver="window.status='New Panel'; return true;" onMouseOut="window.status='Menu ready'; return true;" OnClick="btnInsertPatologiaVoltar_Click">
                                 <asp:Image ID="Image1" runat="server" Width="48px" ImageUrl="~/img/back.png" BackColor="Transparent" />
                                 <br />
                                 <asp:Label ID="Label5" runat="server" Text="Voltar"></asp:Label>
                             </asp:LinkButton>
-                            <asp:LinkButton ID="btnInsertUsuarioCadastrar" CssClass="text-center mx-3" runat="server" Width="100%" onMouseOver="window.status='New Panel'; return true;" onMouseOut="window.status='Menu ready'; return true;" OnClick="btnInsertUsuarioCadastrar_Click" >
+                            <asp:LinkButton ID="btnInsertPatologiaCadastrar" CssClass="text-center mx-3" runat="server" Width="100%" onMouseOver="window.status='New Panel'; return true;" onMouseOut="window.status='Menu ready'; return true;" OnClick="btnInsertPatologiaCadastrar_Click" >
                                 <asp:Image ID="Image2" runat="server" Width="48px" ImageUrl="~/img/ok_user.jpg " BackColor="Transparent" />
                                 <br />
                                 <asp:Label ID="Label1" runat="server" Text="Cadastrar"></asp:Label>

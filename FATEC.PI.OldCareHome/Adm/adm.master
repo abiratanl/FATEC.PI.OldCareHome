@@ -7,9 +7,10 @@
     <title></title>
     
     
-    <link href=<%:ResolveUrl("../Content/bootstrap.min.css" )%> rel="stylesheet" />
-    <link href=<%:ResolveUrl("//cdn.datatables.net/1.10.25/css/jquery.dataTables.min.css")%> rel="stylesheet"/> 
-    <link href=<%:ResolveUrl("Content/myStyle.css")%> rel="stylesheet" />
+    <link href=<%:ResolveUrl("~/Content/bootstrap.min.css" )%> rel="stylesheet" />
+    <link href=<%:ResolveUrl("~/Content/jquery.dataTables.min.css")%> rel="stylesheet" />
+   
+    <link href=<%:ResolveUrl("~/Content/myStyle.css")%> rel="stylesheet" />
     <script type="text/javascript">
         function alertBootstrap() {
             $("#divAlertBootstrap").slideDown(500).delay(4000).slideUp(500);
@@ -201,11 +202,15 @@
                 <%-----./ BODY FILHA-------%>
             </div>
         </div>
+
+
+
+
         <script src="../Scripts/jquery-3.5.1.min.js"></script>
         <script src="../Scripts/bootstrap.bundle.min.js"></script>
         <script src="../Scripts/bootstrap.min.js"></script>          
+        <script src="../Scripts/jquery.dataTables.min.js"></script>
         
-        <script src="../Scripts/jquery.dataTables.min.js"></script> 
         <script type="text/javascript">
             $(document).ready(function () {
                 $('#tblMain').DataTable({

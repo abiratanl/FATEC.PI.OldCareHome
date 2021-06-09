@@ -26,7 +26,7 @@ public class QuartoDB{
             objCommand.Dispose();
             objConexao.Dispose();
         }
-        catch (Exception){
+        catch (Exception ex){
             return -2;
         }
         return 0;
