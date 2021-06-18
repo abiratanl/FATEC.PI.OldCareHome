@@ -1,4 +1,4 @@
-﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="adm.master.cs" Inherits="adm_adm" %>
+﻿ <%@ Master Language="C#" AutoEventWireup="true" CodeFile="adm.master.cs" Inherits="adm_adm" %>
 
 <!DOCTYPE html>
 
@@ -22,62 +22,63 @@
 <body>
     <form id="form1" runat="server">
         <%------ NAVBAR-------%>
-        <nav class="navbar navbar-expand-lg navbar-light bg-primary">            
+        <nav class="navbar navbar-expand-lg navbar-light bg-dark">            
             <a class="navbar-brand text-white" href="#"><strong>OldCareHome</strong></a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarNavDropdown">
                 <ul class="navbar-nav text-white">
-                    <li class="nav-item active">
-                        <a class="nav-link" href="#">Estatuto <span class="sr-only">(current)</span></a>
+                    <li class="nav-item active mx-2">
+                        <asp:LinkButton ID="btnMenuEstatuto" Type="text" CssClass="text-white" runat="server">Estatuto</asp:LinkButton>                        
                     </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Diretoria</a>
+                    <li class="nav-item mx-2">
+                        <asp:LinkButton ID="btnMenuDiretoria" Type="text" CssClass="text-white" runat="server">Diretoria</asp:LinkButton>
                     </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Relatórios Financeiros</a>
+                    <li class="nav-item mx-2">
+                        <asp:LinkButton ID="btnMenuPortalTransparência" Type="text" CssClass="text-white" runat="server">Portal Transparência</asp:LinkButton>
                     </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Fale Conosco</a>
+                    <li class="nav-item mx-2">
+                        <asp:LinkButton ID="btnMenuFaleConosco" Type="text" CssClass="text-white" runat="server">Fale Conosco</asp:LinkButton>
                     </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Como ajudar</a>
+                    <li class="nav-item mx-2">
+                        <asp:LinkButton ID="btnMenuComoAjudar" Type="text" CssClass="text-white" runat="server">Como ajudar?</asp:LinkButton>
                     </li>
-                    <li class="nav-item">
-                        <asp:LinkButton ID="btnSair" CssClass="btn btn-primary text-white" runat="server" OnClick="btnSair_Click">Sair</asp:LinkButton>
+                    <li class="nav-item mx-2">
+                        <asp:LinkButton ID="btnSair" Type="text" CssClass="text-white" runat="server" OnClick="btnSair_Click">Sair</asp:LinkButton>
                     </li>
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Dropdown link
-                        </a>
-                        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                            <a class="dropdown-item" href="#">Action</a>
-                            <a class="dropdown-item" href="#">Another action</a>
-                            <a class="dropdown-item" href="#">Something else here</a>
+                    <li >
+                        
+                        <div >
+                            <asp:Label ID="lblUsuario"  runat="server" Text="Usuário:"></asp:Label>            
+                            <asp:Label ID="lblMenuSessao" CssClass="text-primary font-weight-bold" runat="server" Text=""></asp:Label>
                         </div>
                     </li>
                 </ul>
             </div>
         </nav>
-        <div> <%----./ NAVBAR-------%>
-           
+        <%----./ NAVBAR-------%>
+        <div>            
             <%------ ACCORDEON-------%>
             <div class="row">
-                <div class="col-12 col-md-4">
-                    <div class="m-5">
+                <div class="col-12 col-md-2">
+                    <div class="ml-1">                        
                         <div class="accordion" id="accordionExample">
+                            <div >
+                                <asp:Image ID="Image2" ImageUrl="~/img/logo1.png"   Width="100%" runat="server" />
+                            </div>
                             <div class="card">
                                 <div class="card-header" id="headingOne">
                                     <h2 class="mb-0">
-                                        <button class="btn btn-link btn-block text-left" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                        <button class="btn btn-link btn-block text-left" type="button" data-toggle="collapse" data-target="#divMenuPessoas" aria-expanded="true" aria-controls="collapseOne">
                                             <strong>Pessoas</strong>
                                         </button>
                                     </h2>
                                 </div>
 
-                                <div id="collapseOne" class="collapse" aria-labelledby="headingOne" data-parent="#accordionExample">
+                                <div id="divMenuPessoas" class="collapse" aria-labelledby="headingOne" data-parent="#accordionExample">
                                     <div class="card-body">
-                                        <a href="#">Internos</a>
+                                        <asp:LinkButton ID="btnMenuInternos" runat="server" >Internos</asp:LinkButton>                                      
                                         <br />
                                         <a href="#">Responnsáveis</a>
                                         <br />
@@ -94,12 +95,12 @@
                             <div class="card">
                                 <div class="card-header" id="headingTwo">
                                     <h2 class="mb-0">
-                                        <button class="btn btn-link btn-block text-left collapsed" type="button" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                        <button class="btn btn-link btn-block text-left collapsed" type="button" data-toggle="collapse" data-target="#divMenuRegistroClinico" aria-expanded="false" aria-controls="collapseTwo">
                                             <strong>Registro Clínico</strong>
                                         </button>
                                     </h2>
                                 </div>
-                                <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionExample">
+                                <div id="divMenuRegistroClinico" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionExample">
                                     <div class="card-body">
                                         <ul>
                                             <li>
@@ -122,12 +123,12 @@
                              <div class="card">
                                 <div class="card-header" id="headingThree1">
                                     <h2 class="mb-0">
-                                        <button class="btn btn-link btn-block text-left collapsed" type="button" data-toggle="collapse" data-target="#collapseThree1" aria-expanded="false" aria-controls="collapseThree">
-                                            <strong>Outros Cadastros</strong>
+                                        <button class="btn btn-link btn-block text-left collapsed" type="button" data-toggle="collapse" data-target="#divMenuOutrosCadastros" aria-expanded="false" aria-controls="collapseThree">
+                                            <strong>Cadastros</strong>
                                         </button>
                                     </h2>
                                 </div>
-                                <div id="collapseThree1" class="collapse" aria-labelledby="headingThree" data-parent="#accordionExample">
+                                <div id="divMenuOutrosCadastros" class="collapse" aria-labelledby="headingThree" data-parent="#accordionExample">
                                     <div class="card-body">
                                         <a href="#">Histórico</a>
                                         <br />
@@ -141,12 +142,12 @@
                             <div class="card">
                                 <div class="card-header" id="headingThree">
                                     <h2 class="mb-0">
-                                        <button class="btn btn-link btn-block text-left collapsed" type="button" data-toggle="collapse" data-target="#collapseThree2" aria-expanded="false" aria-controls="collapseThree">
+                                        <button class="btn btn-link btn-block text-left collapsed" type="button" data-toggle="collapse" data-target="#divMenuRelatorios" aria-expanded="false" aria-controls="collapseThree">
                                             <strong>Relatórios</strong>
                                         </button>
                                     </h2>
                                 </div>
-                                <div id="collapseThree2" class="collapse" aria-labelledby="headingThree" data-parent="#accordionExample">
+                                <div id="divMenuRelatorios" class="collapse" aria-labelledby="headingThree" data-parent="#accordionExample">
                                     <div class="card-body">
                                         <a href="#">Internos</a>
                                         <br />
@@ -165,52 +166,67 @@
                                         <asp:LinkButton ID="btnSair2" CssClass="btn btn-link btn-block text-left collapsed" runat="server" OnClick="btnSair_Click"><strong>Sair</strong></asp:LinkButton>                                        
                                     </h2>
                                 </div>
-                                <div id="collapseThree3" class="collapse" aria-labelledby="headingThree" data-parent="#accordionExample">
-                                    <div class="card-body">
-                                                   
+                                <div id="divMenuSair" class="collapse" aria-labelledby="headingThree" data-parent="#accordionExample">
+                                    <div class="card-body">                                                 
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
-                </div><%-----./ ACCORDEON-------%>
-                <!-- Modal -->
-<div class="modal fade" id="modalExemplo" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-  <div class="modal-dialog" role="document">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLabel">Título do modal</h5>
-        <button type="button" class="close" data-dismiss="modal" aria-label="Fechar">
-          <span aria-hidden="true">&times;</span>
-        </button>
-      </div>
-      <div class="modal-body">
-        ...
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
-        <button type="button" class="btn btn-primary">Salvar mudanças</button>
-      </div>
-    </div>
-  </div>
-</div>
-                <%------ BODY FILHA-------%>
-                <div class="col-12 col-md-8">
-                    <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
-                    </asp:ContentPlaceHolder>
+                </div><%-----./ ACCORDEON-------%>    
+                
+
+                <!-- Modal Cadastro OK-->
+        <div class="modal fade " id="modalCadastroOk" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered" role="document">
+                <div class="modal-content">
+                    <div class="modal-header bg-primary">
+                        <h5 class="modal-title  text-center" id="">Confirmação</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body text-danger  text-center">
+                        <div class="row">
+                            <div class="col-3">
+                                <asp:Image ID="Image4" class="img-80-80" ImageUrl="~/img/success.jpeg" runat="server" />
+                            </div>
+                            <div class="col-9 mt-4">
+                                <asp:Literal ID="ltlMensagem" Text="<strong>Um Registro Incluído com Sucesso.</strong>" runat="server"></asp:Literal>
+                                
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-primary" data-dismiss="modal">Fechar</button>
+                    </div>
                 </div>
-                <%-----./ BODY FILHA-------%>
             </div>
         </div>
+        <!-- /.modal -->
 
 
 
 
+
+
+
+
+
+
+
+            <%------ BODY FILHA-------%>
+            <div class="col-12 col-md-10">
+                <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                </asp:ContentPlaceHolder>
+            </div>
+            <%-----./ BODY FILHA-------%>
+            </div>
+        </div>
         <script src="../Scripts/jquery-3.5.1.min.js"></script>
         <script src="../Scripts/bootstrap.bundle.min.js"></script>
         <script src="../Scripts/bootstrap.min.js"></script>          
-        <script src="../Scripts/jquery.dataTables.min.js"></script>
-        
+        <script src="../Scripts/jquery.dataTables.min.js"></script>        
         <script type="text/javascript">
             $(document).ready(function () {
                 $('#tblMain').DataTable({
@@ -222,9 +238,7 @@
                     processing: true
                 });
             });
-
         </script>
-
     </form>
 </body>
 </html>

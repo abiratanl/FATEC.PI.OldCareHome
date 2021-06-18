@@ -49,8 +49,7 @@ public class InternosDB{
         }
         return 0;
     }
-    public static DataSet SelectAll()
-    {
+    public static DataSet SelectAll(){
         DataSet ds = new DataSet();
         IDbConnection objConnection;
         IDbCommand objCommand;

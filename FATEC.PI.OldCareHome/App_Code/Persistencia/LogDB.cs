@@ -23,7 +23,7 @@ public class LogDB{
             objCommand.Parameters.Add(Mapped.Parameter("?log_antes", l.Log_antes));
             objCommand.Parameters.Add(Mapped.Parameter("?log_depois", l.Log_depois));
             objCommand.Parameters.Add(Mapped.Parameter("?usu_id", l.Usu_id.Usu_id));
-            // utilizado quando cdigo não tem retorno, como seria o caso do SELECT
+            // utilizado quando código não tem retorno, como seria o caso do SELECT
             objCommand.ExecuteNonQuery();
             objConexao.Close();
             objCommand.Dispose();

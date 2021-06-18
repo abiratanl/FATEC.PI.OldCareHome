@@ -28,17 +28,19 @@
                                     <label for="txtInsertUsuarioSenha">Senha:</label>
                                      <asp:TextBox ID="txtInsertUsuarioSenha" type="password" required="required" class="form-control" placeholder="Digite senha" runat="server"></asp:TextBox>
                                 </div>
-                                <div class="row">
-                                    <div class="col-6 mt-2">
-                                        <asp:Label ID="lblDataCadastro" runat="server" Text="Data de Cadastro:"></asp:Label>
-                                        <br />
-                                        <asp:TextBox ID="txtDataCadastro" type="date" required="required" Width="100%" runat="server"></asp:TextBox>
-                                    </div>
-                                    <div class="col-6 mt-2">
-                                        <asp:Label ID="Label7" runat="server" Text="Perfil:"></asp:Label>
-                                        <br />
+                                <div class="form-group">
+                                    <div class="row">
+                                        <div class="col-6 ">
+                                            <asp:Label ID="lblDataCadastro" runat="server" Text="Data de Cadastro:"></asp:Label>
+                                            <br />                                          
+                                            <asp:TextBox ID="txtDataCadastro" type="date" CssClass="form-control" required="required" runat="server"></asp:TextBox>
+                                        </div>
+                                        <div class="col-6 ">
+                                            <asp:Label ID="Label7" runat="server" Text="Perfil:"></asp:Label>
+                                            <br />
 
-                                        <asp:DropDownList ID="ddlPerfil" Width="100%" required="required" runat="server"></asp:DropDownList>
+                                            <asp:DropDownList ID="ddlPerfil" CssClass="form-control" required="required" runat="server"></asp:DropDownList>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -80,7 +82,8 @@
                                 <asp:Image ID="imgErro" class="img-80-80" ImageUrl="~/img/erro1.png" runat="server" />
                             </div>
                             <div class="col-9 mt-4">
-                                <p><strong>Ocorreu um erro ao acessar o banco de dados. Verifique a conexão e tente novamente.</strong></p>
+                                <asp:Literal ID="ltlMensagem" runat="server" Text="<strong>Ocorreu um erro ao acessar o banco de dados. Verifique a conexão e tente novamente.</strong>"></asp:Literal>
+                               
                             </div>
                         </div>
                     </div>

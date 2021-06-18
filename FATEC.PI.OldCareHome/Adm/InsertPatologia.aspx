@@ -22,7 +22,7 @@
                                 </div>
                                 <div class="form-group">
                                     <label for="txtInsertPatologiaRestricao">Restrição:</label>
-                                    <asp:TextBox ID="txtInsertPatologiaRestricao" type="text" required="required" class="form-control" placeholder="Digite email" runat="server"></asp:TextBox>
+                                    <asp:TextBox ID="txtInsertPatologiaRestricao" type="text" required="required" class="form-control" placeholder="Digite restrição" runat="server"></asp:TextBox>
                                 </div>
                                 <div class="form-group">
                                     <label for="txtInsertPatologiaCid">Cid:</label>
@@ -67,7 +67,8 @@
                                 <asp:Image ID="imgErro" class="img-80-80" ImageUrl="~/img/erro1.png" runat="server" />
                             </div>
                             <div class="col-9 mt-4">
-                                <p><strong>Ocorreu um erro ao acessar o banco de dados. Verifique a conexão e tente novamente.</strong></p>
+                                <asp:Literal ID="ltlMensagem" runat="server" Text="<strong>Ocorreu um erro ao acessar o banco de dados. Verifique a conexão e tente novamente.</strong>"></asp:Literal>
+                               
                             </div>
                         </div>
                     </div>

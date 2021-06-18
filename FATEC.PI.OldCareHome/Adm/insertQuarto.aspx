@@ -26,7 +26,7 @@
                                 </div>
                                 <div class="form-group">
                                     <label for="txtInsertQuartoCapacidade">Capacidade:</label>
-                                     <asp:TextBox ID="txtInsertQuartoCapacidade" type="text" Width="50%" required="required" class="form-control" placeholder="Digite capacidade" runat="server"></asp:TextBox>
+                                     <asp:TextBox ID="txtInsertQuartoCapacidade" type="number" Width="50%" required="required" class="form-control" placeholder="Digite capacidade" runat="server"></asp:TextBox>
                                 </div>                               
                             </div>
                             <!-- /.card-body -->

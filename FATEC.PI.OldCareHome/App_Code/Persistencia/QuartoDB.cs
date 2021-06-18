@@ -31,4 +31,23 @@ public class QuartoDB{
         }
         return 0;
     }
+
+    public static DataSet SelectAll(){
+        string sql = "SELECT qua_id AS `Código`, qua_descricao AS `Descrição`, qua_tipo AS `Tipo`,  ";
+        sql += "qua_capacidade AS `Capacidade` FROM qua_quarto";
+        
+        DataSet ds = new DataSet();
+        IDbConnection objConnection;
+        IDbCommand objCommand;
+        IDataAdapter objDataAdapter;
+        objConnection = Mapped.Connection();
+        objCommand = Mapped.Command(sql, objConnection);
+        objDataAdapter = Mapped.Adapter(objCommand);
+        // O objeto DataAdapter vai preencher o DataSet com os dados do BD.
+        objDataAdapter.Fill(ds); // O método Fill é o responsável por preencher o DataSet
+        objConnection.Close();
+        objCommand.Dispose();
+        objConnection.Dispose();
+        return ds;
+    }
 }

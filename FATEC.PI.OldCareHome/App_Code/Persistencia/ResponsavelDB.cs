@@ -34,4 +34,20 @@ public class ResponsavelDB{
         }
         return 0;
     }
+
+    public static DataSet SelectAll(){
+        DataSet ds = new DataSet();
+        IDbConnection objConnection;
+        IDbCommand objCommand;
+        IDataAdapter objDataAdapter;
+        objConnection = Mapped.Connection();
+        objCommand = Mapped.Command("SELECT * FROM res_responsavel ORDER BY res_nome", objConnection);
+        objDataAdapter = Mapped.Adapter(objCommand);
+        // O objeto DataAdapter vai preencher o DataSet com os dados do BD.
+        objDataAdapter.Fill(ds); // O método Fill é o responsável por preencher o DataSet
+        objConnection.Close();
+        objCommand.Dispose();
+        objConnection.Dispose();
+        return ds;
+    }
 }

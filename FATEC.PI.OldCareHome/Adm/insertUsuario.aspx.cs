@@ -26,7 +26,16 @@ public partial class Adm_insertUsuario : System.Web.UI.Page
         Response.Redirect("~/adm/HomeRestrita.aspx");
     }
 
-    protected void btnInsertUsuarioCadastrar_Click(object sender, EventArgs e){        
+    protected void btnInsertUsuarioCadastrar_Click(object sender, EventArgs e){
+        if (UsuarioDB.VerificaEmail(txtInsertUsuarioEmail.Text))
+        {
+            // Email já cadastrado
+            ltlMensagem.Text = "<strong> Erro ao inserir usuário. Email já cadastrado.</strong>";
+            Page.ClientScript.RegisterStartupScript(this.GetType(), "script", "<script> $('#modalErroBanco').modal('show'); </script>", false);
+            txtInsertUsuarioEmail.Focus();
+            return;
+
+        }
         Usuario u = new Usuario();         
         u.Usu_nome = txtInsertUsuarioNome.Text ;
         u.Usu_email = txtInsertUsuarioEmail.Text;
@@ -48,6 +57,10 @@ public partial class Adm_insertUsuario : System.Web.UI.Page
                 Page.ClientScript.RegisterStartupScript(this.GetType(), "script", "<script> $('#modalErroBanco').modal('show'); </script>", false);
                 
                 break;
-        }  
+        }
+        txtInsertUsuarioNome.Text = "";
+        txtInsertUsuarioEmail.Text = "";
+        txtInsertUsuarioSenha.Text = "";
+        txtDataCadastro.Text = "";
     }
 }

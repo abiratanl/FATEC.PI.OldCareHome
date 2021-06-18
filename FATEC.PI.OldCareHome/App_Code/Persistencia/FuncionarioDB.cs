@@ -41,4 +41,35 @@ public class FuncionarioDB{
         }
         return 0;
     }
+    public static DataSet SelectAll() {
+        DataSet ds = new DataSet();
+        IDbConnection objConnection;
+        IDbCommand objCommand;
+        IDataAdapter objDataAdapter;
+        objConnection = Mapped.Connection();
+        objCommand = Mapped.Command("SELECT * FROM fun_funcionario ORDER BY fun_nome", objConnection);
+        objDataAdapter = Mapped.Adapter(objCommand);
+        // O objeto DataAdapter vai preencher o DataSet com os dados do BD.
+        objDataAdapter.Fill(ds); // O método Fill é o responsável por preencher o DataSet
+        objConnection.Close();
+        objCommand.Dispose();
+        objConnection.Dispose();
+        return ds;
+    }
+    public static DataSet SelectGrid(){
+        string sql = "SELECT fun_id AS `Código`, fun_nome AS `Nome`, DATE_FORMAT(fun_dataadmissao, '%d/%m/%Y') AS `Admissão`, sit_descricao AS `Situação` FROM fun_funcionario INNER JOIN sit_situacao USING(sit_id) ORDER BY fun_nome";
+        DataSet ds = new DataSet();
+        IDbConnection objConnection;
+        IDbCommand objCommand;
+        IDataAdapter objDataAdapter;
+        objConnection = Mapped.Connection();
+        objCommand = Mapped.Command(sql, objConnection);
+        objDataAdapter = Mapped.Adapter(objCommand);
+        // O objeto DataAdapter vai preencher o DataSet com os dados do BD.
+        objDataAdapter.Fill(ds); // O método Fill é o responsável por preencher o DataSet
+        objConnection.Close();
+        objCommand.Dispose();
+        objConnection.Dispose();
+        return ds;
+    }
 }

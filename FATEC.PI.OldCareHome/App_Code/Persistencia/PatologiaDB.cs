@@ -31,4 +31,44 @@ public class PatologiaDB{
         }
         return 0;
     }
+
+    public static DataSet SelectAll()
+    {
+        string sql = "SELECT pat_id AS `Código`, pat_descricao AS `Descrição`, pat_cid AS `CID`,  ";
+        sql += "pat_restricao AS `Restrição` FROM pat_patologia ORDER BY pat_descricao";
+
+        DataSet ds = new DataSet();
+        IDbConnection objConnection;
+        IDbCommand objCommand;
+        IDataAdapter objDataAdapter;
+        objConnection = Mapped.Connection();
+        objCommand = Mapped.Command(sql, objConnection);
+        objDataAdapter = Mapped.Adapter(objCommand);
+        // O objeto DataAdapter vai preencher o DataSet com os dados do BD.
+        objDataAdapter.Fill(ds); // O método Fill é o responsável por preencher o DataSet
+        objConnection.Close();
+        objCommand.Dispose();
+        objConnection.Dispose();
+        return ds;
+    }
+    public static bool VerificaPatologia(string patologia)
+    {
+        DataSet ds = new DataSet();
+        IDbConnection objConexao;
+        IDbCommand objCommand;
+        IDataAdapter objDataAdapter;
+        string sql = "select * from pat_patologia  where pat_descricao = ?pat_descricao";
+        objConexao = Mapped.Connection();
+        objCommand = Mapped.Command(sql, objConexao);
+        objCommand.Parameters.Add(Mapped.Parameter("?pat_descricao", patologia));
+        objDataAdapter = Mapped.Adapter(objCommand);
+        objDataAdapter.Fill(ds);
+        objConexao.Close();
+        objConexao.Dispose();
+        objCommand.Dispose();
+        if (ds.Tables[0].Rows.Count == 1){
+            return true;
+        }
+        return false;
+    }
 }

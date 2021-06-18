@@ -6,32 +6,39 @@
 <head runat="server">
     <title>Home</title>
     <link href="Content/bootstrap.min.css" rel="stylesheet" />
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"/>
     <link href="Content/myStyle.css" rel="stylesheet" />
     
 </head>
 <body>
     <form id="form1" runat="server">
         <!-- Main content -->
-        <section class="content mt-4 grad">
-            <div class="container mt-5">
-                <div class="row mt-3">
-                    <div class="col-12 col-sm-6 mb-5">
+        <section class="content grad">
+            <div class="container mt-1">
+                <div class="row mt-0">
+                    <div class="col-12 col-sm-6 my-5">
                         <asp:Image ID="imgLogin" ImageUrl="~/img/hand.png" CssClass="img-fluid rounded" runat="server" />
                     </div>
                     <div class="col-12 col-sm-6">
+                        
                         <!-- general form elements -->
-                        <div class="card card-primary mt-5 bgCinza">
+                        <div class="card card-primary  bgCinza">
                             <div class="card-header bg-primary">
                                 <h3 class="card-title">OldCareHome - Controle de Acesso</h3>
                             </div>
                             <!-- /.card-header -->
-                            <div class="card-body mt-3">
+                            <div class="card-body">
                                 <div class="form-group">
-                                    <label for="exampleInputEmail1"><strong>Email</strong></label>
+                                    <div class="text-center">
+                            <asp:Image ID="Image1" ImageUrl="~/img/idosa.png" CssClass="img-rounded" runat="server" />
+                        </div>
+                                    <label for="txtEmail"><strong>Email</strong></label>
+                                    
                                     <asp:TextBox ID="txtEmail" required="required" type="email" runat="server" placeholder="Digite email cadastrado" CssClass="form-control"></asp:TextBox>
                                 </div>
                                 <div class="form-group mt-3">
                                     <label for="exampleInputPassword1"><strong>Senha</strong></label>
+
                                     <asp:TextBox ID="txtSenha" required="required" type="password" runat="server" placeholder="Digite sua senha" CssClass="form-control mb-4"></asp:TextBox>
                                 </div>
                                 <div class="form-group mt-2 text-right">
@@ -50,6 +57,7 @@
                     </div>
                 </div>
             </div>
+
         </section>
         <!-- /.content -->
 
@@ -100,7 +108,8 @@
             </div>
         </div>
         <!-- /.modal -->
-        <script src="Scripts/jquery-3.5.1.min.js"></script>        
+
+        <script src="Scripts/jquery-3.5.1.min.js"></script>
         <script src="Scripts/bootstrap.bundle.min.js"></script>
         <script src="Scripts/bootstrap.min.js"></script>
     </form>

@@ -7,9 +7,14 @@ using System.Web.UI.WebControls;
 
 public partial class Adm_insertQuarto : System.Web.UI.Page
 {
-    protected void Page_Load(object sender, EventArgs e)
-    {
-
+    protected void Page_Load(object sender, EventArgs e){
+        if (Session["nome"] == null){
+            //Exibir mensagem de erro e redirecionar para login
+            Response.Redirect("~/Default.aspx");
+        }
+        else{
+            lblSessao.Text = Session["nome"].ToString();
+        }
     }
 
     protected void btnInsertQuartoVoltar_Click(object sender, EventArgs e){
@@ -36,5 +41,8 @@ public partial class Adm_insertQuarto : System.Web.UI.Page
 
                 break;
         }
+        txtInsertQuartoDescricao.Text = "";
+        txtInsertQuartoTipo.Text = "";
+        txtInsertQuartoCapacidade.Text = "";
     }
 }
