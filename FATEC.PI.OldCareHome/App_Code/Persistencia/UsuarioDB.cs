@@ -11,7 +11,6 @@ public class UsuarioDB
 {
     public static int Insert(Usuario u)
     {
-
         try
         {
             IDbConnection objConexao; // Abre a conexao
@@ -36,6 +35,64 @@ public class UsuarioDB
             return -2;
         }
         return 0;
+    }
+
+
+    public static int Update(Usuario u, int id)
+    {        
+        try
+        {
+            IDbConnection objConexao; // Abre a conexao
+            IDbCommand objCommand; // Cria o comando
+            string sql = "UPDATE usu_usuario SET";
+            sql += " usu_nome = ?usu_nome,";
+            sql += " usu_email = ?usu_email,";
+            sql += " usu_senha = ?usu_senha,";
+            sql += " usu_datacadastro = ?usu_datacadastro,";
+            sql += " per_id = ?per_id";
+            sql += " where usu_id = ?usu_id";
+
+            objConexao = Mapped.Connection();
+            objCommand = Mapped.Command(sql, objConexao);
+            objCommand.Parameters.Add(Mapped.Parameter("?usu_nome", u.Usu_nome));
+            objCommand.Parameters.Add(Mapped.Parameter("?usu_email", u.Usu_email));
+            objCommand.Parameters.Add(Mapped.Parameter("?usu_senha", u.Usu_senha));
+            objCommand.Parameters.Add(Mapped.Parameter("?usu_datacadastro", u.Usu_datacadastro));
+            objCommand.Parameters.Add(Mapped.Parameter("?usu_id", id));
+            objCommand.Parameters.Add(Mapped.Parameter("?per_id", u.Per_id.Per_id));
+            objCommand.ExecuteNonQuery();
+            objConexao.Close();
+            objCommand.Dispose();
+            objConexao.Dispose();
+
+        }
+        catch (Exception ex)
+        {
+            return -2;
+        }
+        return  0;
+    }
+    public static int Delete(int id)
+    {
+        int retorno = 0;
+        try
+        {
+            IDbConnection objConnection;
+            IDbCommand objCommand;
+            string sql = "DELETE FROM usu_usuario WHERE usu_id = ?usu_id";
+            objConnection = Mapped.Connection();
+            objCommand = Mapped.Command(sql, objConnection);
+            objCommand.Parameters.Add(Mapped.Parameter("?usu_id", id));
+            objCommand.ExecuteNonQuery();
+            objConnection.Close();
+            objCommand.Dispose();
+            objConnection.Dispose();
+        }
+        catch (Exception ex)
+        {
+            retorno = -2;
+        }
+        return retorno;
     }
     public static DataSet SelectAll(){
         string sql = "SELECT usu_id AS `Código`, usu_nome AS `Nome`, usu_email AS `Email`,  ";
@@ -74,6 +131,24 @@ public class UsuarioDB
         return ds;
     }
 
+    public static DataSet SelectId(int id)
+    {
+        DataSet ds = new DataSet();
+        IDbConnection objConexao;
+        IDbCommand objCommand;
+        IDataAdapter objDataAdapter;
+        string sql = "select usu_id, usu_nome, usu_email, usu_senha, usu_datacadastro, per_id from usu_usuario where usu_id = ?usu_id";
+        objConexao = Mapped.Connection();
+        objCommand = Mapped.Command(sql, objConexao);
+        objCommand.Parameters.Add(Mapped.Parameter("?usu_id", id));       
+        objDataAdapter = Mapped.Adapter(objCommand);
+        objDataAdapter.Fill(ds);
+        objConexao.Close();
+        objConexao.Dispose();
+        objCommand.Dispose();
+        return ds;
+    }
+
     public static bool VerificaEmail(string email){
         DataSet ds = new DataSet();
         IDbConnection objConexao;
@@ -93,6 +168,7 @@ public class UsuarioDB
         }
         return false;
     }
-     
+
+
 }
 

@@ -63,7 +63,8 @@ public partial class Adm_HomeRestrita : System.Web.UI.Page
         ddlPerfil.DataTextField = "Perfil"; // Nome da coluna do Banco de dados
         ddlPerfil.DataValueField = "Código"; // ID da coluna do Banco
         ddlPerfil.DataBind();
-        ddlPerfil.Items.Insert(0, "Selecione");
+        //ddlPerfil.Items.Insert(0, "Selecione");
+        ddlPerfil.SelectedItem.Value = "Secretaria";
     }
 
 

@@ -108,7 +108,7 @@
                             <span aria-hidden="true">&times;</span>
                         </button>
                     </div>
-                    <div class="modal-body text-center">
+                    <div class="modal-body ">
                         <div class="row">
                             <div class="col-12">
                                 <div class="cemPorCento mt-2">
@@ -259,7 +259,58 @@
             </div>
         </div>
         <!-- /.modal -->
+         <!-- Modal Editar Usuarios-->
+        <div class="modal fade modal-md" id="modalEditUsuario" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered" role="document">
+                <div class="modal-content">
+                    <div class="modal-header bg-primary">
+                        <h5 class="modal-title  text-center" id="titleEdit">Cadastro de Usuários</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body text-center">
+                        <div class="row">
+                            <div class="col-12">
+                                <div class="cemPorCento mt-2">
+                                    <asp:Label ID="Label3" runat="server" Text="Nome"></asp:Label>
+                                    <br />
+                                    <asp:TextBox ID="txtEditNome" CssClass="form-control" Required="Required" Width="100%" runat="server"></asp:TextBox>
+                                </div>
+                                <div class="mt-2">
+                                    <asp:Label ID="Label4" runat="server" Text="Email:"></asp:Label>
+                                    <br />
+                                    <asp:TextBox ID="txtEditEmail" Type="email" CssClass="form-control" Required="Required" Width="100%" runat="server"></asp:TextBox>
+                                </div>
+                                <div class="mt-2">
+                                    <asp:Label ID="Label6" runat="server" Text="Senha:"></asp:Label>
+                                    <br />
+                                    <asp:TextBox ID="txtEditSenha" CssClass="form-control" Required="Required" Width="100%" Type="password" runat="server"></asp:TextBox>
+                                </div>
+                                <div class="row">
+                                    <div class="col-6 mt-2">
+                                        <asp:Label ID="Label8" runat="server" Text="Data de Cadastro:"></asp:Label>
+                                        <br />
+                                        <asp:TextBox ID="txtEditDataCadastro" Type="Date" CssClass="form-control" Required="Required" Width="100%" runat="server"></asp:TextBox>
+                                    </div>
+                                    <div class="col-6 mt-2">
+                                        <asp:Label ID="Label9" runat="server" Text="Perfil"></asp:Label>
+                                        <br />
 
+                                        <asp:DropDownList ID="ddlEditUsuarioPerfil" CssClass="form-control" Required="Required" Width="100%" runat="server"></asp:DropDownList>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
+                        <asp:Button ID="Button1" class="btn btn-primary" runat="server" Text="Salvar" OnClick="btnSalvarUsuario_Click" />
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- /.modal Cadastrar usuários-->
 
 
 

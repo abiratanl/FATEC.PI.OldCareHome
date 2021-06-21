@@ -29,4 +29,21 @@ public class OcorrenciaDB{
         }
         return 0;
     }
+    public static DataSet SelectAll()
+    {
+        string sql = "SELECT oco_id AS `Código`, oco_descricao AS `Descrição`, oco_tipo AS `Tipo` FROM oco_ocorrencia";
+        DataSet ds = new DataSet();
+        IDbConnection objConnection;
+        IDbCommand objCommand;
+        IDataAdapter objDataAdapter;
+        objConnection = Mapped.Connection();
+        objCommand = Mapped.Command(sql, objConnection);
+        objDataAdapter = Mapped.Adapter(objCommand);
+        // O objeto DataAdapter vai preencher o DataSet com os dados do BD.
+        objDataAdapter.Fill(ds); // O método Fill é o responsável por preencher o DataSet
+        objConnection.Close();
+        objCommand.Dispose();
+        objConnection.Dispose();
+        return ds;
+    }
 }

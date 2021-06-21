@@ -41,7 +41,7 @@ public class FuncionarioDB{
         }
         return 0;
     }
-    public static DataSet SelectAll() {
+    public static DataSet SelectGrid() {
         DataSet ds = new DataSet();
         IDbConnection objConnection;
         IDbCommand objCommand;
@@ -56,7 +56,7 @@ public class FuncionarioDB{
         objConnection.Dispose();
         return ds;
     }
-    public static DataSet SelectGrid(){
+    public static DataSet SelectAll(){
         string sql = "SELECT fun_id AS `Código`, fun_nome AS `Nome`, DATE_FORMAT(fun_dataadmissao, '%d/%m/%Y') AS `Admissão`, sit_descricao AS `Situação` FROM fun_funcionario INNER JOIN sit_situacao USING(sit_id) ORDER BY fun_nome";
         DataSet ds = new DataSet();
         IDbConnection objConnection;

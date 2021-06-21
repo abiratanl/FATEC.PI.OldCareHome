@@ -30,4 +30,23 @@ public class ProdutoDB{
         }
         return 0;
     }
+
+    public static DataSet SelectAll()
+    {
+        string sql = "SELECT pro_id AS `Código`, pro_descricao AS `Produto`, pro_unidade AS Unidade, pro_emuso AS `Em Uso` FROM pro_produto;";
+        
+        DataSet ds = new DataSet();
+        IDbConnection objConnection;
+        IDbCommand objCommand;
+        IDataAdapter objDataAdapter;
+        objConnection = Mapped.Connection();
+        objCommand = Mapped.Command(sql, objConnection);
+        objDataAdapter = Mapped.Adapter(objCommand);
+        // O objeto DataAdapter vai preencher o DataSet com os dados do BD.
+        objDataAdapter.Fill(ds); // O método Fill é o responsável por preencher o DataSet
+        objConnection.Close();
+        objCommand.Dispose();
+        objConnection.Dispose();
+        return ds;
+    }
 }
