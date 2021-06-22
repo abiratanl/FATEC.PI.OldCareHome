@@ -21,7 +21,7 @@ public partial class Adm_HomeTabelas : System.Web.UI.Page
             // lblSessao.Text = Session["nome"].ToString();
             if (!IsPostBack)
             {
-                CarregarTable();
+                //CarregarTable();
             }
 
         }
@@ -29,8 +29,8 @@ public partial class Adm_HomeTabelas : System.Web.UI.Page
     }
 
     protected void CarregarTable(){
-        DataSet ds = UsuarioDB.SelectAll();
-        rptTableBody.DataSource = ds;
-        rptTableBody.DataBind();
+        //DataSet ds = UsuarioDB.SelectAll();
+       // rptTableBody.DataSource = ds;
+       // rptTableBody.DataBind();
     }
 }

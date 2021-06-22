@@ -23,7 +23,6 @@ public class FuncionarioDB{
             objCommand.Parameters.Add(Mapped.Parameter("?fun_datanascimento", f.Fun_datanascimento));
             objCommand.Parameters.Add(Mapped.Parameter("?fun_datasituacao", f.Fun_datasituacao));
             objCommand.Parameters.Add(Mapped.Parameter("?fun_sexo", f.Fun_sexo));
-            objCommand.Parameters.Add(Mapped.Parameter("?fun_sexo", f.Fun_sexo));
             objCommand.Parameters.Add(Mapped.Parameter("?fun_rg", f.Fun_rg));
             objCommand.Parameters.Add(Mapped.Parameter("?fun_pis", f.Fun_pis));
             objCommand.Parameters.Add(Mapped.Parameter("?fun_ctps", f.Fun_ctps));
@@ -57,7 +56,11 @@ public class FuncionarioDB{
         return ds;
     }
     public static DataSet SelectAll(){
-        string sql = "SELECT fun_id AS `Código`, fun_nome AS `Nome`, DATE_FORMAT(fun_dataadmissao, '%d/%m/%Y') AS `Admissão`, sit_descricao AS `Situação` FROM fun_funcionario INNER JOIN sit_situacao USING(sit_id) ORDER BY fun_nome";
+        string sql = "SELECT fun_id AS `Código`,";
+        sql += " fun_nome AS `Nome`,";
+        sql += " DATE_FORMAT(fun_dataadmissao, '%d/%m/%Y') AS `Admissão`,";
+        sql += " sit_descricao AS `Situação`";
+        sql += " FROM fun_funcionario INNER JOIN sit_situacao USING(sit_id) ORDER BY fun_nome";
         DataSet ds = new DataSet();
         IDbConnection objConnection;
         IDbCommand objCommand;

@@ -137,7 +137,7 @@ public class UsuarioDB
         IDbConnection objConexao;
         IDbCommand objCommand;
         IDataAdapter objDataAdapter;
-        string sql = "select usu_id, usu_nome, usu_email, usu_senha, usu_datacadastro, per_id from usu_usuario where usu_id = ?usu_id";
+        string sql = "SELECT * FROM usu_usuario WHERE usu_id = ?usu_id";
         objConexao = Mapped.Connection();
         objCommand = Mapped.Command(sql, objConexao);
         objCommand.Parameters.Add(Mapped.Parameter("?usu_id", id));       
