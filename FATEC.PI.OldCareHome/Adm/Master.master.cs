@@ -81,6 +81,12 @@ public partial class Adm_Master : System.Web.UI.MasterPage
             case "fun_funcionario":
                 Response.Redirect("~/adm/tblFuncionario.aspx");
                 break;
+            case "int_internos":
+                Response.Redirect("~/adm/tblInternos.aspx");
+                break;
+            case "res_responsavel":
+                Response.Redirect("~/adm/tblResponsavel.aspx");
+                break;
         }
         int qtd = ds.Tables[0].Rows.Count;
         if (qtd > 0)
@@ -104,5 +110,14 @@ public partial class Adm_Master : System.Web.UI.MasterPage
         ChangeTable();
         //lblTitle.Text = "Cadastro de " +  ddlTabelas.SelectedItem;
         //lblMsg.Text = ddlTabelas.SelectedValue;
+    }
+
+    protected void btnDisponibilidade_Click(object sender, EventArgs e)
+    {
+        Page.ClientScript.RegisterStartupScript(this.GetType(), "script", "<script> $('#modalDisponibilidade').modal('show'); </script>", false);
+        DataSet ds = QuartoDB.Disponibilidade();
+        rptTableBody.DataSource = ds;
+        rptTableBody.DataBind();
+
     }
 }

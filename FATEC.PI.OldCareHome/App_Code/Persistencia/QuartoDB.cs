@@ -87,7 +87,7 @@ public class QuartoDB{
     }
 
     public static DataSet SelectAll(){
-        string sql = "SELECT qua_id AS `Código`, qua_descricao AS `Descrição`, qua_tipo AS `Tipo`,  ";
+        string sql = "SELECT qua_id AS `Código`, qua_descricao AS `Descrição`, qua_tipo AS `Gênero`,  ";
         sql += "qua_capacidade AS `Capacidade` FROM qua_quarto";
         
         DataSet ds = new DataSet();
@@ -121,6 +121,24 @@ public class QuartoDB{
         objConexao.Close();
         objConexao.Dispose();
         objCommand.Dispose();
+        return ds;
+    }
+    public static DataSet Disponibilidade()
+    {
+        string sql = "SELECT SUM(qua_quarto.qua_capacidade) AS `Capacidade`, COUNT(int_internos.qua_id) AS `Ocupação`, (SUM(qua_quarto.qua_capacidade) - (SUM(int_internos.qua_id))) `Disponível`, qua_tipo as `Sexo` FROM qua_quarto LEFT JOIN int_internos USING (qua_id) GROUP BY qua_tipo";
+
+        DataSet ds = new DataSet();
+        IDbConnection objConnection;
+        IDbCommand objCommand;
+        IDataAdapter objDataAdapter;
+        objConnection = Mapped.Connection();
+        objCommand = Mapped.Command(sql, objConnection);
+        objDataAdapter = Mapped.Adapter(objCommand);
+        // O objeto DataAdapter vai preencher o DataSet com os dados do BD.
+        objDataAdapter.Fill(ds); // O método Fill é o responsável por preencher o DataSet
+        objConnection.Close();
+        objCommand.Dispose();
+        objConnection.Dispose();
         return ds;
     }
 

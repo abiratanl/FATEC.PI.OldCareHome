@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Adm/Master.master" AutoEventWireup="true" CodeFile="tblUsuario.aspx.cs" Inherits="Adm_Tables_Usuario" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Adm/Master.master" AutoEventWireup="true" CodeFile="tblResponsavel.aspx.cs" Inherits="Adm_Tables_Usuario" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="Server">
 </asp:Content>
@@ -10,12 +10,12 @@
                     <div class="mx-3">
                         <div class="row">
                             <div class="col-1 bg-primary text-right ">
-                                <asp:LinkButton ID="btnIncluirUsuario" runat="server" data-toggle="tooltip" data-placement="top" title="Incluir um usuário" OnClick="btnIncluirUsuario_Click" onMouseOver="window.status='New Panel'; return true;" onMouseOut="window.status='Menu ready'; return true;">
+                                <asp:LinkButton ID="btnIncluirUsuario" runat="server" data-toggle="tooltip" data-placement="top" title="Incluir um usuário" OnClick="btnIncluirUsuario_Click1" onMouseOver="window.status='New Panel'; return true;" onMouseOut="window.status='Menu ready'; return true;">
                                     <asp:Image ID="Image4" runat="server" ImageUrl="~/img/ico24/add-blue-24.jpg" BackColor="Transparent" />
                                 </asp:LinkButton>
                             </div>
                             <div class="col-11 bg-primary text-white">
-                                <asp:Label ID="lblTitle" CssClass="h4" runat="server" Text="Cadastro de Usuários"></asp:Label>
+                                <asp:Label ID="lblTitle" CssClass="h4" runat="server" Text="Cadastro de Responsáveis"></asp:Label>
                             </div>
                         </div>
                     </div>
@@ -29,9 +29,9 @@
                                 <tr>
                                     <th>Código</th>
                                     <th>Nome</th>
-                                    <th>Email</th>
-                                    <th>Data de Cadastro</th>
-                                    <th>Perfil</th>
+                                    <th>Parentesco</th>
+                                    <th>C P F</th>
+                                    <th>R G</th>
                                     <th>Editar</th>
                                     <th>Excluir</th>
                                 </tr>
@@ -46,16 +46,16 @@
                                             <td>
                                                 <asp:Label ID="Label2" runat="server" Text='<%#DataBinder.Eval(Container.DataItem, "Nome")%>'></asp:Label>
                                             </td>
-                                            <td><%#DataBinder.Eval(Container.DataItem, "Email")%></td>
-                                            <td><%#DataBinder.Eval(Container.DataItem, "Data de Cadastro")%></td>
-                                            <td><%#DataBinder.Eval(Container.DataItem, "Perfil")%></td>
+                                            <td><%#DataBinder.Eval(Container.DataItem, "Parentesco")%></td>
+                                            <td><%#DataBinder.Eval(Container.DataItem, "CPF")%></td>
+                                            <td><%#DataBinder.Eval(Container.DataItem, "RG")%></td>
                                             <td>
-                                                <asp:LinkButton ID="btnRptEditar" CommandName="Editar" CommandArgument='<%#Eval("Código")%>' runat="server" OnClick="btnRptEditar_Click" onMouseOver="window.status='New Panel'; return true;" onMouseOut="window.status='Menu ready'; return true;">
+                                                <asp:LinkButton ID="btnRptEditar" CommandName="Editar" CommandArgument='<%#Eval("Código")%>' runat="server" OnClick="btnRptEditar_Click1" onMouseOver="window.status='New Panel'; return true;" onMouseOut="window.status='Menu ready'; return true;">
                                                     <asp:Image ID="Image2" runat="server" ImageUrl="~/img/ico32/edit-orange-32.jpg" BackColor="Transparent" />
                                                 </asp:LinkButton>
                                             </td>
                                             <td>
-                                                <asp:LinkButton ID="btnRptExcluir" CommandName="Excluir" CommandArgument='<%#Eval("Código")%>' runat="server" OnClick="btnRptExcluir_Click" onMouseOver="window.status='New Panel'; return true;" onMouseOut="window.status='Menu ready'; return true;">
+                                                <asp:LinkButton ID="btnRptExcluir" CommandName="Excluir" CommandArgument='<%#Eval("Código")%>' runat="server" OnClick="btnRptExcluir_Click1" onMouseOver="window.status='New Panel'; return true;" onMouseOut="window.status='Menu ready'; return true;">
                                                     <asp:Image ID="Image3" runat="server" ImageUrl="~/img/ico32/delete-red-32.jpg" BackColor="Transparent" />
                                                 </asp:LinkButton>
                                             </td>  
@@ -70,26 +70,7 @@
                 <!-- /.card-body -->
                 <!-- card-footer -->
                 <div class="card-footer ">
-                    <asp:Literal ID="ltlMsg" runat="server"></asp:Literal>
-                    <!--     <asp:Panel ID="panBotoes" runat="server" CssClass="btn-group text-right" role="group">
-                       
-                        <asp:LinkButton ID="btnAdicionar" CssClass="text-center mx-2" runat="server" Width="100%" onMouseOver="window.status='New Panel'; return true;" onMouseOut="window.status='Menu ready'; return true;">
-                            <asp:Image ID="Image1" runat="server" ImageUrl="~/img/ico32/add-blue-32.jpg" BackColor="Transparent" />
-                            <br />
-                            <asp:Label ID="Label5" runat="server" Text="Adicionar"></asp:Label>
-                        </asp:LinkButton>
-                        <asp:LinkButton ID="btnEditar" CssClass="text-center mx-2"  runat="server" Width="100%" onMouseOver="window.status='New Panel'; return true;" onMouseOut="window.status='Menu ready'; return true;">
-                            <asp:Image ID="Image2" runat="server" ImageUrl="~/img/ico32/edit-orange-32.jpg" BackColor="Transparent" />
-                            <br />
-                            <asp:Label ID="lblEditar" runat="server" Text="Editar"></asp:Label>
-                        </asp:LinkButton>
-                        <asp:LinkButton ID="btnExcluir" CssClass="text-center mx-2"  runat="server" Width="100%" onMouseOver="window.status='New Panel'; return true;" onMouseOut="window.status='Menu ready'; return true;">
-                            <asp:Image ID="Image3" runat="server" ImageUrl="~/img/ico32/delete-red-32.jpg" BackColor="Transparent" />
-                            <br />
-                            <asp:Label ID="lblExcluir" runat="server" Text="Excluir"></asp:Label>
-                        </asp:LinkButton>
-                      
-                    </asp:Panel>-->
+                    <asp:Literal ID="ltlMsg" runat="server"></asp:Literal>                    
                 </div>
                 <!--./ card-footer -->
             </div>

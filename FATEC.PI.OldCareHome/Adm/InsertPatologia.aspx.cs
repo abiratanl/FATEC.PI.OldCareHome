@@ -8,13 +8,8 @@ using System.Web.UI.WebControls;
 public partial class Adm_InsertPatologia : System.Web.UI.Page
 {
     protected void Page_Load(object sender, EventArgs e){
-        if (Session["nome"] == null){
-            //Exibir mensagem de erro e redirecionar para login
+        if (Session["nome"] == null)
             Response.Redirect("~/Default.aspx");
-        }
-        else{
-            lblSessao.Text = Session["nome"].ToString();            
-        }  
     }
 
     protected void btnInsertPatologiaCadastrar_Click(object sender, EventArgs e){

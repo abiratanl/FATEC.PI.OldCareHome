@@ -1,0 +1,995 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml-stylesheet type="text/xsl" href="c:\program files (x86)\microsoft visual studio\2019\community\team tools\static analysis tools\fxcop\Xml\CodeAnalysisReport.xsl"?>
+<FxCopReport Version="16.0">
+ <Targets>
+  <Target Name="C:\Users\abira\AppData\Local\Temp\tmp2FEF.tmp.cadir\bin\App_Code.dll">
+   <Modules>
+    <Module Name="app_code.dll">
+     <Namespaces>
+      <Namespace Name="">
+       <Types>
+        <Type Name="CargoDB" Kind="Class" Accessibility="Public" ExternallyVisible="True">
+         <Members>
+          <Member Name="#Delete(System.Int32)" Kind="Method" Static="True" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="Do not dispose objects multiple times" Category="Microsoft.Usage" CheckId="CA2202" Status="Active" Created="2021-06-23 14:27:43Z" FixCategory="DependsOnFix">
+             <Issue Certainty="75" Level="Warning" Path="C:\Users\abira\source\repos\FATEC.PI.OldCareHome\FATEC.PI.OldCareHome\App_Code\Persistencia" File="CargoDB.cs" Line="78">Object 'objConnection' can be disposed more than once in method 'CargoDB.Delete(int)'. To avoid generating a System.ObjectDisposedException you should not call Dispose more than one time on an object.: Lines: 78</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#Insert(Cargo)" Kind="Method" Static="True" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="Do not dispose objects multiple times" Category="Microsoft.Usage" CheckId="CA2202" Status="Active" Created="2021-06-23 14:27:43Z" FixCategory="DependsOnFix">
+             <Issue Certainty="75" Level="Warning" Path="C:\Users\abira\source\repos\FATEC.PI.OldCareHome\FATEC.PI.OldCareHome\App_Code\Persistencia" File="CargoDB.cs" Line="27">Object 'objConexao' can be disposed more than once in method 'CargoDB.Insert(Cargo)'. To avoid generating a System.ObjectDisposedException you should not call Dispose more than one time on an object.: Lines: 27</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#SelectAll()" Kind="Method" Static="True" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="Do not dispose objects multiple times" Category="Microsoft.Usage" CheckId="CA2202" Status="Active" Created="2021-06-23 14:27:43Z" FixCategory="DependsOnFix">
+             <Issue Certainty="75" Level="Warning" Path="C:\Users\abira\source\repos\FATEC.PI.OldCareHome\FATEC.PI.OldCareHome\App_Code\Persistencia" File="CargoDB.cs" Line="102">Object 'objConnection' can be disposed more than once in method 'CargoDB.SelectAll()'. To avoid generating a System.ObjectDisposedException you should not call Dispose more than one time on an object.: Lines: 102</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#SelectId(System.Int32)" Kind="Method" Static="True" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="Do not dispose objects multiple times" Category="Microsoft.Usage" CheckId="CA2202" Status="Active" Created="2021-06-23 14:27:43Z" FixCategory="DependsOnFix">
+             <Issue Certainty="75" Level="Warning" Path="C:\Users\abira\source\repos\FATEC.PI.OldCareHome\FATEC.PI.OldCareHome\App_Code\Persistencia" File="CargoDB.cs" Line="119">Object 'objConexao' can be disposed more than once in method 'CargoDB.SelectId(int)'. To avoid generating a System.ObjectDisposedException you should not call Dispose more than one time on an object.: Lines: 119</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#Update(Cargo,System.Int32)" Kind="Method" Static="True" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="Do not dispose objects multiple times" Category="Microsoft.Usage" CheckId="CA2202" Status="Active" Created="2021-06-23 14:27:43Z" FixCategory="DependsOnFix">
+             <Issue Certainty="75" Level="Warning" Path="C:\Users\abira\source\repos\FATEC.PI.OldCareHome\FATEC.PI.OldCareHome\App_Code\Persistencia" File="CargoDB.cs" Line="55">Object 'objConexao' can be disposed more than once in method 'CargoDB.Update(Cargo, int)'. To avoid generating a System.ObjectDisposedException you should not call Dispose more than one time on an object.: Lines: 55</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#VerificaCargo(System.String)" Kind="Method" Static="True" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="Do not dispose objects multiple times" Category="Microsoft.Usage" CheckId="CA2202" Status="Active" Created="2021-06-23 14:27:43Z" FixCategory="DependsOnFix">
+             <Issue Certainty="75" Level="Warning" Path="C:\Users\abira\source\repos\FATEC.PI.OldCareHome\FATEC.PI.OldCareHome\App_Code\Persistencia" File="CargoDB.cs" Line="137">Object 'objConexao' can be disposed more than once in method 'CargoDB.VerificaCargo(string)'. To avoid generating a System.ObjectDisposedException you should not call Dispose more than one time on an object.: Lines: 137</Issue>
+            </Message>
+           </Messages>
+          </Member>
+         </Members>
+        </Type>
+        <Type Name="ContatoDB" Kind="Class" Accessibility="Public" ExternallyVisible="True">
+         <Members>
+          <Member Name="#Delete(System.Int32)" Kind="Method" Static="True" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="Do not dispose objects multiple times" Category="Microsoft.Usage" CheckId="CA2202" Status="Active" Created="2021-06-23 14:27:43Z" FixCategory="DependsOnFix">
+             <Issue Certainty="75" Level="Warning" Path="C:\Users\abira\source\repos\FATEC.PI.OldCareHome\FATEC.PI.OldCareHome\App_Code\Persistencia" File="ContatoDB.cs" Line="80">Object 'objConnection' can be disposed more than once in method 'ContatoDB.Delete(int)'. To avoid generating a System.ObjectDisposedException you should not call Dispose more than one time on an object.: Lines: 80</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#Insert(Contato)" Kind="Method" Static="True" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="Do not dispose objects multiple times" Category="Microsoft.Usage" CheckId="CA2202" Status="Active" Created="2021-06-23 14:27:43Z" FixCategory="DependsOnFix">
+             <Issue Certainty="75" Level="Warning" Path="C:\Users\abira\source\repos\FATEC.PI.OldCareHome\FATEC.PI.OldCareHome\App_Code\Persistencia" File="ContatoDB.cs" Line="26">Object 'objConexao' can be disposed more than once in method 'ContatoDB.Insert(Contato)'. To avoid generating a System.ObjectDisposedException you should not call Dispose more than one time on an object.: Lines: 26</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#SelectAll()" Kind="Method" Static="True" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="Do not dispose objects multiple times" Category="Microsoft.Usage" CheckId="CA2202" Status="Active" Created="2021-06-23 14:27:43Z" FixCategory="DependsOnFix">
+             <Issue Certainty="75" Level="Warning" Path="C:\Users\abira\source\repos\FATEC.PI.OldCareHome\FATEC.PI.OldCareHome\App_Code\Persistencia" File="ContatoDB.cs" Line="105">Object 'objConnection' can be disposed more than once in method 'ContatoDB.SelectAll()'. To avoid generating a System.ObjectDisposedException you should not call Dispose more than one time on an object.: Lines: 105</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#SelectId(System.Int32)" Kind="Method" Static="True" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="Do not dispose objects multiple times" Category="Microsoft.Usage" CheckId="CA2202" Status="Active" Created="2021-06-23 14:27:43Z" FixCategory="DependsOnFix">
+             <Issue Certainty="75" Level="Warning" Path="C:\Users\abira\source\repos\FATEC.PI.OldCareHome\FATEC.PI.OldCareHome\App_Code\Persistencia" File="ContatoDB.cs" Line="122">Object 'objConexao' can be disposed more than once in method 'ContatoDB.SelectId(int)'. To avoid generating a System.ObjectDisposedException you should not call Dispose more than one time on an object.: Lines: 122</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#Update(Contato,System.Int32)" Kind="Method" Static="True" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="Do not dispose objects multiple times" Category="Microsoft.Usage" CheckId="CA2202" Status="Active" Created="2021-06-23 14:27:43Z" FixCategory="DependsOnFix">
+             <Issue Certainty="75" Level="Warning" Path="C:\Users\abira\source\repos\FATEC.PI.OldCareHome\FATEC.PI.OldCareHome\App_Code\Persistencia" File="ContatoDB.cs" Line="56">Object 'objConexao' can be disposed more than once in method 'ContatoDB.Update(Contato, int)'. To avoid generating a System.ObjectDisposedException you should not call Dispose more than one time on an object.: Lines: 56</Issue>
+            </Message>
+           </Messages>
+          </Member>
+         </Members>
+        </Type>
+        <Type Name="Del" Kind="Class" Accessibility="Public" ExternallyVisible="True">
+         <Members>
+          <Member Name="#Delete(System.String,System.String,System.String)" Kind="Method" Static="True" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="Do not dispose objects multiple times" Category="Microsoft.Usage" CheckId="CA2202" Status="Active" Created="2021-06-23 14:27:43Z" FixCategory="DependsOnFix">
+             <Issue Certainty="75" Level="Warning" Path="C:\Users\abira\source\repos\FATEC.PI.OldCareHome\FATEC.PI.OldCareHome\App_Code\Persistencia" File="Del.cs" Line="24">Object 'objConnection' can be disposed more than once in method 'Del.Delete(string, string, string)'. To avoid generating a System.ObjectDisposedException you should not call Dispose more than one time on an object.: Lines: 24</Issue>
+            </Message>
+           </Messages>
+          </Member>
+         </Members>
+        </Type>
+        <Type Name="DiretorDB" Kind="Class" Accessibility="Public" ExternallyVisible="True">
+         <Members>
+          <Member Name="#Delete(System.Int32)" Kind="Method" Static="True" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="Do not dispose objects multiple times" Category="Microsoft.Usage" CheckId="CA2202" Status="Active" Created="2021-06-23 14:27:43Z" FixCategory="DependsOnFix">
+             <Issue Certainty="75" Level="Warning" Path="C:\Users\abira\source\repos\FATEC.PI.OldCareHome\FATEC.PI.OldCareHome\App_Code\Persistencia" File="DiretorDB.cs" Line="80">Object 'objConnection' can be disposed more than once in method 'DiretorDB.Delete(int)'. To avoid generating a System.ObjectDisposedException you should not call Dispose more than one time on an object.: Lines: 80</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#Insert(Diretor)" Kind="Method" Static="True" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="Do not dispose objects multiple times" Category="Microsoft.Usage" CheckId="CA2202" Status="Active" Created="2021-06-23 14:27:43Z" FixCategory="DependsOnFix">
+             <Issue Certainty="75" Level="Warning" Path="C:\Users\abira\source\repos\FATEC.PI.OldCareHome\FATEC.PI.OldCareHome\App_Code\Persistencia" File="DiretorDB.cs" Line="26">Object 'objConexao' can be disposed more than once in method 'DiretorDB.Insert(Diretor)'. To avoid generating a System.ObjectDisposedException you should not call Dispose more than one time on an object.: Lines: 26</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#SelectAll()" Kind="Method" Static="True" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="Do not dispose objects multiple times" Category="Microsoft.Usage" CheckId="CA2202" Status="Active" Created="2021-06-23 14:27:43Z" FixCategory="DependsOnFix">
+             <Issue Certainty="75" Level="Warning" Path="C:\Users\abira\source\repos\FATEC.PI.OldCareHome\FATEC.PI.OldCareHome\App_Code\Persistencia" File="DiretorDB.cs" Line="103">Object 'objConnection' can be disposed more than once in method 'DiretorDB.SelectAll()'. To avoid generating a System.ObjectDisposedException you should not call Dispose more than one time on an object.: Lines: 103</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#SelectId(System.Int32)" Kind="Method" Static="True" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="Do not dispose objects multiple times" Category="Microsoft.Usage" CheckId="CA2202" Status="Active" Created="2021-06-23 14:27:43Z" FixCategory="DependsOnFix">
+             <Issue Certainty="75" Level="Warning" Path="C:\Users\abira\source\repos\FATEC.PI.OldCareHome\FATEC.PI.OldCareHome\App_Code\Persistencia" File="DiretorDB.cs" Line="120">Object 'objConexao' can be disposed more than once in method 'DiretorDB.SelectId(int)'. To avoid generating a System.ObjectDisposedException you should not call Dispose more than one time on an object.: Lines: 120</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#Update(Diretor,System.Int32)" Kind="Method" Static="True" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="Do not dispose objects multiple times" Category="Microsoft.Usage" CheckId="CA2202" Status="Active" Created="2021-06-23 14:27:43Z" FixCategory="DependsOnFix">
+             <Issue Certainty="75" Level="Warning" Path="C:\Users\abira\source\repos\FATEC.PI.OldCareHome\FATEC.PI.OldCareHome\App_Code\Persistencia" File="DiretorDB.cs" Line="58">Object 'objConexao' can be disposed more than once in method 'DiretorDB.Update(Diretor, int)'. To avoid generating a System.ObjectDisposedException you should not call Dispose more than one time on an object.: Lines: 58</Issue>
+            </Message>
+           </Messages>
+          </Member>
+         </Members>
+        </Type>
+        <Type Name="DiretoriaDB" Kind="Class" Accessibility="Public" ExternallyVisible="True">
+         <Members>
+          <Member Name="#Delete(System.Int32)" Kind="Method" Static="True" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="Do not dispose objects multiple times" Category="Microsoft.Usage" CheckId="CA2202" Status="Active" Created="2021-06-23 14:27:43Z" FixCategory="DependsOnFix">
+             <Issue Certainty="75" Level="Warning" Path="C:\Users\abira\source\repos\FATEC.PI.OldCareHome\FATEC.PI.OldCareHome\App_Code\Persistencia" File="DiretoriaDB.cs" Line="82">Object 'objConnection' can be disposed more than once in method 'DiretoriaDB.Delete(int)'. To avoid generating a System.ObjectDisposedException you should not call Dispose more than one time on an object.: Lines: 82</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#Insert(Diretoria)" Kind="Method" Static="True" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="Do not dispose objects multiple times" Category="Microsoft.Usage" CheckId="CA2202" Status="Active" Created="2021-06-23 14:27:43Z" FixCategory="DependsOnFix">
+             <Issue Certainty="75" Level="Warning" Path="C:\Users\abira\source\repos\FATEC.PI.OldCareHome\FATEC.PI.OldCareHome\App_Code\Persistencia" File="DiretoriaDB.cs" Line="28">Object 'objConexao' can be disposed more than once in method 'DiretoriaDB.Insert(Diretoria)'. To avoid generating a System.ObjectDisposedException you should not call Dispose more than one time on an object.: Lines: 28</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#SelectAll()" Kind="Method" Static="True" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="Do not dispose objects multiple times" Category="Microsoft.Usage" CheckId="CA2202" Status="Active" Created="2021-06-23 14:27:43Z" FixCategory="DependsOnFix">
+             <Issue Certainty="75" Level="Warning" Path="C:\Users\abira\source\repos\FATEC.PI.OldCareHome\FATEC.PI.OldCareHome\App_Code\Persistencia" File="DiretoriaDB.cs" Line="109">Object 'objConnection' can be disposed more than once in method 'DiretoriaDB.SelectAll()'. To avoid generating a System.ObjectDisposedException you should not call Dispose more than one time on an object.: Lines: 109</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#SelectId(System.Int32)" Kind="Method" Static="True" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="Do not dispose objects multiple times" Category="Microsoft.Usage" CheckId="CA2202" Status="Active" Created="2021-06-23 14:27:43Z" FixCategory="DependsOnFix">
+             <Issue Certainty="75" Level="Warning" Path="C:\Users\abira\source\repos\FATEC.PI.OldCareHome\FATEC.PI.OldCareHome\App_Code\Persistencia" File="DiretoriaDB.cs" Line="127">Object 'objConexao' can be disposed more than once in method 'DiretoriaDB.SelectId(int)'. To avoid generating a System.ObjectDisposedException you should not call Dispose more than one time on an object.: Lines: 127</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#Update(Diretoria,System.Int32)" Kind="Method" Static="True" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="Do not dispose objects multiple times" Category="Microsoft.Usage" CheckId="CA2202" Status="Active" Created="2021-06-23 14:27:43Z" FixCategory="DependsOnFix">
+             <Issue Certainty="75" Level="Warning" Path="C:\Users\abira\source\repos\FATEC.PI.OldCareHome\FATEC.PI.OldCareHome\App_Code\Persistencia" File="DiretoriaDB.cs" Line="59">Object 'objConexao' can be disposed more than once in method 'DiretoriaDB.Update(Diretoria, int)'. To avoid generating a System.ObjectDisposedException you should not call Dispose more than one time on an object.: Lines: 59</Issue>
+            </Message>
+           </Messages>
+          </Member>
+         </Members>
+        </Type>
+        <Type Name="EncargoDB" Kind="Class" Accessibility="Public" ExternallyVisible="True">
+         <Members>
+          <Member Name="#Delete(System.Int32)" Kind="Method" Static="True" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="Do not dispose objects multiple times" Category="Microsoft.Usage" CheckId="CA2202" Status="Active" Created="2021-06-23 14:27:43Z" FixCategory="DependsOnFix">
+             <Issue Certainty="75" Level="Warning" Path="C:\Users\abira\source\repos\FATEC.PI.OldCareHome\FATEC.PI.OldCareHome\App_Code\Persistencia" File="EncargoDB.cs" Line="86">Object 'objConnection' can be disposed more than once in method 'EncargoDB.Delete(int)'. To avoid generating a System.ObjectDisposedException you should not call Dispose more than one time on an object.: Lines: 86</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#Insert(Encargo)" Kind="Method" Static="True" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="Do not dispose objects multiple times" Category="Microsoft.Usage" CheckId="CA2202" Status="Active" Created="2021-06-23 14:27:43Z" FixCategory="DependsOnFix">
+             <Issue Certainty="75" Level="Warning" Path="C:\Users\abira\source\repos\FATEC.PI.OldCareHome\FATEC.PI.OldCareHome\App_Code\Persistencia" File="EncargoDB.cs" Line="28">Object 'objConexao' can be disposed more than once in method 'EncargoDB.Insert(Encargo)'. To avoid generating a System.ObjectDisposedException you should not call Dispose more than one time on an object.: Lines: 28</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#SelectAll()" Kind="Method" Static="True" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="Do not dispose objects multiple times" Category="Microsoft.Usage" CheckId="CA2202" Status="Active" Created="2021-06-23 14:27:43Z" FixCategory="DependsOnFix">
+             <Issue Certainty="75" Level="Warning" Path="C:\Users\abira\source\repos\FATEC.PI.OldCareHome\FATEC.PI.OldCareHome\App_Code\Persistencia" File="EncargoDB.cs" Line="115">Object 'objConnection' can be disposed more than once in method 'EncargoDB.SelectAll()'. To avoid generating a System.ObjectDisposedException you should not call Dispose more than one time on an object.: Lines: 115</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#SelectId(System.Int32)" Kind="Method" Static="True" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="Do not dispose objects multiple times" Category="Microsoft.Usage" CheckId="CA2202" Status="Active" Created="2021-06-23 14:27:43Z" FixCategory="DependsOnFix">
+             <Issue Certainty="75" Level="Warning" Path="C:\Users\abira\source\repos\FATEC.PI.OldCareHome\FATEC.PI.OldCareHome\App_Code\Persistencia" File="EncargoDB.cs" Line="132">Object 'objConexao' can be disposed more than once in method 'EncargoDB.SelectId(int)'. To avoid generating a System.ObjectDisposedException you should not call Dispose more than one time on an object.: Lines: 132</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#Update(Encargo,System.Int32)" Kind="Method" Static="True" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="Do not dispose objects multiple times" Category="Microsoft.Usage" CheckId="CA2202" Status="Active" Created="2021-06-23 14:27:43Z" FixCategory="DependsOnFix">
+             <Issue Certainty="75" Level="Warning" Path="C:\Users\abira\source\repos\FATEC.PI.OldCareHome\FATEC.PI.OldCareHome\App_Code\Persistencia" File="EncargoDB.cs" Line="62">Object 'objConexao' can be disposed more than once in method 'EncargoDB.Update(Encargo, int)'. To avoid generating a System.ObjectDisposedException you should not call Dispose more than one time on an object.: Lines: 62</Issue>
+            </Message>
+           </Messages>
+          </Member>
+         </Members>
+        </Type>
+        <Type Name="EnderecoDB" Kind="Class" Accessibility="Public" ExternallyVisible="True">
+         <Members>
+          <Member Name="#Delete(System.Int32)" Kind="Method" Static="True" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="Do not dispose objects multiple times" Category="Microsoft.Usage" CheckId="CA2202" Status="Active" Created="2021-06-23 14:27:43Z" FixCategory="DependsOnFix">
+             <Issue Certainty="75" Level="Warning" Path="C:\Users\abira\source\repos\FATEC.PI.OldCareHome\FATEC.PI.OldCareHome\App_Code\Persistencia" File="EnderecoDB.cs" Line="101">Object 'objConnection' can be disposed more than once in method 'EnderecoDB.Delete(int)'. To avoid generating a System.ObjectDisposedException you should not call Dispose more than one time on an object.: Lines: 101</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#Insert(Endereco)" Kind="Method" Static="True" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="Do not dispose objects multiple times" Category="Microsoft.Usage" CheckId="CA2202" Status="Active" Created="2021-06-23 14:27:43Z" FixCategory="DependsOnFix">
+             <Issue Certainty="75" Level="Warning" Path="C:\Users\abira\source\repos\FATEC.PI.OldCareHome\FATEC.PI.OldCareHome\App_Code\Persistencia" File="EnderecoDB.cs" Line="34">Object 'objConexao' can be disposed more than once in method 'EnderecoDB.Insert(Endereco)'. To avoid generating a System.ObjectDisposedException you should not call Dispose more than one time on an object.: Lines: 34</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#SelectAll()" Kind="Method" Static="True" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="Do not dispose objects multiple times" Category="Microsoft.Usage" CheckId="CA2202" Status="Active" Created="2021-06-23 14:27:43Z" FixCategory="DependsOnFix">
+             <Issue Certainty="75" Level="Warning" Path="C:\Users\abira\source\repos\FATEC.PI.OldCareHome\FATEC.PI.OldCareHome\App_Code\Persistencia" File="EnderecoDB.cs" Line="128">Object 'objConnection' can be disposed more than once in method 'EnderecoDB.SelectAll()'. To avoid generating a System.ObjectDisposedException you should not call Dispose more than one time on an object.: Lines: 128</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#SelectId(System.Int32)" Kind="Method" Static="True" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="Do not dispose objects multiple times" Category="Microsoft.Usage" CheckId="CA2202" Status="Active" Created="2021-06-23 14:27:43Z" FixCategory="DependsOnFix">
+             <Issue Certainty="75" Level="Warning" Path="C:\Users\abira\source\repos\FATEC.PI.OldCareHome\FATEC.PI.OldCareHome\App_Code\Persistencia" File="EnderecoDB.cs" Line="145">Object 'objConexao' can be disposed more than once in method 'EnderecoDB.SelectId(int)'. To avoid generating a System.ObjectDisposedException you should not call Dispose more than one time on an object.: Lines: 145</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#Update(Endereco,System.Int32)" Kind="Method" Static="True" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="Do not dispose objects multiple times" Category="Microsoft.Usage" CheckId="CA2202" Status="Active" Created="2021-06-23 14:27:43Z" FixCategory="DependsOnFix">
+             <Issue Certainty="75" Level="Warning" Path="C:\Users\abira\source\repos\FATEC.PI.OldCareHome\FATEC.PI.OldCareHome\App_Code\Persistencia" File="EnderecoDB.cs" Line="77">Object 'objConexao' can be disposed more than once in method 'EnderecoDB.Update(Endereco, int)'. To avoid generating a System.ObjectDisposedException you should not call Dispose more than one time on an object.: Lines: 77</Issue>
+            </Message>
+           </Messages>
+          </Member>
+         </Members>
+        </Type>
+        <Type Name="FuncionarioDB" Kind="Class" Accessibility="Public" ExternallyVisible="True">
+         <Members>
+          <Member Name="#Delete(System.Int32)" Kind="Method" Static="True" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="Do not dispose objects multiple times" Category="Microsoft.Usage" CheckId="CA2202" Status="Active" Created="2021-06-23 14:27:43Z" FixCategory="DependsOnFix">
+             <Issue Certainty="75" Level="Warning" Path="C:\Users\abira\source\repos\FATEC.PI.OldCareHome\FATEC.PI.OldCareHome\App_Code\Persistencia" File="FuncionarioDB.cs" Line="126">Object 'objConnection' can be disposed more than once in method 'FuncionarioDB.Delete(int)'. To avoid generating a System.ObjectDisposedException you should not call Dispose more than one time on an object.: Lines: 126</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#Insert(Funcionario)" Kind="Method" Static="True" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="Do not dispose objects multiple times" Category="Microsoft.Usage" CheckId="CA2202" Status="Active" Created="2021-06-23 14:27:43Z" FixCategory="DependsOnFix">
+             <Issue Certainty="75" Level="Warning" Path="C:\Users\abira\source\repos\FATEC.PI.OldCareHome\FATEC.PI.OldCareHome\App_Code\Persistencia" File="FuncionarioDB.cs" Line="38">Object 'objConexao' can be disposed more than once in method 'FuncionarioDB.Insert(Funcionario)'. To avoid generating a System.ObjectDisposedException you should not call Dispose more than one time on an object.: Lines: 38</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#SelectAll()" Kind="Method" Static="True" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="Do not dispose objects multiple times" Category="Microsoft.Usage" CheckId="CA2202" Status="Active" Created="2021-06-23 14:27:43Z" FixCategory="DependsOnFix">
+             <Issue Certainty="75" Level="Warning" Path="C:\Users\abira\source\repos\FATEC.PI.OldCareHome\FATEC.PI.OldCareHome\App_Code\Persistencia" File="FuncionarioDB.cs" Line="164">Object 'objConnection' can be disposed more than once in method 'FuncionarioDB.SelectAll()'. To avoid generating a System.ObjectDisposedException you should not call Dispose more than one time on an object.: Lines: 164</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#SelectGrid()" Kind="Method" Static="True" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="Do not dispose objects multiple times" Category="Microsoft.Usage" CheckId="CA2202" Status="Active" Created="2021-06-23 14:27:43Z" FixCategory="DependsOnFix">
+             <Issue Certainty="75" Level="Warning" Path="C:\Users\abira\source\repos\FATEC.PI.OldCareHome\FATEC.PI.OldCareHome\App_Code\Persistencia" File="FuncionarioDB.cs" Line="108">Object 'objConnection' can be disposed more than once in method 'FuncionarioDB.SelectGrid()'. To avoid generating a System.ObjectDisposedException you should not call Dispose more than one time on an object.: Lines: 108</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#SelectId(System.Int32)" Kind="Method" Static="True" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="Do not dispose objects multiple times" Category="Microsoft.Usage" CheckId="CA2202" Status="Active" Created="2021-06-23 14:27:43Z" FixCategory="DependsOnFix">
+             <Issue Certainty="75" Level="Warning" Path="C:\Users\abira\source\repos\FATEC.PI.OldCareHome\FATEC.PI.OldCareHome\App_Code\Persistencia" File="FuncionarioDB.cs" Line="181">Object 'objConexao' can be disposed more than once in method 'FuncionarioDB.SelectId(int)'. To avoid generating a System.ObjectDisposedException you should not call Dispose more than one time on an object.: Lines: 181</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#Update(Funcionario,System.Int32)" Kind="Method" Static="True" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="Do not dispose objects multiple times" Category="Microsoft.Usage" CheckId="CA2202" Status="Active" Created="2021-06-23 14:27:43Z" FixCategory="DependsOnFix">
+             <Issue Certainty="75" Level="Warning" Path="C:\Users\abira\source\repos\FATEC.PI.OldCareHome\FATEC.PI.OldCareHome\App_Code\Persistencia" File="FuncionarioDB.cs" Line="86">Object 'objConexao' can be disposed more than once in method 'FuncionarioDB.Update(Funcionario, int)'. To avoid generating a System.ObjectDisposedException you should not call Dispose more than one time on an object.: Lines: 86</Issue>
+            </Message>
+           </Messages>
+          </Member>
+         </Members>
+        </Type>
+        <Type Name="GridDB" Kind="Class" Accessibility="Public" ExternallyVisible="True">
+         <Members>
+          <Member Name="#SelectAll(System.String)" Kind="Method" Static="True" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="Do not dispose objects multiple times" Category="Microsoft.Usage" CheckId="CA2202" Status="Active" Created="2021-06-23 14:27:43Z" FixCategory="DependsOnFix">
+             <Issue Certainty="75" Level="Warning" Path="C:\Users\abira\source\repos\FATEC.PI.OldCareHome\FATEC.PI.OldCareHome\App_Code\Persistencia" File="GridDB.cs" Line="23">Object 'objConnection' can be disposed more than once in method 'GridDB.SelectAll(string)'. To avoid generating a System.ObjectDisposedException you should not call Dispose more than one time on an object.: Lines: 23</Issue>
+            </Message>
+           </Messages>
+          </Member>
+         </Members>
+        </Type>
+        <Type Name="HistoricoDB" Kind="Class" Accessibility="Public" ExternallyVisible="True">
+         <Members>
+          <Member Name="#Delete(System.Int32)" Kind="Method" Static="True" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="Do not dispose objects multiple times" Category="Microsoft.Usage" CheckId="CA2202" Status="Active" Created="2021-06-23 14:27:43Z" FixCategory="DependsOnFix">
+             <Issue Certainty="75" Level="Warning" Path="C:\Users\abira\source\repos\FATEC.PI.OldCareHome\FATEC.PI.OldCareHome\App_Code\Persistencia" File="HistoricoDB.cs" Line="82">Object 'objConnection' can be disposed more than once in method 'HistoricoDB.Delete(int)'. To avoid generating a System.ObjectDisposedException you should not call Dispose more than one time on an object.: Lines: 82</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#Insert(Historico)" Kind="Method" Static="True" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="Do not dispose objects multiple times" Category="Microsoft.Usage" CheckId="CA2202" Status="Active" Created="2021-06-23 14:27:43Z" FixCategory="DependsOnFix">
+             <Issue Certainty="75" Level="Warning" Path="C:\Users\abira\source\repos\FATEC.PI.OldCareHome\FATEC.PI.OldCareHome\App_Code\Persistencia" File="HistoricoDB.cs" Line="27">Object 'objConexao' can be disposed more than once in method 'HistoricoDB.Insert(Historico)'. To avoid generating a System.ObjectDisposedException you should not call Dispose more than one time on an object.: Lines: 27</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#SelectAll()" Kind="Method" Static="True" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="Do not dispose objects multiple times" Category="Microsoft.Usage" CheckId="CA2202" Status="Active" Created="2021-06-23 14:27:43Z" FixCategory="DependsOnFix">
+             <Issue Certainty="75" Level="Warning" Path="C:\Users\abira\source\repos\FATEC.PI.OldCareHome\FATEC.PI.OldCareHome\App_Code\Persistencia" File="HistoricoDB.cs" Line="129">Object 'objConnection' can be disposed more than once in method 'HistoricoDB.SelectAll()'. To avoid generating a System.ObjectDisposedException you should not call Dispose more than one time on an object.: Lines: 129</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#SelectId(System.Int32)" Kind="Method" Static="True" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="Do not dispose objects multiple times" Category="Microsoft.Usage" CheckId="CA2202" Status="Active" Created="2021-06-23 14:27:43Z" FixCategory="DependsOnFix">
+             <Issue Certainty="75" Level="Warning" Path="C:\Users\abira\source\repos\FATEC.PI.OldCareHome\FATEC.PI.OldCareHome\App_Code\Persistencia" File="HistoricoDB.cs" Line="104">Object 'objConexao' can be disposed more than once in method 'HistoricoDB.SelectId(int)'. To avoid generating a System.ObjectDisposedException you should not call Dispose more than one time on an object.: Lines: 104</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#Update(Historico,System.Int32)" Kind="Method" Static="True" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="Do not dispose objects multiple times" Category="Microsoft.Usage" CheckId="CA2202" Status="Active" Created="2021-06-23 14:27:43Z" FixCategory="DependsOnFix">
+             <Issue Certainty="75" Level="Warning" Path="C:\Users\abira\source\repos\FATEC.PI.OldCareHome\FATEC.PI.OldCareHome\App_Code\Persistencia" File="HistoricoDB.cs" Line="59">Object 'objConexao' can be disposed more than once in method 'HistoricoDB.Update(Historico, int)'. To avoid generating a System.ObjectDisposedException you should not call Dispose more than one time on an object.: Lines: 59</Issue>
+            </Message>
+           </Messages>
+          </Member>
+         </Members>
+        </Type>
+        <Type Name="InternosDB" Kind="Class" Accessibility="Public" ExternallyVisible="True">
+         <Members>
+          <Member Name="#Delete(System.Int32)" Kind="Method" Static="True" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="Do not dispose objects multiple times" Category="Microsoft.Usage" CheckId="CA2202" Status="Active" Created="2021-06-23 14:27:43Z" FixCategory="DependsOnFix">
+             <Issue Certainty="75" Level="Warning" Path="C:\Users\abira\source\repos\FATEC.PI.OldCareHome\FATEC.PI.OldCareHome\App_Code\Persistencia" File="InternosDB.cs" Line="132">Object 'objConnection' can be disposed more than once in method 'InternosDB.Delete(int)'. To avoid generating a System.ObjectDisposedException you should not call Dispose more than one time on an object.: Lines: 132</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#Insert(Internos)" Kind="Method" Static="True" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="Do not dispose objects multiple times" Category="Microsoft.Usage" CheckId="CA2202" Status="Active" Created="2021-06-23 14:27:43Z" FixCategory="DependsOnFix">
+             <Issue Certainty="75" Level="Warning" Path="C:\Users\abira\source\repos\FATEC.PI.OldCareHome\FATEC.PI.OldCareHome\App_Code\Persistencia" File="InternosDB.cs" Line="45">Object 'objConexao' can be disposed more than once in method 'InternosDB.Insert(Internos)'. To avoid generating a System.ObjectDisposedException you should not call Dispose more than one time on an object.: Lines: 45</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#SelectAll()" Kind="Method" Static="True" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="Do not dispose objects multiple times" Category="Microsoft.Usage" CheckId="CA2202" Status="Active" Created="2021-06-23 14:27:43Z" FixCategory="DependsOnFix">
+             <Issue Certainty="75" Level="Warning" Path="C:\Users\abira\source\repos\FATEC.PI.OldCareHome\FATEC.PI.OldCareHome\App_Code\Persistencia" File="InternosDB.cs" Line="175">Object 'objConnection' can be disposed more than once in method 'InternosDB.SelectAll()'. To avoid generating a System.ObjectDisposedException you should not call Dispose more than one time on an object.: Lines: 175</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#SelectId(System.Int32)" Kind="Method" Static="True" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="Do not dispose objects multiple times" Category="Microsoft.Usage" CheckId="CA2202" Status="Active" Created="2021-06-23 14:27:43Z" FixCategory="DependsOnFix">
+             <Issue Certainty="75" Level="Warning" Path="C:\Users\abira\source\repos\FATEC.PI.OldCareHome\FATEC.PI.OldCareHome\App_Code\Persistencia" File="InternosDB.cs" Line="192">Object 'objConexao' can be disposed more than once in method 'InternosDB.SelectId(int)'. To avoid generating a System.ObjectDisposedException you should not call Dispose more than one time on an object.: Lines: 192</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#Update(Internos,System.Int32)" Kind="Method" Static="True" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="Do not dispose objects multiple times" Category="Microsoft.Usage" CheckId="CA2202" Status="Active" Created="2021-06-23 14:27:43Z" FixCategory="DependsOnFix">
+             <Issue Certainty="75" Level="Warning" Path="C:\Users\abira\source\repos\FATEC.PI.OldCareHome\FATEC.PI.OldCareHome\App_Code\Persistencia" File="InternosDB.cs" Line="109">Object 'objConexao' can be disposed more than once in method 'InternosDB.Update(Internos, int)'. To avoid generating a System.ObjectDisposedException you should not call Dispose more than one time on an object.: Lines: 109</Issue>
+            </Message>
+           </Messages>
+          </Member>
+         </Members>
+        </Type>
+        <Type Name="ItemPrescricaoDB" Kind="Class" Accessibility="Public" ExternallyVisible="True">
+         <Members>
+          <Member Name="#Delete(System.Int32)" Kind="Method" Static="True" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="Do not dispose objects multiple times" Category="Microsoft.Usage" CheckId="CA2202" Status="Active" Created="2021-06-23 14:27:43Z" FixCategory="DependsOnFix">
+             <Issue Certainty="75" Level="Warning" Path="C:\Users\abira\source\repos\FATEC.PI.OldCareHome\FATEC.PI.OldCareHome\App_Code\Persistencia" File="ItemPrescricaoDB.cs" Line="86">Object 'objConnection' can be disposed more than once in method 'ItemPrescricaoDB.Delete(int)'. To avoid generating a System.ObjectDisposedException you should not call Dispose more than one time on an object.: Lines: 86</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#Insert(ItemPrescricao)" Kind="Method" Static="True" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="Do not dispose objects multiple times" Category="Microsoft.Usage" CheckId="CA2202" Status="Active" Created="2021-06-23 14:27:43Z" FixCategory="DependsOnFix">
+             <Issue Certainty="75" Level="Warning" Path="C:\Users\abira\source\repos\FATEC.PI.OldCareHome\FATEC.PI.OldCareHome\App_Code\Persistencia" File="ItemPrescricaoDB.cs" Line="28">Object 'objConexao' can be disposed more than once in method 'ItemPrescricaoDB.Insert(ItemPrescricao)'. To avoid generating a System.ObjectDisposedException you should not call Dispose more than one time on an object.: Lines: 28</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#SelectAll()" Kind="Method" Static="True" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="Do not dispose objects multiple times" Category="Microsoft.Usage" CheckId="CA2202" Status="Active" Created="2021-06-23 14:27:43Z" FixCategory="DependsOnFix">
+             <Issue Certainty="75" Level="Warning" Path="C:\Users\abira\source\repos\FATEC.PI.OldCareHome\FATEC.PI.OldCareHome\App_Code\Persistencia" File="ItemPrescricaoDB.cs" Line="134">Object 'objConnection' can be disposed more than once in method 'ItemPrescricaoDB.SelectAll()'. To avoid generating a System.ObjectDisposedException you should not call Dispose more than one time on an object.: Lines: 134</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#SelectId(System.Int32)" Kind="Method" Static="True" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="Do not dispose objects multiple times" Category="Microsoft.Usage" CheckId="CA2202" Status="Active" Created="2021-06-23 14:27:43Z" FixCategory="DependsOnFix">
+             <Issue Certainty="75" Level="Warning" Path="C:\Users\abira\source\repos\FATEC.PI.OldCareHome\FATEC.PI.OldCareHome\App_Code\Persistencia" File="ItemPrescricaoDB.cs" Line="108">Object 'objConexao' can be disposed more than once in method 'ItemPrescricaoDB.SelectId(int)'. To avoid generating a System.ObjectDisposedException you should not call Dispose more than one time on an object.: Lines: 108</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#Update(ItemPrescricao,System.Int32)" Kind="Method" Static="True" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="Do not dispose objects multiple times" Category="Microsoft.Usage" CheckId="CA2202" Status="Active" Created="2021-06-23 14:27:43Z" FixCategory="DependsOnFix">
+             <Issue Certainty="75" Level="Warning" Path="C:\Users\abira\source\repos\FATEC.PI.OldCareHome\FATEC.PI.OldCareHome\App_Code\Persistencia" File="ItemPrescricaoDB.cs" Line="63">Object 'objConexao' can be disposed more than once in method 'ItemPrescricaoDB.Update(ItemPrescricao, int)'. To avoid generating a System.ObjectDisposedException you should not call Dispose more than one time on an object.: Lines: 63</Issue>
+            </Message>
+           </Messages>
+          </Member>
+         </Members>
+        </Type>
+        <Type Name="LarDB" Kind="Class" Accessibility="Public" ExternallyVisible="True">
+         <Members>
+          <Member Name="#Delete(System.Int32)" Kind="Method" Static="True" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="Do not dispose objects multiple times" Category="Microsoft.Usage" CheckId="CA2202" Status="Active" Created="2021-06-23 14:27:43Z" FixCategory="DependsOnFix">
+             <Issue Certainty="75" Level="Warning" Path="C:\Users\abira\source\repos\FATEC.PI.OldCareHome\FATEC.PI.OldCareHome\App_Code\Persistencia" File="LarDB.cs" Line="91">Object 'objConnection' can be disposed more than once in method 'LarDB.Delete(int)'. To avoid generating a System.ObjectDisposedException you should not call Dispose more than one time on an object.: Lines: 91</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#Insert(Lar)" Kind="Method" Static="True" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="Do not dispose objects multiple times" Category="Microsoft.Usage" CheckId="CA2202" Status="Active" Created="2021-06-23 14:27:43Z" FixCategory="DependsOnFix">
+             <Issue Certainty="75" Level="Warning" Path="C:\Users\abira\source\repos\FATEC.PI.OldCareHome\FATEC.PI.OldCareHome\App_Code\Persistencia" File="LarDB.cs" Line="32">Object 'objConexao' can be disposed more than once in method 'LarDB.Insert(Lar)'. To avoid generating a System.ObjectDisposedException you should not call Dispose more than one time on an object.: Lines: 32</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#SelectAll()" Kind="Method" Static="True" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="Do not dispose objects multiple times" Category="Microsoft.Usage" CheckId="CA2202" Status="Active" Created="2021-06-23 14:27:43Z" FixCategory="DependsOnFix">
+             <Issue Certainty="75" Level="Warning" Path="C:\Users\abira\source\repos\FATEC.PI.OldCareHome\FATEC.PI.OldCareHome\App_Code\Persistencia" File="LarDB.cs" Line="123">Object 'objConnection' can be disposed more than once in method 'LarDB.SelectAll()'. To avoid generating a System.ObjectDisposedException you should not call Dispose more than one time on an object.: Lines: 123</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#SelectId(System.Int32)" Kind="Method" Static="True" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="Do not dispose objects multiple times" Category="Microsoft.Usage" CheckId="CA2202" Status="Active" Created="2021-06-23 14:27:43Z" FixCategory="DependsOnFix">
+             <Issue Certainty="75" Level="Warning" Path="C:\Users\abira\source\repos\FATEC.PI.OldCareHome\FATEC.PI.OldCareHome\App_Code\Persistencia" File="LarDB.cs" Line="140">Object 'objConexao' can be disposed more than once in method 'LarDB.SelectId(int)'. To avoid generating a System.ObjectDisposedException you should not call Dispose more than one time on an object.: Lines: 140</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#Update(Lar,System.Int32)" Kind="Method" Static="True" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="Do not dispose objects multiple times" Category="Microsoft.Usage" CheckId="CA2202" Status="Active" Created="2021-06-23 14:27:43Z" FixCategory="DependsOnFix">
+             <Issue Certainty="75" Level="Warning" Path="C:\Users\abira\source\repos\FATEC.PI.OldCareHome\FATEC.PI.OldCareHome\App_Code\Persistencia" File="LarDB.cs" Line="68">Object 'objConexao' can be disposed more than once in method 'LarDB.Update(Lar, int)'. To avoid generating a System.ObjectDisposedException you should not call Dispose more than one time on an object.: Lines: 68</Issue>
+            </Message>
+           </Messages>
+          </Member>
+         </Members>
+        </Type>
+        <Type Name="LogDB" Kind="Class" Accessibility="Public" ExternallyVisible="True">
+         <Members>
+          <Member Name="#Insert(Log)" Kind="Method" Static="True" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="Do not dispose objects multiple times" Category="Microsoft.Usage" CheckId="CA2202" Status="Active" Created="2021-06-23 14:27:43Z" FixCategory="DependsOnFix">
+             <Issue Certainty="75" Level="Warning" Path="C:\Users\abira\source\repos\FATEC.PI.OldCareHome\FATEC.PI.OldCareHome\App_Code\Persistencia" File="LogDB.cs" Line="30">Object 'objConexao' can be disposed more than once in method 'LogDB.Insert(Log)'. To avoid generating a System.ObjectDisposedException you should not call Dispose more than one time on an object.: Lines: 30</Issue>
+            </Message>
+           </Messages>
+          </Member>
+         </Members>
+        </Type>
+        <Type Name="Mapped" Kind="Class" Accessibility="Public" ExternallyVisible="True">
+         <Members>
+          <Member Name="#Command(System.String,System.Data.IDbConnection)" Kind="Method" Static="True" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="Review SQL queries for security vulnerabilities" Category="Microsoft.Security" CheckId="CA2100" Status="Active" Created="2021-06-23 14:27:43Z" FixCategory="DependsOnFix">
+             <Issue Name="WithNonLiterals" Certainty="75" Level="Warning" Path="C:\Users\abira\source\repos\FATEC.PI.OldCareHome\FATEC.PI.OldCareHome\App_Code" File="Mapped.cs" Line="23">The query string passed to 'IDbCommand.CommandText.set(string)' in 'Mapped.Command(string, IDbConnection)' could contain the following variables 'query'. If any of these variables could come from user input, consider using a stored procedure or a parameterized SQL query instead of building the query with string concatenations.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+         </Members>
+        </Type>
+        <Type Name="MedicacaoDB" Kind="Class" Accessibility="Public" ExternallyVisible="True">
+         <Members>
+          <Member Name="#Delete(System.Int32)" Kind="Method" Static="True" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="Do not dispose objects multiple times" Category="Microsoft.Usage" CheckId="CA2202" Status="Active" Created="2021-06-23 14:27:43Z" FixCategory="DependsOnFix">
+             <Issue Certainty="75" Level="Warning" Path="C:\Users\abira\source\repos\FATEC.PI.OldCareHome\FATEC.PI.OldCareHome\App_Code\Persistencia" File="MedicacaoDB.cs" Line="81">Object 'objConnection' can be disposed more than once in method 'MedicacaoDB.Delete(int)'. To avoid generating a System.ObjectDisposedException you should not call Dispose more than one time on an object.: Lines: 81</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#Insert(Medicacao)" Kind="Method" Static="True" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="Do not dispose objects multiple times" Category="Microsoft.Usage" CheckId="CA2202" Status="Active" Created="2021-06-23 14:27:43Z" FixCategory="DependsOnFix">
+             <Issue Certainty="75" Level="Warning" Path="C:\Users\abira\source\repos\FATEC.PI.OldCareHome\FATEC.PI.OldCareHome\App_Code\Persistencia" File="MedicacaoDB.cs" Line="27">Object 'objConexao' can be disposed more than once in method 'MedicacaoDB.Insert(Medicacao)'. To avoid generating a System.ObjectDisposedException you should not call Dispose more than one time on an object.: Lines: 27</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#SelectAll()" Kind="Method" Static="True" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="Do not dispose objects multiple times" Category="Microsoft.Usage" CheckId="CA2202" Status="Active" Created="2021-06-23 14:27:43Z" FixCategory="DependsOnFix">
+             <Issue Certainty="75" Level="Warning" Path="C:\Users\abira\source\repos\FATEC.PI.OldCareHome\FATEC.PI.OldCareHome\App_Code\Persistencia" File="MedicacaoDB.cs" Line="127">Object 'objConnection' can be disposed more than once in method 'MedicacaoDB.SelectAll()'. To avoid generating a System.ObjectDisposedException you should not call Dispose more than one time on an object.: Lines: 127</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#SelectId(System.Int32)" Kind="Method" Static="True" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="Do not dispose objects multiple times" Category="Microsoft.Usage" CheckId="CA2202" Status="Active" Created="2021-06-23 14:27:43Z" FixCategory="DependsOnFix">
+             <Issue Certainty="75" Level="Warning" Path="C:\Users\abira\source\repos\FATEC.PI.OldCareHome\FATEC.PI.OldCareHome\App_Code\Persistencia" File="MedicacaoDB.cs" Line="103">Object 'objConexao' can be disposed more than once in method 'MedicacaoDB.SelectId(int)'. To avoid generating a System.ObjectDisposedException you should not call Dispose more than one time on an object.: Lines: 103</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#Update(Medicacao,System.Int32)" Kind="Method" Static="True" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="Do not dispose objects multiple times" Category="Microsoft.Usage" CheckId="CA2202" Status="Active" Created="2021-06-23 14:27:43Z" FixCategory="DependsOnFix">
+             <Issue Certainty="75" Level="Warning" Path="C:\Users\abira\source\repos\FATEC.PI.OldCareHome\FATEC.PI.OldCareHome\App_Code\Persistencia" File="MedicacaoDB.cs" Line="58">Object 'objConexao' can be disposed more than once in method 'MedicacaoDB.Update(Medicacao, int)'. To avoid generating a System.ObjectDisposedException you should not call Dispose more than one time on an object.: Lines: 58</Issue>
+            </Message>
+           </Messages>
+          </Member>
+         </Members>
+        </Type>
+        <Type Name="OcorrenciaDB" Kind="Class" Accessibility="Public" ExternallyVisible="True">
+         <Members>
+          <Member Name="#Delete(System.Int32)" Kind="Method" Static="True" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="Do not dispose objects multiple times" Category="Microsoft.Usage" CheckId="CA2202" Status="Active" Created="2021-06-23 14:27:43Z" FixCategory="DependsOnFix">
+             <Issue Certainty="75" Level="Warning" Path="C:\Users\abira\source\repos\FATEC.PI.OldCareHome\FATEC.PI.OldCareHome\App_Code\Persistencia" File="OcorrenciaDB.cs" Line="76">Object 'objConnection' can be disposed more than once in method 'OcorrenciaDB.Delete(int)'. To avoid generating a System.ObjectDisposedException you should not call Dispose more than one time on an object.: Lines: 76</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#Insert(Ocorrencia)" Kind="Method" Static="True" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="Do not dispose objects multiple times" Category="Microsoft.Usage" CheckId="CA2202" Status="Active" Created="2021-06-23 14:27:43Z" FixCategory="DependsOnFix">
+             <Issue Certainty="75" Level="Warning" Path="C:\Users\abira\source\repos\FATEC.PI.OldCareHome\FATEC.PI.OldCareHome\App_Code\Persistencia" File="OcorrenciaDB.cs" Line="25">Object 'objConexao' can be disposed more than once in method 'OcorrenciaDB.Insert(Ocorrencia)'. To avoid generating a System.ObjectDisposedException you should not call Dispose more than one time on an object.: Lines: 25</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#SelectAll()" Kind="Method" Static="True" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="Do not dispose objects multiple times" Category="Microsoft.Usage" CheckId="CA2202" Status="Active" Created="2021-06-23 14:27:43Z" FixCategory="DependsOnFix">
+             <Issue Certainty="75" Level="Warning" Path="C:\Users\abira\source\repos\FATEC.PI.OldCareHome\FATEC.PI.OldCareHome\App_Code\Persistencia" File="OcorrenciaDB.cs" Line="139">Object 'objConnection' can be disposed more than once in method 'OcorrenciaDB.SelectAll()'. To avoid generating a System.ObjectDisposedException you should not call Dispose more than one time on an object.: Lines: 139</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#SelectId(System.Int32)" Kind="Method" Static="True" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="Do not dispose objects multiple times" Category="Microsoft.Usage" CheckId="CA2202" Status="Active" Created="2021-06-23 14:27:43Z" FixCategory="DependsOnFix">
+             <Issue Certainty="75" Level="Warning" Path="C:\Users\abira\source\repos\FATEC.PI.OldCareHome\FATEC.PI.OldCareHome\App_Code\Persistencia" File="OcorrenciaDB.cs" Line="98">Object 'objConexao' can be disposed more than once in method 'OcorrenciaDB.SelectId(int)'. To avoid generating a System.ObjectDisposedException you should not call Dispose more than one time on an object.: Lines: 98</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#Update(Ocorrencia,System.Int32)" Kind="Method" Static="True" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="Do not dispose objects multiple times" Category="Microsoft.Usage" CheckId="CA2202" Status="Active" Created="2021-06-23 14:27:43Z" FixCategory="DependsOnFix">
+             <Issue Certainty="75" Level="Warning" Path="C:\Users\abira\source\repos\FATEC.PI.OldCareHome\FATEC.PI.OldCareHome\App_Code\Persistencia" File="OcorrenciaDB.cs" Line="53">Object 'objConexao' can be disposed more than once in method 'OcorrenciaDB.Update(Ocorrencia, int)'. To avoid generating a System.ObjectDisposedException you should not call Dispose more than one time on an object.: Lines: 53</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#VerificaOcorrencia(System.String)" Kind="Method" Static="True" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="Do not dispose objects multiple times" Category="Microsoft.Usage" CheckId="CA2202" Status="Active" Created="2021-06-23 14:27:43Z" FixCategory="DependsOnFix">
+             <Issue Certainty="75" Level="Warning" Path="C:\Users\abira\source\repos\FATEC.PI.OldCareHome\FATEC.PI.OldCareHome\App_Code\Persistencia" File="OcorrenciaDB.cs" Line="116">Object 'objConexao' can be disposed more than once in method 'OcorrenciaDB.VerificaOcorrencia(string)'. To avoid generating a System.ObjectDisposedException you should not call Dispose more than one time on an object.: Lines: 116</Issue>
+            </Message>
+           </Messages>
+          </Member>
+         </Members>
+        </Type>
+        <Type Name="PatologiaDB" Kind="Class" Accessibility="Public" ExternallyVisible="True">
+         <Members>
+          <Member Name="#Delete(System.Int32)" Kind="Method" Static="True" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="Do not dispose objects multiple times" Category="Microsoft.Usage" CheckId="CA2202" Status="Active" Created="2021-06-23 14:27:43Z" FixCategory="DependsOnFix">
+             <Issue Certainty="75" Level="Warning" Path="C:\Users\abira\source\repos\FATEC.PI.OldCareHome\FATEC.PI.OldCareHome\App_Code\Persistencia" File="PatologiaDB.cs" Line="80">Object 'objConnection' can be disposed more than once in method 'PatologiaDB.Delete(int)'. To avoid generating a System.ObjectDisposedException you should not call Dispose more than one time on an object.: Lines: 80</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#Insert(Patologia)" Kind="Method" Static="True" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="Do not dispose objects multiple times" Category="Microsoft.Usage" CheckId="CA2202" Status="Active" Created="2021-06-23 14:27:43Z" FixCategory="DependsOnFix">
+             <Issue Certainty="75" Level="Warning" Path="C:\Users\abira\source\repos\FATEC.PI.OldCareHome\FATEC.PI.OldCareHome\App_Code\Persistencia" File="PatologiaDB.cs" Line="27">Object 'objConexao' can be disposed more than once in method 'PatologiaDB.Insert(Patologia)'. To avoid generating a System.ObjectDisposedException you should not call Dispose more than one time on an object.: Lines: 27</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#SelectAll()" Kind="Method" Static="True" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="Do not dispose objects multiple times" Category="Microsoft.Usage" CheckId="CA2202" Status="Active" Created="2021-06-23 14:27:43Z" FixCategory="DependsOnFix">
+             <Issue Certainty="75" Level="Warning" Path="C:\Users\abira\source\repos\FATEC.PI.OldCareHome\FATEC.PI.OldCareHome\App_Code\Persistencia" File="PatologiaDB.cs" Line="105">Object 'objConnection' can be disposed more than once in method 'PatologiaDB.SelectAll()'. To avoid generating a System.ObjectDisposedException you should not call Dispose more than one time on an object.: Lines: 105</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#SelectId(System.Int32)" Kind="Method" Static="True" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="Do not dispose objects multiple times" Category="Microsoft.Usage" CheckId="CA2202" Status="Active" Created="2021-06-23 14:27:43Z" FixCategory="DependsOnFix">
+             <Issue Certainty="75" Level="Warning" Path="C:\Users\abira\source\repos\FATEC.PI.OldCareHome\FATEC.PI.OldCareHome\App_Code\Persistencia" File="PatologiaDB.cs" Line="122">Object 'objConexao' can be disposed more than once in method 'PatologiaDB.SelectId(int)'. To avoid generating a System.ObjectDisposedException you should not call Dispose more than one time on an object.: Lines: 122</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#Update(Patologia,System.Int32)" Kind="Method" Static="True" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="Do not dispose objects multiple times" Category="Microsoft.Usage" CheckId="CA2202" Status="Active" Created="2021-06-23 14:27:43Z" FixCategory="DependsOnFix">
+             <Issue Certainty="75" Level="Warning" Path="C:\Users\abira\source\repos\FATEC.PI.OldCareHome\FATEC.PI.OldCareHome\App_Code\Persistencia" File="PatologiaDB.cs" Line="56">Object 'objConexao' can be disposed more than once in method 'PatologiaDB.Update(Patologia, int)'. To avoid generating a System.ObjectDisposedException you should not call Dispose more than one time on an object.: Lines: 56</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#VerificaPatologia(System.String)" Kind="Method" Static="True" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="Do not dispose objects multiple times" Category="Microsoft.Usage" CheckId="CA2202" Status="Active" Created="2021-06-23 14:27:43Z" FixCategory="DependsOnFix">
+             <Issue Certainty="75" Level="Warning" Path="C:\Users\abira\source\repos\FATEC.PI.OldCareHome\FATEC.PI.OldCareHome\App_Code\Persistencia" File="PatologiaDB.cs" Line="140">Object 'objConexao' can be disposed more than once in method 'PatologiaDB.VerificaPatologia(string)'. To avoid generating a System.ObjectDisposedException you should not call Dispose more than one time on an object.: Lines: 140</Issue>
+            </Message>
+           </Messages>
+          </Member>
+         </Members>
+        </Type>
+        <Type Name="Perfil" Kind="Class" Accessibility="Public" ExternallyVisible="True">
+         <Members>
+          <Member Name="#Insert()" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="Do not dispose objects multiple times" Category="Microsoft.Usage" CheckId="CA2202" Status="Active" Created="2021-06-23 14:27:43Z" FixCategory="DependsOnFix">
+             <Issue Certainty="75" Level="Warning" Path="C:\Users\abira\source\repos\FATEC.PI.OldCareHome\FATEC.PI.OldCareHome\App_Code\classes" File="Perfil.cs" Line="31">Object 'objConexao' can be disposed more than once in method 'Perfil.Insert()'. To avoid generating a System.ObjectDisposedException you should not call Dispose more than one time on an object.: Lines: 31</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#SelectAll()" Kind="Method" Static="True" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="Do not dispose objects multiple times" Category="Microsoft.Usage" CheckId="CA2202" Status="Active" Created="2021-06-23 14:27:43Z" FixCategory="DependsOnFix">
+             <Issue Certainty="75" Level="Warning" Path="C:\Users\abira\source\repos\FATEC.PI.OldCareHome\FATEC.PI.OldCareHome\App_Code\classes" File="Perfil.cs" Line="54">Object 'objConnection' can be disposed more than once in method 'Perfil.SelectAll()'. To avoid generating a System.ObjectDisposedException you should not call Dispose more than one time on an object.: Lines: 54</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#SelectId(System.Int32)" Kind="Method" Static="True" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="Do not dispose objects multiple times" Category="Microsoft.Usage" CheckId="CA2202" Status="Active" Created="2021-06-23 14:27:43Z" FixCategory="DependsOnFix">
+             <Issue Certainty="75" Level="Warning" Path="C:\Users\abira\source\repos\FATEC.PI.OldCareHome\FATEC.PI.OldCareHome\App_Code\classes" File="Perfil.cs" Line="72">Object 'objConnection' can be disposed more than once in method 'Perfil.SelectId(int)'. To avoid generating a System.ObjectDisposedException you should not call Dispose more than one time on an object.: Lines: 72</Issue>
+            </Message>
+           </Messages>
+          </Member>
+         </Members>
+        </Type>
+        <Type Name="PerfilDB" Kind="Class" Accessibility="Public" ExternallyVisible="True">
+         <Members>
+          <Member Name="#Delete(System.Int32)" Kind="Method" Static="True" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="Do not dispose objects multiple times" Category="Microsoft.Usage" CheckId="CA2202" Status="Active" Created="2021-06-23 14:27:43Z" FixCategory="DependsOnFix">
+             <Issue Certainty="75" Level="Warning" Path="C:\Users\abira\source\repos\FATEC.PI.OldCareHome\FATEC.PI.OldCareHome\App_Code\Persistencia" File="PerfilDB.cs" Line="72">Object 'objConnection' can be disposed more than once in method 'PerfilDB.Delete(int)'. To avoid generating a System.ObjectDisposedException you should not call Dispose more than one time on an object.: Lines: 72</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#Insert(Perfil)" Kind="Method" Static="True" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="Do not dispose objects multiple times" Category="Microsoft.Usage" CheckId="CA2202" Status="Active" Created="2021-06-23 14:27:43Z" FixCategory="DependsOnFix">
+             <Issue Certainty="75" Level="Warning" Path="C:\Users\abira\source\repos\FATEC.PI.OldCareHome\FATEC.PI.OldCareHome\App_Code\Persistencia" File="PerfilDB.cs" Line="24">Object 'objConexao' can be disposed more than once in method 'PerfilDB.Insert(Perfil)'. To avoid generating a System.ObjectDisposedException you should not call Dispose more than one time on an object.: Lines: 24</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#SelectAId(System.Int32)" Kind="Method" Static="True" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="Do not dispose objects multiple times" Category="Microsoft.Usage" CheckId="CA2202" Status="Active" Created="2021-06-23 14:27:43Z" FixCategory="DependsOnFix">
+             <Issue Certainty="75" Level="Warning" Path="C:\Users\abira\source\repos\FATEC.PI.OldCareHome\FATEC.PI.OldCareHome\App_Code\Persistencia" File="PerfilDB.cs" Line="112">Object 'objConnection' can be disposed more than once in method 'PerfilDB.SelectAId(int)'. To avoid generating a System.ObjectDisposedException you should not call Dispose more than one time on an object.: Lines: 112</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#SelectAll()" Kind="Method" Static="True" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="Do not dispose objects multiple times" Category="Microsoft.Usage" CheckId="CA2202" Status="Active" Created="2021-06-23 14:27:43Z" FixCategory="DependsOnFix">
+             <Issue Certainty="75" Level="Warning" Path="C:\Users\abira\source\repos\FATEC.PI.OldCareHome\FATEC.PI.OldCareHome\App_Code\Persistencia" File="PerfilDB.cs" Line="95">Object 'objConnection' can be disposed more than once in method 'PerfilDB.SelectAll()'. To avoid generating a System.ObjectDisposedException you should not call Dispose more than one time on an object.: Lines: 95</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#Update(Perfil,System.Int32)" Kind="Method" Static="True" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="Do not dispose objects multiple times" Category="Microsoft.Usage" CheckId="CA2202" Status="Active" Created="2021-06-23 14:27:43Z" FixCategory="DependsOnFix">
+             <Issue Certainty="75" Level="Warning" Path="C:\Users\abira\source\repos\FATEC.PI.OldCareHome\FATEC.PI.OldCareHome\App_Code\Persistencia" File="PerfilDB.cs" Line="49">Object 'objConexao' can be disposed more than once in method 'PerfilDB.Update(Perfil, int)'. To avoid generating a System.ObjectDisposedException you should not call Dispose more than one time on an object.: Lines: 49</Issue>
+            </Message>
+           </Messages>
+          </Member>
+         </Members>
+        </Type>
+        <Type Name="PrescricaoDB" Kind="Class" Accessibility="Public" ExternallyVisible="True">
+         <Members>
+          <Member Name="#Delete(System.Int32)" Kind="Method" Static="True" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="Do not dispose objects multiple times" Category="Microsoft.Usage" CheckId="CA2202" Status="Active" Created="2021-06-23 14:27:43Z" FixCategory="DependsOnFix">
+             <Issue Certainty="75" Level="Warning" Path="C:\Users\abira\source\repos\FATEC.PI.OldCareHome\FATEC.PI.OldCareHome\App_Code\Persistencia" File="PrescricaoDB.cs" Line="82">Object 'objConnection' can be disposed more than once in method 'PrescricaoDB.Delete(int)'. To avoid generating a System.ObjectDisposedException you should not call Dispose more than one time on an object.: Lines: 82</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#Insert(Prescricao)" Kind="Method" Static="True" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="Do not dispose objects multiple times" Category="Microsoft.Usage" CheckId="CA2202" Status="Active" Created="2021-06-23 14:27:43Z" FixCategory="DependsOnFix">
+             <Issue Certainty="75" Level="Warning" Path="C:\Users\abira\source\repos\FATEC.PI.OldCareHome\FATEC.PI.OldCareHome\App_Code\Persistencia" File="PrescricaoDB.cs" Line="28">Object 'objConexao' can be disposed more than once in method 'PrescricaoDB.Insert(Prescricao)'. To avoid generating a System.ObjectDisposedException you should not call Dispose more than one time on an object.: Lines: 28</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#SelectAll()" Kind="Method" Static="True" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="Do not dispose objects multiple times" Category="Microsoft.Usage" CheckId="CA2202" Status="Active" Created="2021-06-23 14:27:43Z" FixCategory="DependsOnFix">
+             <Issue Certainty="75" Level="Warning" Path="C:\Users\abira\source\repos\FATEC.PI.OldCareHome\FATEC.PI.OldCareHome\App_Code\Persistencia" File="PrescricaoDB.cs" Line="129">Object 'objConnection' can be disposed more than once in method 'PrescricaoDB.SelectAll()'. To avoid generating a System.ObjectDisposedException you should not call Dispose more than one time on an object.: Lines: 129</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#SelectId(System.Int32)" Kind="Method" Static="True" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="Do not dispose objects multiple times" Category="Microsoft.Usage" CheckId="CA2202" Status="Active" Created="2021-06-23 14:27:43Z" FixCategory="DependsOnFix">
+             <Issue Certainty="75" Level="Warning" Path="C:\Users\abira\source\repos\FATEC.PI.OldCareHome\FATEC.PI.OldCareHome\App_Code\Persistencia" File="PrescricaoDB.cs" Line="104">Object 'objConexao' can be disposed more than once in method 'PrescricaoDB.SelectId(int)'. To avoid generating a System.ObjectDisposedException you should not call Dispose more than one time on an object.: Lines: 104</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#Update(Prescricao,System.Int32)" Kind="Method" Static="True" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="Do not dispose objects multiple times" Category="Microsoft.Usage" CheckId="CA2202" Status="Active" Created="2021-06-23 14:27:43Z" FixCategory="DependsOnFix">
+             <Issue Certainty="75" Level="Warning" Path="C:\Users\abira\source\repos\FATEC.PI.OldCareHome\FATEC.PI.OldCareHome\App_Code\Persistencia" File="PrescricaoDB.cs" Line="59">Object 'objConexao' can be disposed more than once in method 'PrescricaoDB.Update(Prescricao, int)'. To avoid generating a System.ObjectDisposedException you should not call Dispose more than one time on an object.: Lines: 59</Issue>
+            </Message>
+           </Messages>
+          </Member>
+         </Members>
+        </Type>
+        <Type Name="ProdutoDB" Kind="Class" Accessibility="Public" ExternallyVisible="True">
+         <Members>
+          <Member Name="#Insert(Produto)" Kind="Method" Static="True" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="Do not dispose objects multiple times" Category="Microsoft.Usage" CheckId="CA2202" Status="Active" Created="2021-06-23 14:27:43Z" FixCategory="DependsOnFix">
+             <Issue Certainty="75" Level="Warning" Path="C:\Users\abira\source\repos\FATEC.PI.OldCareHome\FATEC.PI.OldCareHome\App_Code\Persistencia" File="ProdutoDB.cs" Line="26">Object 'objConexao' can be disposed more than once in method 'ProdutoDB.Insert(Produto)'. To avoid generating a System.ObjectDisposedException you should not call Dispose more than one time on an object.: Lines: 26</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#SelectAll()" Kind="Method" Static="True" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="Do not dispose objects multiple times" Category="Microsoft.Usage" CheckId="CA2202" Status="Active" Created="2021-06-23 14:27:43Z" FixCategory="DependsOnFix">
+             <Issue Certainty="75" Level="Warning" Path="C:\Users\abira\source\repos\FATEC.PI.OldCareHome\FATEC.PI.OldCareHome\App_Code\Persistencia" File="ProdutoDB.cs" Line="49">Object 'objConnection' can be disposed more than once in method 'ProdutoDB.SelectAll()'. To avoid generating a System.ObjectDisposedException you should not call Dispose more than one time on an object.: Lines: 49</Issue>
+            </Message>
+           </Messages>
+          </Member>
+         </Members>
+        </Type>
+        <Type Name="QuartoDB" Kind="Class" Accessibility="Public" ExternallyVisible="True">
+         <Members>
+          <Member Name="#Delete(System.Int32)" Kind="Method" Static="True" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="Do not dispose objects multiple times" Category="Microsoft.Usage" CheckId="CA2202" Status="Active" Created="2021-06-23 14:27:43Z" FixCategory="DependsOnFix">
+             <Issue Certainty="75" Level="Warning" Path="C:\Users\abira\source\repos\FATEC.PI.OldCareHome\FATEC.PI.OldCareHome\App_Code\Persistencia" File="QuartoDB.cs" Line="80">Object 'objConnection' can be disposed more than once in method 'QuartoDB.Delete(int)'. To avoid generating a System.ObjectDisposedException you should not call Dispose more than one time on an object.: Lines: 80</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#Insert(Quarto)" Kind="Method" Static="True" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="Do not dispose objects multiple times" Category="Microsoft.Usage" CheckId="CA2202" Status="Active" Created="2021-06-23 14:27:43Z" FixCategory="DependsOnFix">
+             <Issue Certainty="75" Level="Warning" Path="C:\Users\abira\source\repos\FATEC.PI.OldCareHome\FATEC.PI.OldCareHome\App_Code\Persistencia" File="QuartoDB.cs" Line="27">Object 'objConexao' can be disposed more than once in method 'QuartoDB.Insert(Quarto)'. To avoid generating a System.ObjectDisposedException you should not call Dispose more than one time on an object.: Lines: 27</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#SelectAll()" Kind="Method" Static="True" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="Do not dispose objects multiple times" Category="Microsoft.Usage" CheckId="CA2202" Status="Active" Created="2021-06-23 14:27:43Z" FixCategory="DependsOnFix">
+             <Issue Certainty="75" Level="Warning" Path="C:\Users\abira\source\repos\FATEC.PI.OldCareHome\FATEC.PI.OldCareHome\App_Code\Persistencia" File="QuartoDB.cs" Line="104">Object 'objConnection' can be disposed more than once in method 'QuartoDB.SelectAll()'. To avoid generating a System.ObjectDisposedException you should not call Dispose more than one time on an object.: Lines: 104</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#SelectId(System.Int32)" Kind="Method" Static="True" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="Do not dispose objects multiple times" Category="Microsoft.Usage" CheckId="CA2202" Status="Active" Created="2021-06-23 14:27:43Z" FixCategory="DependsOnFix">
+             <Issue Certainty="75" Level="Warning" Path="C:\Users\abira\source\repos\FATEC.PI.OldCareHome\FATEC.PI.OldCareHome\App_Code\Persistencia" File="QuartoDB.cs" Line="122">Object 'objConexao' can be disposed more than once in method 'QuartoDB.SelectId(int)'. To avoid generating a System.ObjectDisposedException you should not call Dispose more than one time on an object.: Lines: 122</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#Update(Quarto,System.Int32)" Kind="Method" Static="True" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="Do not dispose objects multiple times" Category="Microsoft.Usage" CheckId="CA2202" Status="Active" Created="2021-06-23 14:27:43Z" FixCategory="DependsOnFix">
+             <Issue Certainty="75" Level="Warning" Path="C:\Users\abira\source\repos\FATEC.PI.OldCareHome\FATEC.PI.OldCareHome\App_Code\Persistencia" File="QuartoDB.cs" Line="56">Object 'objConexao' can be disposed more than once in method 'QuartoDB.Update(Quarto, int)'. To avoid generating a System.ObjectDisposedException you should not call Dispose more than one time on an object.: Lines: 56</Issue>
+            </Message>
+           </Messages>
+          </Member>
+         </Members>
+        </Type>
+        <Type Name="RegistroClinicoDB" Kind="Class" Accessibility="Public" ExternallyVisible="True">
+         <Members>
+          <Member Name="#Delete(System.Int32)" Kind="Method" Static="True" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="Do not dispose objects multiple times" Category="Microsoft.Usage" CheckId="CA2202" Status="Active" Created="2021-06-23 14:27:43Z" FixCategory="DependsOnFix">
+             <Issue Certainty="75" Level="Warning" Path="C:\Users\abira\source\repos\FATEC.PI.OldCareHome\FATEC.PI.OldCareHome\App_Code\Persistencia" File="RegistroClinicoDB.cs" Line="89">Object 'objConnection' can be disposed more than once in method 'RegistroClinicoDB.Delete(int)'. To avoid generating a System.ObjectDisposedException you should not call Dispose more than one time on an object.: Lines: 89</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#Insert(RegistroClinico)" Kind="Method" Static="True" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="Do not dispose objects multiple times" Category="Microsoft.Usage" CheckId="CA2202" Status="Active" Created="2021-06-23 14:27:43Z" FixCategory="DependsOnFix">
+             <Issue Certainty="75" Level="Warning" Path="C:\Users\abira\source\repos\FATEC.PI.OldCareHome\FATEC.PI.OldCareHome\App_Code\Persistencia" File="RegistroClinicoDB.cs" Line="31">Object 'objConexao' can be disposed more than once in method 'RegistroClinicoDB.Insert(RegistroClinico)'. To avoid generating a System.ObjectDisposedException you should not call Dispose more than one time on an object.: Lines: 31</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#SelectAll()" Kind="Method" Static="True" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="Do not dispose objects multiple times" Category="Microsoft.Usage" CheckId="CA2202" Status="Active" Created="2021-06-23 14:27:43Z" FixCategory="DependsOnFix">
+             <Issue Certainty="75" Level="Warning" Path="C:\Users\abira\source\repos\FATEC.PI.OldCareHome\FATEC.PI.OldCareHome\App_Code\Persistencia" File="RegistroClinicoDB.cs" Line="120">Object 'objConnection' can be disposed more than once in method 'RegistroClinicoDB.SelectAll()'. To avoid generating a System.ObjectDisposedException you should not call Dispose more than one time on an object.: Lines: 120</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#SelectId(System.Int32)" Kind="Method" Static="True" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="Do not dispose objects multiple times" Category="Microsoft.Usage" CheckId="CA2202" Status="Active" Created="2021-06-23 14:27:43Z" FixCategory="DependsOnFix">
+             <Issue Certainty="75" Level="Warning" Path="C:\Users\abira\source\repos\FATEC.PI.OldCareHome\FATEC.PI.OldCareHome\App_Code\Persistencia" File="RegistroClinicoDB.cs" Line="137">Object 'objConexao' can be disposed more than once in method 'RegistroClinicoDB.SelectId(int)'. To avoid generating a System.ObjectDisposedException you should not call Dispose more than one time on an object.: Lines: 137</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#Update(RegistroClinico,System.Int32)" Kind="Method" Static="True" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="Do not dispose objects multiple times" Category="Microsoft.Usage" CheckId="CA2202" Status="Active" Created="2021-06-23 14:27:43Z" FixCategory="DependsOnFix">
+             <Issue Certainty="75" Level="Warning" Path="C:\Users\abira\source\repos\FATEC.PI.OldCareHome\FATEC.PI.OldCareHome\App_Code\Persistencia" File="RegistroClinicoDB.cs" Line="65">Object 'objConexao' can be disposed more than once in method 'RegistroClinicoDB.Update(RegistroClinico, int)'. To avoid generating a System.ObjectDisposedException you should not call Dispose more than one time on an object.: Lines: 65</Issue>
+            </Message>
+           </Messages>
+          </Member>
+         </Members>
+        </Type>
+        <Type Name="ResponsavelDB" Kind="Class" Accessibility="Public" ExternallyVisible="True">
+         <Members>
+          <Member Name="#Delete(System.Int32)" Kind="Method" Static="True" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="Do not dispose objects multiple times" Category="Microsoft.Usage" CheckId="CA2202" Status="Active" Created="2021-06-23 14:27:43Z" FixCategory="DependsOnFix">
+             <Issue Certainty="75" Level="Warning" Path="C:\Users\abira\source\repos\FATEC.PI.OldCareHome\FATEC.PI.OldCareHome\App_Code\Persistencia" File="ResponsavelDB.cs" Line="86">Object 'objConnection' can be disposed more than once in method 'ResponsavelDB.Delete(int)'. To avoid generating a System.ObjectDisposedException you should not call Dispose more than one time on an object.: Lines: 86</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#Insert(Responsavel)" Kind="Method" Static="True" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="Do not dispose objects multiple times" Category="Microsoft.Usage" CheckId="CA2202" Status="Active" Created="2021-06-23 14:27:43Z" FixCategory="DependsOnFix">
+             <Issue Certainty="75" Level="Warning" Path="C:\Users\abira\source\repos\FATEC.PI.OldCareHome\FATEC.PI.OldCareHome\App_Code\Persistencia" File="ResponsavelDB.cs" Line="29">Object 'objConexao' can be disposed more than once in method 'ResponsavelDB.Insert(Responsavel)'. To avoid generating a System.ObjectDisposedException you should not call Dispose more than one time on an object.: Lines: 29</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#SelectAll()" Kind="Method" Static="True" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="Do not dispose objects multiple times" Category="Microsoft.Usage" CheckId="CA2202" Status="Active" Created="2021-06-23 14:27:43Z" FixCategory="DependsOnFix">
+             <Issue Certainty="75" Level="Warning" Path="C:\Users\abira\source\repos\FATEC.PI.OldCareHome\FATEC.PI.OldCareHome\App_Code\Persistencia" File="ResponsavelDB.cs" Line="114">Object 'objConnection' can be disposed more than once in method 'ResponsavelDB.SelectAll()'. To avoid generating a System.ObjectDisposedException you should not call Dispose more than one time on an object.: Lines: 114</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#SelectId(System.Int32)" Kind="Method" Static="True" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="Do not dispose objects multiple times" Category="Microsoft.Usage" CheckId="CA2202" Status="Active" Created="2021-06-23 14:27:43Z" FixCategory="DependsOnFix">
+             <Issue Certainty="75" Level="Warning" Path="C:\Users\abira\source\repos\FATEC.PI.OldCareHome\FATEC.PI.OldCareHome\App_Code\Persistencia" File="ResponsavelDB.cs" Line="131">Object 'objConexao' can be disposed more than once in method 'ResponsavelDB.SelectId(int)'. To avoid generating a System.ObjectDisposedException you should not call Dispose more than one time on an object.: Lines: 131</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#Update(Responsavel,System.Int32)" Kind="Method" Static="True" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="Do not dispose objects multiple times" Category="Microsoft.Usage" CheckId="CA2202" Status="Active" Created="2021-06-23 14:27:43Z" FixCategory="DependsOnFix">
+             <Issue Certainty="75" Level="Warning" Path="C:\Users\abira\source\repos\FATEC.PI.OldCareHome\FATEC.PI.OldCareHome\App_Code\Persistencia" File="ResponsavelDB.cs" Line="62">Object 'objConexao' can be disposed more than once in method 'ResponsavelDB.Update(Responsavel, int)'. To avoid generating a System.ObjectDisposedException you should not call Dispose more than one time on an object.: Lines: 62</Issue>
+            </Message>
+           </Messages>
+          </Member>
+         </Members>
+        </Type>
+        <Type Name="SituacaoDB" Kind="Class" Accessibility="Public" ExternallyVisible="True">
+         <Members>
+          <Member Name="#Insert(Situacao)" Kind="Method" Static="True" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="Do not dispose objects multiple times" Category="Microsoft.Usage" CheckId="CA2202" Status="Active" Created="2021-06-23 14:27:43Z" FixCategory="DependsOnFix">
+             <Issue Certainty="75" Level="Warning" Path="C:\Users\abira\source\repos\FATEC.PI.OldCareHome\FATEC.PI.OldCareHome\App_Code\Persistencia" File="SituacaoDB.cs" Line="24">Object 'objConexao' can be disposed more than once in method 'SituacaoDB.Insert(Situacao)'. To avoid generating a System.ObjectDisposedException you should not call Dispose more than one time on an object.: Lines: 24</Issue>
+            </Message>
+           </Messages>
+          </Member>
+         </Members>
+        </Type>
+        <Type Name="TabelasDB" Kind="Class" Accessibility="Public" ExternallyVisible="True">
+         <Members>
+          <Member Name="#SelectAll()" Kind="Method" Static="True" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="Do not dispose objects multiple times" Category="Microsoft.Usage" CheckId="CA2202" Status="Active" Created="2021-06-23 14:27:43Z" FixCategory="DependsOnFix">
+             <Issue Certainty="75" Level="Warning" Path="C:\Users\abira\source\repos\FATEC.PI.OldCareHome\FATEC.PI.OldCareHome\App_Code\Persistencia" File="TabelasDB.cs" Line="24">Object 'objConnection' can be disposed more than once in method 'TabelasDB.SelectAll()'. To avoid generating a System.ObjectDisposedException you should not call Dispose more than one time on an object.: Lines: 24</Issue>
+            </Message>
+           </Messages>
+          </Member>
+         </Members>
+        </Type>
+        <Type Name="UsuarioDB" Kind="Class" Accessibility="Public" ExternallyVisible="True">
+         <Members>
+          <Member Name="#Delete(System.Int32)" Kind="Method" Static="True" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="Do not dispose objects multiple times" Category="Microsoft.Usage" CheckId="CA2202" Status="Active" Created="2021-06-23 14:27:43Z" FixCategory="DependsOnFix">
+             <Issue Certainty="75" Level="Warning" Path="C:\Users\abira\source\repos\FATEC.PI.OldCareHome\FATEC.PI.OldCareHome\App_Code\Persistencia" File="UsuarioDB.cs" Line="89">Object 'objConnection' can be disposed more than once in method 'UsuarioDB.Delete(int)'. To avoid generating a System.ObjectDisposedException you should not call Dispose more than one time on an object.: Lines: 89</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#Insert(Usuario)" Kind="Method" Static="True" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="Do not dispose objects multiple times" Category="Microsoft.Usage" CheckId="CA2202" Status="Active" Created="2021-06-23 14:27:43Z" FixCategory="DependsOnFix">
+             <Issue Certainty="75" Level="Warning" Path="C:\Users\abira\source\repos\FATEC.PI.OldCareHome\FATEC.PI.OldCareHome\App_Code\Persistencia" File="UsuarioDB.cs" Line="31">Object 'objConexao' can be disposed more than once in method 'UsuarioDB.Insert(Usuario)'. To avoid generating a System.ObjectDisposedException you should not call Dispose more than one time on an object.: Lines: 31</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#SelectAll()" Kind="Method" Static="True" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="Do not dispose objects multiple times" Category="Microsoft.Usage" CheckId="CA2202" Status="Active" Created="2021-06-23 14:27:43Z" FixCategory="DependsOnFix">
+             <Issue Certainty="75" Level="Warning" Path="C:\Users\abira\source\repos\FATEC.PI.OldCareHome\FATEC.PI.OldCareHome\App_Code\Persistencia" File="UsuarioDB.cs" Line="112">Object 'objConnection' can be disposed more than once in method 'UsuarioDB.SelectAll()'. To avoid generating a System.ObjectDisposedException you should not call Dispose more than one time on an object.: Lines: 112</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#SelectId(System.Int32)" Kind="Method" Static="True" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="Do not dispose objects multiple times" Category="Microsoft.Usage" CheckId="CA2202" Status="Active" Created="2021-06-23 14:27:43Z" FixCategory="DependsOnFix">
+             <Issue Certainty="75" Level="Warning" Path="C:\Users\abira\source\repos\FATEC.PI.OldCareHome\FATEC.PI.OldCareHome\App_Code\Persistencia" File="UsuarioDB.cs" Line="147">Object 'objConexao' can be disposed more than once in method 'UsuarioDB.SelectId(int)'. To avoid generating a System.ObjectDisposedException you should not call Dispose more than one time on an object.: Lines: 147</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#SelectLogin(System.String,System.String)" Kind="Method" Static="True" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="Do not dispose objects multiple times" Category="Microsoft.Usage" CheckId="CA2202" Status="Active" Created="2021-06-23 14:27:43Z" FixCategory="DependsOnFix">
+             <Issue Certainty="75" Level="Warning" Path="C:\Users\abira\source\repos\FATEC.PI.OldCareHome\FATEC.PI.OldCareHome\App_Code\Persistencia" File="UsuarioDB.cs" Line="129">Object 'objConexao' can be disposed more than once in method 'UsuarioDB.SelectLogin(string, string)'. To avoid generating a System.ObjectDisposedException you should not call Dispose more than one time on an object.: Lines: 129</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#Update(Usuario,System.Int32)" Kind="Method" Static="True" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="Do not dispose objects multiple times" Category="Microsoft.Usage" CheckId="CA2202" Status="Active" Created="2021-06-23 14:27:43Z" FixCategory="DependsOnFix">
+             <Issue Certainty="75" Level="Warning" Path="C:\Users\abira\source\repos\FATEC.PI.OldCareHome\FATEC.PI.OldCareHome\App_Code\Persistencia" File="UsuarioDB.cs" Line="66">Object 'objConexao' can be disposed more than once in method 'UsuarioDB.Update(Usuario, int)'. To avoid generating a System.ObjectDisposedException you should not call Dispose more than one time on an object.: Lines: 66</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#VerificaEmail(System.String)" Kind="Method" Static="True" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="Do not dispose objects multiple times" Category="Microsoft.Usage" CheckId="CA2202" Status="Active" Created="2021-06-23 14:27:43Z" FixCategory="DependsOnFix">
+             <Issue Certainty="75" Level="Warning" Path="C:\Users\abira\source\repos\FATEC.PI.OldCareHome\FATEC.PI.OldCareHome\App_Code\Persistencia" File="UsuarioDB.cs" Line="164">Object 'objConexao' can be disposed more than once in method 'UsuarioDB.VerificaEmail(string)'. To avoid generating a System.ObjectDisposedException you should not call Dispose more than one time on an object.: Lines: 164</Issue>
+            </Message>
+           </Messages>
+          </Member>
+         </Members>
+        </Type>
+       </Types>
+      </Namespace>
+     </Namespaces>
+    </Module>
+   </Modules>
+  </Target>
+ </Targets>
+ <Rules>
+  <Rule TypeName="Do not dispose objects multiple times" Category="Microsoft.Usage" CheckId="CA2202">
+   <Name>Do not dispose objects multiple times</Name>
+   <Description>A correctly implemented Dispose method can be called multiple times without throwing an exception. However, this is not guaranteed and to avoid generating a System.ObjectDisposedException you should not call Dispose more than one time on an object.</Description>
+   <Resolution Name="Default">Object {0} can be disposed more than once in method {1}. To avoid generating a System.ObjectDisposedException you should not call Dispose more than one time on an object.: Lines: 140</Resolution>
+   <Owner>RuleOwner</Owner>
+   <Url>http://msdn.microsoft.com/library/ms182334.aspx</Url>
+   <Email />
+   <MessageLevel Certainty="75">Warning</MessageLevel>
+   <File Name="dataflowrules.dll" Version="16.0.0.0" />
+  </Rule>
+  <Rule TypeName="Review SQL queries for security vulnerabilities" Category="Microsoft.Security" CheckId="CA2100">
+   <Name>Review SQL queries for security vulnerabilities</Name>
+   <Description>A SQL command string built from user input is vulnerable to SQL injection attacks. Microsoft SQL Server and other database servers support stored procedures and parameterized SQL queries, which reduce the risk of injection attacks.</Description>
+   <Resolution Name="WithNonLiterals">The query string passed to {0} in {1} could contain the following variables {2}. If any of these variables could come from user input, consider using a stored procedure or a parameterized SQL query instead of building the query with string concatenations.</Resolution>
+   <Owner>RuleOwner</Owner>
+   <Url>http://msdn.microsoft.com/library/ms182310.aspx</Url>
+   <Email />
+   <MessageLevel Certainty="75">Warning</MessageLevel>
+   <File Name="dataflowrules.dll" Version="16.0.0.0" />
+  </Rule>
+ </Rules>
+ <Localized>
+  <String Key="Category">Category</String>
+  <String Key="Certainty">Certainty</String>
+  <String Key="CollapseAll">Collapse All</String>
+  <String Key="CheckId">Check Id</String>
+  <String Key="Error">Error</String>
+  <String Key="Errors">error(s)</String>
+  <String Key="ExpandAll">Expand All</String>
+  <String Key="Help">Help</String>
+  <String Key="Line">Line</String>
+  <String Key="Messages">message(s)</String>
+  <String Key="LocationNotStoredInPdb">[Location not stored in Pdb]</String>
+  <String Key="Project">Project</String>
+  <String Key="Resolution">Resolution</String>
+  <String Key="Rule">Rule</String>
+  <String Key="RuleFile">Rule File</String>
+  <String Key="RuleDescription">Rule Description</String>
+  <String Key="Source">Source</String>
+  <String Key="Status">Status</String>
+  <String Key="Target">Target</String>
+  <String Key="Warning">Warning</String>
+  <String Key="Warnings">warning(s)</String>
+  <String Key="ReportTitle">Code Analysis Report</String>
+ </Localized>
+</FxCopReport>

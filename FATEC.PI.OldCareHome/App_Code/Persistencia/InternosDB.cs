@@ -14,8 +14,8 @@ public class InternosDB{
         {
             IDbConnection objConexao; // Abre a conexao
             IDbCommand objCommand; // Cria o comando
-            string sql = "INSERT INTO int_interno(int_nome, int_datanascimento, int_sexo, int_pai, int_mae, int_estadocivil, int_profissao, int_escolaridade, int_naturalidade, int_cpf, int_rg, int_tituloeleitor, int_beneficioinss, int_planosaude, int_situacao, int_dataentrada, int_datasituacao, int_mobilidade, qua_id, end_id) ";
-            sql += "VALUES(?int_nome, ?int_datanascimento, ?int_sexo, ?int_pai, ?int_mae, ?int_estadocivil, ?int_profissao, ?int_escolaridade, ?int_naturalidade, ?int_cpf, ?int_rg, ?int_tituloeleitor, ?int_beneficioinss, ?int_planosaude, ?int_situacao, ?int_dataentrada, ?int_datasituacao, ?int_mobilidade, ?qua_id, ?end_id)"; 
+            string sql = "INSERT INTO int_internos(int_nome, int_datanascimento, int_sexo, int_pai, int_mae, int_estadocivil, int_profissao, int_escolaridade, int_naturalidade, int_cpf, int_rg, int_tituloeleitor, int_beneficioinss, int_planosaude, int_situacao, int_dataentrada, int_datasituacao, int_mobilidade, qua_id, end_id)";
+            sql += " VALUES(?int_nome, ?int_datanascimento, ?int_sexo, ?int_pai, ?int_mae, ?int_estadocivil, ?int_profissao, ?int_escolaridade, ?int_naturalidade, ?int_cpf, ?int_rg, ?int_tituloeleitor, ?int_beneficioinss, ?int_planosaude, ?int_situacao, ?int_dataentrada, ?int_datasituacao, ?int_mobilidade, ?qua_id, ?end_id)"; 
             objConexao = Mapped.Connection();
             objCommand = Mapped.Command(sql, objConexao);
             objCommand.Parameters.Add(Mapped.Parameter("?int_nome", i.Int_nome));
@@ -59,25 +59,25 @@ public class InternosDB{
             IDbCommand objCommand; // Cria o comando
             string sql = "UPDATE int_internos SET";
             sql += " int_nome = ?int_nome,";
-            sql += " int_datanascimento ?int_datanascimento,";
-            sql += " int_sexo ?int_sexo,";
-            sql += " int_pai ?int_pai,";
-            sql += " int_mae ?int_mae,";
-            sql += " int_estadocivil ?int_estadocivil,";
-            sql += " int_profissao ?int_profissao,";
-            sql += " int_escolaridade ?int_escolaridade,";
-            sql += " int_naturalidade ?int_naturalidade,";
-            sql += " int_cpf ?int_cpf,";
-            sql += " int_rg ?int_rg,";
-            sql += " int_tituloeleitor ?int_tituloeleitor,";
-            sql += " int_beneficioinss ?int_beneficioinss,";
-            sql += " int_planosaude ?int_planosaude,";
-            sql += " int_situacao ?int_situacao,";
-            sql += " int_dataentrada ?int_dataentrada,";
-            sql += " int_datasituacao ?int_datasituacao,";
-            sql += " int_mobilidade ?int_mobilidade,";
-            sql += " qua_id ?qua_id,";
-            sql += " end_id ?end_id";
+            sql += " int_datanascimento = ?int_datanascimento,";
+            sql += " int_sexo = ?int_sexo,";
+            sql += " int_pai = ?int_pai,";
+            sql += " int_mae = ?int_mae,";
+            sql += " int_estadocivil = ?int_estadocivil,";
+            sql += " int_profissao = ?int_profissao,";
+            sql += " int_escolaridade = ?int_escolaridade,";
+            sql += " int_naturalidade = ?int_naturalidade,";
+            sql += " int_cpf = ?int_cpf,";
+            sql += " int_rg = ?int_rg,";
+            sql += " int_tituloeleitor = ?int_tituloeleitor,";
+            sql += " int_beneficioinss = ?int_beneficioinss,";
+            sql += " int_planosaude = ?int_planosaude,";
+            sql += " int_situacao = ?int_situacao,";
+            sql += " int_dataentrada = ?int_dataentrada,";
+            sql += " int_datasituacao = ?int_datasituacao,";
+            sql += " int_mobilidade = ?int_mobilidade,";
+            sql += " qua_id = ?qua_id,";
+            sql += " end_id = ?end_id";
             sql += " WHERE int_id = ?int_id";            
 
             objConexao = Mapped.Connection();
@@ -141,24 +141,24 @@ public class InternosDB{
     public static DataSet SelectAll(){
         string sql = "SELECT int_id AS `Código`,";
         sql += " int_nome AS `Nome`,";
-        sql += " int_datanascimento AS `Data de Nascimento`,";
+        sql += " DATE_FORMAT(int_datanascimento, '%d/%m/%Y') AS `Data de Nascimento`,";
         sql += " int_sexo AS `Sexo`,";
         sql += " int_pai AS `Pai`,";
         sql += " int_mae AS `Mãe`,";
         sql += " int_estadocivil AS `Estado Civil`,";
         sql += " int_profissao AS `Profissão`,";
         sql += " int_escolaridade AS `Escolaridade`,";
-        sql += " int_naturalidade AS `Naturalidade`";
+        sql += " int_naturalidade AS `Naturalidade`,";
         sql += " int_cpf AS `CPF`,";
         sql += " int_rg AS `RG`,";
         sql += " int_tituloeleitor AS `Título de Eleitor`,";
         sql += " int_beneficioinss AS `Número Benefício`,";
         sql += " int_planosaude AS `Plano de Saúde`,";
         sql += " int_situacao AS `Situação`,";
-        sql += " int_dataentrada AS `Data de Entrada`,";
-        sql += " int_datasituacao AS `Data da Situação`,";
+        sql += " DATE_FORMAT(int_dataentrada, '%d/%m/%Y') AS `Data de Entrada`,";
+        sql += " DATE_FORMAT(int_datasituacao, '%d/%m/%Y') AS `Data da Situação`,";
         sql += " int_mobilidade AS `Mobilidade`,";
-        sql += "  qua_id AS `Quarto`,";
+        sql += " qua_id AS `Quarto`,";
         sql += " end_id AS `Endereço`";
         sql += " FROM int_internos ORDER BY int_nome";
         DataSet ds = new DataSet();

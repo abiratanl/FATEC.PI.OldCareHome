@@ -1,15 +1,15 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Adm/Master.master" AutoEventWireup="true" CodeFile="insertInternos.aspx.cs" Inherits="Adm_insertInternos" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Adm/Master.master" AutoEventWireup="true" CodeFile="editInternos.aspx.cs" Inherits="Adm_editInternos" %>
 
-<asp:Content ID="Content1" ContentPlaceHolderID="head" runat="Server">
+<asp:Content ID="Content1" ContentPlaceHolderID="head" Runat="Server">
 </asp:Content>
-<asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="Server">
-    <div>
+<asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" Runat="Server">
+     <div>
         <div class="card card-primary" id="modalCadastramentoInternos">
             <!-- card-header -->
             <div class="card-header bg-primary text-white p-0 ">
                     <div class="mx-3"> 
                         <div class="bg-primary text-white">
-                            <asp:Label ID="lblTitle" CssClass="h4" runat="server" Text="Cadastro de Internos - Inclusão"></asp:Label>
+                            <asp:Label ID="lblTitle" CssClass="h4" runat="server" Text="Cadastro de Internos - Alteração"></asp:Label>
                         </div>
                     </div>
                 </div>
@@ -21,15 +21,15 @@
                     <div class="col-12 col-md-4">
                         <div class="form-group">
                             <label for="txtNome">Nome:</label>
-                            <label class="text-danger" for=""><strong>*</strong></label>  
-                            <asp:TextBox ID="txtNome" Required="required" CssClass="form-control" PlaceHolder="Nome do interno" runat="server"></asp:TextBox>
+                            <label class="text-danger" for=""><strong>*</strong></label> 
+                            <asp:TextBox ID="txtNome" CssClass="form-control" PlaceHolder="Nome do interno" runat="server"></asp:TextBox>
                         </div>
                         
                         <div class="row">
                             <div class="col-6">
                                 <div >
                                     <asp:Label ID="lblSituacao" runat="server" Text="Situação:"></asp:Label>
-                                    <label class="text-danger" for=""><strong>*</strong></label>  
+                                    <label class="text-danger" for=""><strong>*</strong></label> 
                                     <br />
                                     <asp:DropDownList ID="ddlSituacao" CssClass="form-control" Width="100%" runat="server">
                                         <asp:ListItem>Ativo</asp:ListItem>
@@ -65,8 +65,8 @@
                            
                         </div>
                         <div class="form-group mt-1">
-                            <label  for="ddlQuarto">Quarto que ocupa: </label> 
-                            <label class="text-danger" for=""><strong>*</strong></label>                             
+                            <label for="ddlQuarto">Quarto que ocupa:</label>
+                            <label class="text-danger" for=""><strong>*</strong></label> 
                             <asp:DropDownList ID="ddlQuarto" CssClass="form-control" Width="100%" runat="server">                                
                             </asp:DropDownList>
                         </div>
@@ -88,7 +88,7 @@
                             <div class="col-6">
                                 <div>
                                     <asp:Label ID="lblDataEntrada" runat="server" Text="Data de Entrada:"></asp:Label>
-                                    <label class="text-danger" for=""><strong>*</strong></label>  
+                                    <label class="text-danger" for=""><strong>*</strong></label> 
                                     <br />
                                     <asp:TextBox ID="txtDataEntrada" Type="Date" required="required" CssClass="form-control" Width="100%" runat="server"></asp:TextBox>
                                 </div>                                
@@ -105,17 +105,17 @@
                                     </asp:DropDownList>
                                 </div>
                         <div class="form-group">
-                            <label for="txtEscolaridade">Escolaridade:</label>
+                            <label for="ddlEscolaridade">Escolaridade:</label>
                             <asp:DropDownList ID="ddlEscolaridade" CssClass="form-control" Width="100%" runat="server">
-                                <asp:ListItem>Fundamental Completo</asp:ListItem>
-                                <asp:ListItem>Fundamental Completo</asp:ListItem>
-                                <asp:ListItem>Fundamental Incompleto</asp:ListItem>
+                                <asp:ListItem>Analfabeto</asp:ListItem>
                                 <asp:ListItem>Básico Completo</asp:ListItem>
                                 <asp:ListItem>Básico Incompleto</asp:ListItem>
-                                <asp:ListItem>Superior</asp:ListItem>
-                                <asp:ListItem>Pós-graduação</asp:ListItem>
-                                <asp:ListItem>Mestrado</asp:ListItem>
                                 <asp:ListItem>Doutorado</asp:ListItem>
+                                <asp:ListItem>Fundamental Completo</asp:ListItem>
+                                <asp:ListItem>Fundamental Incompleto</asp:ListItem>
+                                <asp:ListItem>Mestrado</asp:ListItem>
+                                <asp:ListItem>Pós-graduação</asp:ListItem>
+                                <asp:ListItem>Superior</asp:ListItem> 
                             </asp:DropDownList>
                         </div>
                         <div class="form-group">
@@ -167,13 +167,14 @@
             <!-- card-footer -->
             <div class="card-footer text-right">
                 <asp:LinkButton ID="btnCancelar" CssClass="btn btn-secondary mr-3" Text="Cancelar" runat="server" OnClick="btnCancelar_Click"></asp:LinkButton>
-                <asp:LinkButton ID="btnCadastrar" CssClass="btn btn-primary mx-3" runat="server" OnClick="btnCadastrar_Click"><strong>Cadastrar Interno</strong></asp:LinkButton>
+                <asp:LinkButton ID="btnSalvar" CssClass="btn btn-primary mx-3" runat="server" OnClick="btnSalvar_Click" ><strong>Salvar Alterações</strong></asp:LinkButton>
             </div>
-        </div>        
+
+        </div>
         <!-- /.card -->
     </div>
-     <!-- Modal Insert OK-->
-                 <div class="modal fade " id="modalInsertOk" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <!-- Modal Insert OK-->
+                 <div class="modal fade " id="modalEditOk" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
             <div class="modal-dialog modal-dialog-centered" role="document">
                 <div class="modal-content">
                     <div class="modal-header bg-primary">
@@ -188,7 +189,7 @@
                                 <asp:Image ID="Image4" class="img-80-80" ImageUrl="~/img/success.jpeg" runat="server" />
                             </div>
                             <div class="col-9 mt-4">
-                                <asp:Literal ID="ltlMensagem" Text="<strong>Um Registro Incluído com Sucesso!</strong>" runat="server"></asp:Literal>                                
+                                <asp:Literal ID="ltlMensagem" Text="<strong>Registro alterado com Sucesso!</strong>" runat="server"></asp:Literal>                                
                             </div>
                         </div>
                     </div>

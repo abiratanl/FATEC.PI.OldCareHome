@@ -10,8 +10,20 @@ public partial class Adm_HomeTabelas : System.Web.UI.Page
 {
     protected void Page_Load(object sender, EventArgs e)
     {
-        lblTitle.Text = "Cadastro de Ocorrências";
-        CarregarTable();
+        if (Session["nome"] == null)
+        {
+            //Exibir mensagem de erro e redirecionar para login
+            Response.Redirect("~/Default.aspx");
+        }
+        else
+        {
+            lblSessao.Text = Session["nome"].ToString();
+            if (!IsPostBack)
+            {
+                lblSessao.Text = Session["nome"].ToString();
+                CarregarTable();
+            }
+        }
     }
     protected void CarregarTable(){
         DataSet ds = OcorrenciaDB.SelectAll();

@@ -1,15 +1,15 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Adm/Master.master" AutoEventWireup="true" CodeFile="insertInternos.aspx.cs" Inherits="Adm_insertInternos" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Adm/Master.master" AutoEventWireup="true" CodeFile="insertResponsavel.aspx.cs" Inherits="Adm_insertInternos" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="Server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="Server">
     <div>
-        <div class="card card-primary" id="modalCadastramentoInternos">
+        <div class="card card-primary" id="modalInsert">
             <!-- card-header -->
             <div class="card-header bg-primary text-white p-0 ">
                     <div class="mx-3"> 
                         <div class="bg-primary text-white">
-                            <asp:Label ID="lblTitle" CssClass="h4" runat="server" Text="Cadastro de Internos - Inclusão"></asp:Label>
+                            <asp:Label ID="lblTitle" CssClass="h4" runat="server" Text="Cadastro de Responsáveis - Inclusão"></asp:Label>
                         </div>
                     </div>
                 </div>

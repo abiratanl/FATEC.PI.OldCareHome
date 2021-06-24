@@ -1,10 +1,11 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
-using System.Data;
+
 public partial class Adm_Tables_Usuario : System.Web.UI.Page
 {
     protected void Page_Load(object sender, EventArgs e)
@@ -26,7 +27,7 @@ public partial class Adm_Tables_Usuario : System.Web.UI.Page
     }
     protected void CarregarTable()
     {
-        DataSet ds = UsuarioDB.SelectAll();
+        DataSet ds = ResponsavelDB.SelectAll();
         rptTableBody.DataSource = ds;
         rptTableBody.DataBind();
     }
@@ -46,7 +47,7 @@ public partial class Adm_Tables_Usuario : System.Web.UI.Page
         ddlPerfil.DataValueField = "Código";
         ddlPerfil.DataBind();
         ddlPerfil.Items.Insert(0, "Selecione");
-       // ddlPerfil.SelectedItem.Value = "Secretaria";
+        // ddlPerfil.SelectedItem.Value = "Secretaria";
     }
 
     protected void btnInsert_Click(object sender, EventArgs e)
@@ -86,7 +87,7 @@ public partial class Adm_Tables_Usuario : System.Web.UI.Page
     }
 
     protected void btnRptEditar_Click(object sender, EventArgs e)
-    {   
+    {
         Session["id"] = ((LinkButton)sender).CommandArgument;
         DataSet ds = UsuarioDB.SelectId(Convert.ToInt32(Session["id"]));
         txtUpdateNome.Text = ds.Tables[0].Rows[0]["usu_nome"].ToString();
@@ -137,7 +138,7 @@ public partial class Adm_Tables_Usuario : System.Web.UI.Page
         ltlExcluir.Text += "<br>Email: " + ds.Tables[0].Rows[0]["usu_email"].ToString() + "<br>Data de Cadastro: " + DateTime.Parse(ds.Tables[0].Rows[0]["usu_datacadastro"].ToString()).ToString("dd/MM/yyyy") + "</strong>";
         ltlMsg.Text = "Exclui o registro " + Session["id"].ToString();
     }
-   
+
     protected void btnDelete_Click(object sender, EventArgs e)
     {
         switch (UsuarioDB.Delete(Convert.ToInt32(Session["id"])))
@@ -151,7 +152,22 @@ public partial class Adm_Tables_Usuario : System.Web.UI.Page
                 break;
         }
     }
+
+    protected void btnRptEditar_Click1(object sender, EventArgs e)
+    {
+
+    }
+
+    protected void btnRptExcluir_Click1(object sender, EventArgs e)
+    {
+
+    }
+
+    protected void btnIncluirUsuario_Click1(object sender, EventArgs e)
+    {
+
+    }
 }
-   
+
 
 

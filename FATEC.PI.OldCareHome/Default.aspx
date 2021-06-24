@@ -23,7 +23,7 @@
                         
                         <!-- general form elements -->
                         <div class="card card-primary  bgCinza">
-                            <div class="card-header bg-primary">
+                            <div class="card-header bg-primary text-white">
                                 <h3 class="card-title">OldCareHome - Controle de Acesso</h3>
                             </div>
                             <!-- /.card-header -->
@@ -37,7 +37,7 @@
                                     <asp:TextBox ID="txtEmail" required="required" type="email" runat="server" placeholder="Digite email cadastrado" CssClass="form-control"></asp:TextBox>
                                 </div>
                                 <div class="form-group mt-3">
-                                    <label for="exampleInputPassword1"><strong>Senha</strong></label>
+                                    <label for="txtSenha"><strong>Senha</strong></label>
 
                                     <asp:TextBox ID="txtSenha" required="required" type="password" runat="server" placeholder="Digite sua senha" CssClass="form-control mb-4"></asp:TextBox>
                                 </div>

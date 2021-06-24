@@ -62,6 +62,8 @@
                 <!--./ card-footer -->
             </div>
             <!-- /.card -->
+            <asp:Label ID="lblUsuario" CssClass="mr-1" runat="server" Text="Usuário:"></asp:Label>
+            <asp:Label ID="lblSessao" runat="server" CssClass="text-primary mr-2" Text=""></asp:Label>
         </div>
     </div>
 </asp:Content>

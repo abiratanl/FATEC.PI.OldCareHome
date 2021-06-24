@@ -33,8 +33,6 @@ public class DiretoriaDB
         return 0;
     }
 
-
-
     public static int Update(Diretoria d, int id)
     {
         try
@@ -91,9 +89,11 @@ public class DiretoriaDB
     }
     public static DataSet SelectAll()
     {
-        string sql = "SELECT dir_id AS `Código`, DATE_FORMAT(dir_datainicio, '%d/%m/%Y') AS `Data de Início`,";
+        string sql = "SELECT dir_id AS `Código`,";
+        sql += " DATE_FORMAT(dir_datainicio, '%d/%m/%Y') AS `Data de Início`,";
         sql += " DATE_FORMAT(dir_datatermino, '%d/%m/%Y') AS `Data de Término`,";
-        sql += " dtr_nome AS `Diretor`, car_descricao AS `Cargo` FROM dir_diretoria INNER JOIN  dtr_diretor USING(dtr_id)";
+        sql += " dtr_nome AS `Diretor`,";
+        sql += " car_descricao AS `Cargo` FROM dir_diretoria INNER JOIN  dtr_diretor USING(dtr_id)";
         sql += " INNER JOIN  car_cargo USING(car_id) ORDER BY dtr_nome";
         DataSet ds = new DataSet();
         IDbConnection objConnection;

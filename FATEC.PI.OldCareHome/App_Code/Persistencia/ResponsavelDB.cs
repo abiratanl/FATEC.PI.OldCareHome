@@ -93,13 +93,13 @@ public class ResponsavelDB{
     }
 
     public static DataSet SelectAll(){
-        string sql = "SELECT res_id AS `Código`";
+        string sql = "SELECT res_id AS `Código`,";
         sql += " res_nome AS `Nome`,";
         sql += " res_parentesco AS `Parentesco`,";
         sql += " res_cpf AS `CPF`,";
         sql += " res_rg AS `RG`,";
         sql += " end_id AS `Endereço`";
-        sql += " FROM res_responsavel INNER JOIN end_endereco USING (end_id) ORDER BY res_nome";
+        sql += " FROM res_responsavel ORDER BY res_nome";
         DataSet ds = new DataSet();
         IDbConnection objConnection;
         IDbCommand objCommand;
@@ -132,5 +132,4 @@ public class ResponsavelDB{
         objCommand.Dispose();
         return ds;
     }
-
 }
