@@ -141,5 +141,42 @@ public class QuartoDB{
         objConnection.Dispose();
         return ds;
     }
+    public static bool QuartoLotado(int id)
+    {
 
+        DataSet ds = new DataSet();
+        IDbConnection objConexao;
+        IDbCommand objCommand;
+        IDataAdapter objDataAdapter;
+        string sql = "SELECT qua_id, (SUM(qua_quarto.qua_capacidade) - (COUNT(int_internos.qua_id))) AS `Vagas` FROM qua_quarto LEFT JOIN int_internos USING (qua_id) WHERE qua_id = ?qua_id GROUP BY qua_id";
+        objConexao = Mapped.Connection();
+        objCommand = Mapped.Command(sql, objConexao);
+        objCommand.Parameters.Add(Mapped.Parameter("?qua_id", id));
+        objDataAdapter = Mapped.Adapter(objCommand);
+        objDataAdapter.Fill(ds);
+        objConexao.Close();
+        objConexao.Dispose();
+        objCommand.Dispose();
+        if (Convert.ToInt32(ds.Tables[0].Rows[0]["vagas"]) < 1)
+            return false;
+        return true;
+    }
+
+    public static DataSet PorSexo(string sexo)
+    {
+        DataSet ds = new DataSet();
+        IDbConnection objConexao;
+        IDbCommand objCommand;
+        IDataAdapter objDataAdapter;
+        string sql = "SELECT qua_id AS `Código`, qua_descricao AS `Descrição` FROM qua_quarto WHERE qua_tipo = ?qua_tipo";
+        objConexao = Mapped.Connection();
+        objCommand = Mapped.Command(sql, objConexao);
+        objCommand.Parameters.Add(Mapped.Parameter("?qua_tipo", sexo));
+        objDataAdapter = Mapped.Adapter(objCommand);
+        objDataAdapter.Fill(ds);
+        objConexao.Close();
+        objConexao.Dispose();
+        objCommand.Dispose();
+        return ds;
+    }
 }

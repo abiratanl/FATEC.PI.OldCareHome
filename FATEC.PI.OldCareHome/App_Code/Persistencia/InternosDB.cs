@@ -193,4 +193,23 @@ public class InternosDB{
         objCommand.Dispose();
         return ds;
     }
+
+    public static DataSet Restricoes()
+    {
+        string sql = "SELECT int_nome AS `Interno`, pat_descricao AS `Patologia`, pat_restricao AS `Restrição`";
+        sql += " FROM int_internos INNER JOIN reg_registroclinico USING(int_id) INNER JOIN pat_patologia USING(pat_id) ORDER BY Interno; ";        
+        DataSet ds = new DataSet();
+        IDbConnection objConnection;
+        IDbCommand objCommand;
+        IDataAdapter objDataAdapter;
+        objConnection = Mapped.Connection();
+        objCommand = Mapped.Command(sql, objConnection);
+        objDataAdapter = Mapped.Adapter(objCommand);
+        // O objeto DataAdapter vai preencher o DataSet com os dados do BD.
+        objDataAdapter.Fill(ds); // O método Fill é o responsável por preencher o DataSet
+        objConnection.Close();
+        objCommand.Dispose();
+        objConnection.Dispose();
+        return ds;
+    }
 }

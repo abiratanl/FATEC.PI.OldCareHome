@@ -50,7 +50,7 @@
                                     <asp:Label ID="lblSexo" runat="server" Text="Sexo:"></asp:Label>
                                     <br />
                                     <div>
-                                        <asp:RadioButtonList ID="rbtnSexo" RepeatDirection="Vertical" runat="server">
+                                        <asp:RadioButtonList ID="rbtnSexo" RepeatDirection="Vertical" runat="server" OnSelectedIndexChanged="rbtnSexo_SelectedIndexChanged">
                                             <asp:ListItem Value="M" Selected="True">Masculino</asp:ListItem>
                                             <asp:ListItem Value="F">Feminino</asp:ListItem>
                                         </asp:RadioButtonList>

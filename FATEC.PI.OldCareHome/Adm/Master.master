@@ -1,12 +1,10 @@
-﻿ 
-﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="Master.master.cs" Inherits="Adm_Master" %>
+﻿ ﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="Master.master.cs" Inherits="Adm_Master" %>
 
 <!DOCTYPE html>
 
-
 <html>
 <head runat="server">
-    <title></title>    
+    <title>Fatec PI - OldCareHome</title>    
     
     <link href=<%:ResolveUrl("~/Content/bootstrap.min.css" )%> rel="stylesheet" />
     <link href=<%:ResolveUrl("~/Content/jquery.dataTables.min.css")%> rel="stylesheet" />
@@ -47,8 +45,7 @@
                     <li class="nav-item mx-2">
                         <asp:LinkButton ID="btnSair" Type="text" CssClass="text-white" runat="server" OnClick="btnSair_Click">Sair</asp:LinkButton>
                     </li>
-                    <li >
-                        
+                    <li >                        
                         <div >
                             <asp:Label ID="lblUsuario"  runat="server" Text="Usuário:"></asp:Label>            
                             <asp:Label ID="lblMenuSessao" CssClass="text-primary font-weight-bold" runat="server" Text=""></asp:Label>
@@ -67,28 +64,39 @@
                             <div >
                                 <asp:Image ID="Image2" ImageUrl="~/img/logo1.png"   Width="100%" runat="server" />
                             </div>
+                             <div class="card">
+                                <div class="card-header" id="headingThree">
+                                    <h2 class="mb-0">
+                                        <button class="btn btn-link btn-block text-left collapsed" type="button" data-toggle="collapse" data-target="#divMenuRelatorios" aria-expanded="false" aria-controls="collapseThree">
+                                            <strong>Internos</strong>
+                                        </button>
+                                    </h2>
+                                </div>
+                                <div id="divMenuRelatorios" class="collapse" aria-labelledby="headingThree" data-parent="#accordionExample">
+                                    <div class="card-body">
+                                        <asp:LinkButton ID="btnDisponibilidade" runat="server" OnClick="btnDisponibilidade_Click" >Ocupação</asp:LinkButton>                                        
+                                        <hr />
+                                        <asp:LinkButton ID="btnRestricoes" runat="server" OnClick="btnRestricoes_Click" >Restrições Alimentares</asp:LinkButton> 
+                                        <hr />
+                                        <a href="#">Prescrições Ativas</a>
+                                        <hr />
+                                        <%--<a href="#"></a>--%>
+                                        <br />                                        
+                                    </div>
+                                </div>
+                            </div>
                             <div class="card">
                                 <div class="card-header" id="headingOne">
                                     <h2 class="mb-0">
                                         <button class="btn btn-link btn-block text-left" type="button" data-toggle="collapse" data-target="#divMenuPessoas" aria-expanded="true" aria-controls="collapseOne">
-                                            <strong>Pessoas</strong>
+                                            <strong>Tesouraria</strong>
                                         </button>
                                     </h2>
                                 </div>
 
                                 <div id="divMenuPessoas" class="collapse" aria-labelledby="headingOne" data-parent="#accordionExample">
                                     <div class="card-body">
-                                        <asp:LinkButton ID="btnMenuInternos" runat="server" >Internos</asp:LinkButton>                                      
-                                        <br />
-                                        <a href="#">Responnsáveis</a>
-                                        <br />
-                                        <a href="#">Funcionários</a>
-                                        <br />
-                                        <a href="#">Diretoria</a>
-                                        <br /> 
-                                        <asp:LinkButton ID="btnInsertUsuario" runat="server" Onclick="btnInsertUsuario_Click">Usuários</asp:LinkButton>
-                                        
-                                        <br />
+                                       <a href="#">Módulo a ser desenvolivido futuramente</a>           
                                     </div>
                                 </div>
                             </div>
@@ -96,27 +104,13 @@
                                 <div class="card-header" id="headingTwo">
                                     <h2 class="mb-0">
                                         <button class="btn btn-link btn-block text-left collapsed" type="button" data-toggle="collapse" data-target="#divMenuRegistroClinico" aria-expanded="false" aria-controls="collapseTwo">
-                                            <strong>Registro Clínico</strong>
+                                            <strong>Patrimônio</strong>
                                         </button>
                                     </h2>
                                 </div>
                                 <div id="divMenuRegistroClinico" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionExample">
                                     <div class="card-body">
-                                        <ul>
-                                            <li>
-                                                <asp:LinkButton ID="btnMenuPatologia" runat="server" OnClick="btnMenuPatologia_Click" >Patologias</asp:LinkButton>                                       
-                                                <br />
-                                            </li>
-                                            <li>
-                                                <a href="#">Medicamentos</a>
-                                            </li>
-                                            <li>
-                                                <a href="#">Prescrições</a>
-                                            </li>
-                                            <li>
-                                                <a href="#">Controle de Medicação</a>
-                                            </li>
-                                        </ul>
+                                        <a href="#">Módulo a ser desenvolivido futuramente</a>           
                                     </div>
                                 </div>
                             </div>
@@ -124,42 +118,17 @@
                                 <div class="card-header" id="headingThree1">
                                     <h2 class="mb-0">
                                         <button class="btn btn-link btn-block text-left collapsed" type="button" data-toggle="collapse" data-target="#divMenuOutrosCadastros" aria-expanded="false" aria-controls="collapseThree">
-                                            <strong>Cadastros</strong>
+                                            <strong>Contabilidade</strong>
                                         </button>
                                     </h2>
                                 </div>
                                 <div id="divMenuOutrosCadastros" class="collapse" aria-labelledby="headingThree" data-parent="#accordionExample">
                                     <div class="card-body">
-                                        <a href="#">Histórico</a>
-                                        <br />
-                                        <a href="#">Ocorrências</a>
-                                        <br />
-                                        <asp:LinkButton ID="btnMenuQuarto" runat="server" OnClick="btnMenuQuarto_Click" >Quartos</asp:LinkButton> 
-                                        <br />                                        
+                                        <a href="#">Módulo a ser desenvolivido futuramente</a>                                                         
                                     </div>
                                 </div>
                             </div>
-                            <div class="card">
-                                <div class="card-header" id="headingThree">
-                                    <h2 class="mb-0">
-                                        <button class="btn btn-link btn-block text-left collapsed" type="button" data-toggle="collapse" data-target="#divMenuRelatorios" aria-expanded="false" aria-controls="collapseThree">
-                                            <strong>Relatórios</strong>
-                                        </button>
-                                    </h2>
-                                </div>
-                                <div id="divMenuRelatorios" class="collapse" aria-labelledby="headingThree" data-parent="#accordionExample">
-                                    <div class="card-body">
-                                        <asp:LinkButton ID="btnDisponibilidade" runat="server" OnClick="btnDisponibilidade_Click" >Disponibilidade</asp:LinkButton>                                        
-                                        <br />
-                                        <a href="#">Restrição Alimentar</a>
-                                        <br />
-                                        <a href="#">Prescrições Ativas</a>
-                                        <br />
-                                        <a href="#">Ocupação</a>
-                                        <br />                                        
-                                    </div>
-                                </div>
-                            </div>
+                           
                              <div class="card">
                                 <div class="card-header" id="headingThree3">
                                     <h2 class="mb-0">
@@ -429,7 +398,7 @@
                     searching: true,
                     scrollY: 180,
                     scrollX: true,
-                    pageLength: 20,
+                    pageLength: 30,
                     processing: true
                 });
             });

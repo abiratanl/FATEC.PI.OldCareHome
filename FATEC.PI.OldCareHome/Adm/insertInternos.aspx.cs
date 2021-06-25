@@ -93,5 +93,10 @@ public partial class Adm_insertInternos : System.Web.UI.Page
     {
         Response.Redirect("~/adm/tblInternos.aspx");
     }
-        
+
+
+    protected void rbtnSexo_SelectedIndexChanged(object sender, EventArgs e)
+    {
+
+    }
 }

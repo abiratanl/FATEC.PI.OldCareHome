@@ -38,19 +38,19 @@ public partial class Adm_Master : System.Web.UI.MasterPage
 
     protected void btnMenuPatologia_Click(object sender, EventArgs e)
     {
-        Response.Redirect("~/adm/insertPatologia.aspx");
+       // Response.Redirect("~/adm/insertPatologia.aspx");
         //Page.ClientScript.RegisterStartupScript(this.GetType(), "script", "<script> $('#modalPatologia').modal('show'); </script>", false);
     }
 
     protected void btnMenuQuarto_Click(object sender, EventArgs e)
     {
-        Response.Redirect("~/adm/insertQuarto.aspx");
+       // Response.Redirect("~/adm/insertQuarto.aspx");
         //Page.ClientScript.RegisterStartupScript(this.GetType(), "script", "<script> $('#modalInsertQuarto').modal('show'); </script>", false);
     }
 
     protected void btnInsertUsuario_Click(object sender, EventArgs e)
     {
-        Response.Redirect("~/adm/insertUsuario.aspx");
+       // Response.Redirect("~/adm/insertUsuario.aspx");
         // Page.ClientScript.RegisterStartupScript(this.GetType(), "script", "<script> $('#modalInsertUsuario').modal('show'); </script>", false);        
     }
     public void ChangeTable()
@@ -87,20 +87,7 @@ public partial class Adm_Master : System.Web.UI.MasterPage
             case "res_responsavel":
                 Response.Redirect("~/adm/tblResponsavel.aspx");
                 break;
-        }
-        int qtd = ds.Tables[0].Rows.Count;
-        if (qtd > 0)
-        {
-            //gridMain.DataSource = ds.Tables[0].DefaultView;
-            //gridMain.DataBind();
-            //gridMain.Visible = true;
-
-        }
-        else
-        {
-            //gdv.Visible = false;
-            //lbl.Text = "Não foram encontrado registros...";
-        }
+        }        
     }
 
 
@@ -108,20 +95,15 @@ public partial class Adm_Master : System.Web.UI.MasterPage
     protected void ddlTabelas_SelectedIndexChanged(object sender, EventArgs e)
     {
         ChangeTable();
-        //lblTitle.Text = "Cadastro de " +  ddlTabelas.SelectedItem;
-        //lblMsg.Text = ddlTabelas.SelectedValue;
     }
 
     protected void btnDisponibilidade_Click(object sender, EventArgs e)
     {
-        Page.ClientScript.RegisterStartupScript(this.GetType(), "script", "<script> $('#modalDisponibilidade').modal('show'); </script>", false);
-        DataSet ds = QuartoDB.Disponibilidade();
-        lblCapacidadeM.Text = ds.Tables[0].Rows[0]["Capacidade"].ToString();
-        lblCapacidadeF.Text = ds.Tables[0].Rows[1]["Capacidade"].ToString();
-        lblOcupacaoM.Text = ds.Tables[0].Rows[0]["Ocupação"].ToString();
-        lblOcupacaoF.Text = ds.Tables[0].Rows[1]["Ocupação"].ToString();
-        lblDisponivelM.Text = ds.Tables[0].Rows[0]["Disponível"].ToString();
-        lblDisponivelF.Text = ds.Tables[0].Rows[1]["Disponível"].ToString();        
-       
+        Response.Redirect("~/adm/relDisponibilidade.aspx");
+    }
+
+    protected void btnRestricoes_Click(object sender, EventArgs e)
+    {
+        Response.Redirect("~/adm/relRestricoes.aspx");
     }
 }
