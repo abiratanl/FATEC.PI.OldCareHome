@@ -125,7 +125,7 @@ public class QuartoDB{
     }
     public static DataSet Disponibilidade()
     {
-        string sql = "SELECT SUM(qua_quarto.qua_capacidade) AS `Capacidade`, COUNT(int_internos.qua_id) AS `Ocupação`, (SUM(qua_quarto.qua_capacidade) - (SUM(int_internos.qua_id))) `Disponível`, qua_tipo as `Sexo` FROM qua_quarto LEFT JOIN int_internos USING (qua_id) GROUP BY qua_tipo";
+        string sql = "SELECT SUM(qua_quarto.qua_capacidade) AS `Capacidade`, COUNT(int_internos.qua_id) AS `Ocupação`, (SUM(qua_quarto.qua_capacidade) - (COUNT(int_internos.qua_id))) `Disponível`, qua_tipo as `Sexo` FROM qua_quarto LEFT JOIN int_internos USING (qua_id) GROUP BY qua_tipo";
 
         DataSet ds = new DataSet();
         IDbConnection objConnection;

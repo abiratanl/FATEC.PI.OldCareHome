@@ -116,8 +116,12 @@ public partial class Adm_Master : System.Web.UI.MasterPage
     {
         Page.ClientScript.RegisterStartupScript(this.GetType(), "script", "<script> $('#modalDisponibilidade').modal('show'); </script>", false);
         DataSet ds = QuartoDB.Disponibilidade();
-        rptTableBody.DataSource = ds;
-        rptTableBody.DataBind();
-
+        lblCapacidadeM.Text = ds.Tables[0].Rows[0]["Capacidade"].ToString();
+        lblCapacidadeF.Text = ds.Tables[0].Rows[1]["Capacidade"].ToString();
+        lblOcupacaoM.Text = ds.Tables[0].Rows[0]["Ocupação"].ToString();
+        lblOcupacaoF.Text = ds.Tables[0].Rows[1]["Ocupação"].ToString();
+        lblDisponivelM.Text = ds.Tables[0].Rows[0]["Disponível"].ToString();
+        lblDisponivelF.Text = ds.Tables[0].Rows[1]["Disponível"].ToString();        
+       
     }
 }

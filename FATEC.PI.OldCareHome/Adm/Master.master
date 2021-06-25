@@ -1,3 +1,4 @@
+﻿ 
 ﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="Master.master.cs" Inherits="Adm_Master" %>
 
 <!DOCTYPE html>
@@ -5,8 +6,7 @@
 
 <html>
 <head runat="server">
-    <title></title>
-    
+    <title></title>    
     
     <link href=<%:ResolveUrl("~/Content/bootstrap.min.css" )%> rel="stylesheet" />
     <link href=<%:ResolveUrl("~/Content/jquery.dataTables.min.css")%> rel="stylesheet" />
@@ -318,41 +318,91 @@
                  <div class="modal fade " id="modalDisponibilidade" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
             <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
                 <div class="modal-content">
-                    <div class="modal-header bg-primary">
+                    <div class="modal-header bg-primary text-white">
                         <h5 class="modal-title  text-center" id="">Disponibilidade de Vagas</h5>
                         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                             <span aria-hidden="true">&times;</span>
                         </button>
                     </div>
-                    <div class="modal-body text-danger  text-center">
-                        <!-- Tabela -->
-                        <table id="tblMain" class="display" style="width: 100%">
-                            <thead class="bg-primary text-white">
-                                <tr>
-                                   
-                                    <th>Capacidade</th>
-                                    <th>Ocupação</th>
-                                    <th>Disponível</th>
-                                    <th>Sexo</th>                                    
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <asp:Repeater ID="rptTableBody"  runat="server">
-                                    <ItemTemplate>
-                                        <tr>    
-                                            <td><%#DataBinder.Eval(Container.DataItem, "Capacidade")%></td>
-                                            <td><%#DataBinder.Eval(Container.DataItem, "Ocupação")%></td>
-                                            <td><%#DataBinder.Eval(Container.DataItem, "Disponível")%></td>  
-                                            <td><%#DataBinder.Eval(Container.DataItem, "Sexo")%></td> 
-                                        </tr>
-                                    </ItemTemplate>
-                                </asp:Repeater>
-                                <tbody>
-                        </table>
-                        <!--  ./ Tabela -->
+                    <div class="modal-body text-center">
+                        <div>
+                            <div class="row">
+                                    <div class="col-3 mx-0 px-0"> 
+                                        <div class="font-weight-bold">
+                                            <div class="bg-secondary text-white">
+                                                <hr class="border border-info border-1 "/>
+                                                <asp:Label ID="lblCapacidade" runat="server" Text="Capacidade"></asp:Label>
+                                                <hr class="border border-info border-1 "/>
+                                            </div>                                         
+                                            <div>
+                                                <asp:Label ID="lblCapacidadeM" runat="server" Text="10"></asp:Label>
+                                                <hr class="border border-info border-1 "/>
+                                            </div>                                         
+                                            <div>
+                                                <asp:Label ID="lblCapacidadeF" runat="server" Text="6"></asp:Label>
+                                                <hr class="border border-info border-1 "/>
+                                            </div>  
+                                        </div> 
+                                    </div> 
+                                 <div class="col-3 mx-0 px-0"> 
+                                        <div class="font-weight-bold">
+                                            <div class="bg-secondary text-white">
+                                                <hr class="border border-info border-1 "/>
+                                                <asp:Label ID="lblOcupacao" runat="server" Text="Ocupação"></asp:Label>
+                                                <hr class="border border-info border-1 "/>
+                                            </div>                                         
+                                            <div>
+                                                <asp:Label ID="lblOcupacaoM" runat="server" Text="2"></asp:Label>
+                                                <hr class="border border-info border-1 "/>
+                                            </div>                                         
+                                            <div>
+                                                <asp:Label ID="lblOcupacaoF" runat="server" Text="2"></asp:Label>
+                                                <hr class="border border-info border-1 "/>
+                                            </div>  
+                                        </div> 
+                                    </div> 
+                                 <div class="col-3 mx-0 px-0"> 
+                                        <div class="font-weight-bold">
+                                            <div class="bg-secondary text-white">
+                                                <hr class="border border-info border-1 "/>
+                                                <asp:Label ID="lblDisponivel" runat="server" Text="Disponível"></asp:Label>
+                                                <hr class="border border-info border-1 "/>
+                                            </div>                                         
+                                            <div>
+                                                <asp:Label ID="lblDisponivelM" runat="server" Text="10"></asp:Label>
+                                                <hr class="border border-info border-1 "/>
+                                            </div>                                         
+                                            <div>
+                                                <asp:Label ID="lblDisponivelF" runat="server" Text="4"></asp:Label>
+                                                <hr class="border border-info border-1 "/>
+                                            </div>  
+                                        </div> 
+                                    </div> 
+                                <div class="col-3 mx-0 px-0"> 
+                                        <div class="font-weight-bold">
+                                            <div class="bg-secondary text-white">
+                                                <hr class="border border-info border-1 "/>
+                                                <asp:Label ID="lblSexo" runat="server" Text="Sexo"></asp:Label>
+                                                <hr class="border border-info border-1 "/>
+                                            </div>                                         
+                                            <div>
+                                                <asp:Label ID="lblSexoM" runat="server" Text="Masculino"></asp:Label>
+                                                <hr class="border border-info border-1 "/>
+                                            </div>                                         
+                                            <div>
+                                                <asp:Label ID="lblSexoF" runat="server" Text="Feminino"></asp:Label>
+                                                <hr class="border border-info border-1 "/>
+                                            </div>  
+                                        </div> 
+                                    </div> 
+                            </div>                        
+                        </div>
+
                     </div>
                     <div class="modal-footer">
-                        <button type="button" class="btn btn-primary" data-dismiss="modal">Fechar</button>
+                        <div class="mr-5">
+                            <button type="button" class="btn btn-primary" data-dismiss="modal">Fechar Relatório</button>
+                        </div>
                     </div>
                 </div>
             </div>
